@@ -1,0 +1,60 @@
+.smalltile
+{
+	position: relative;
+	width: 30%;
+	height: 95%;
+	margin-top: 2%;
+	margin-left: 2%;
+	float: left;
+	border: solid;
+	border-width: 1px;
+}
+
+.column
+{
+	width: 100%;
+	height: 33%;
+}
+
+#redtile
+{
+	background-color: red;
+}
+#orangetile
+{
+	background-color: orange;
+}
+#yellowtile
+{
+	background-color: yellow;
+}
+
+#greentile
+{
+	background-color: green;
+}
+
+#bluetile
+{
+	background-color: blue;
+}
+
+#purpletile
+{
+	background-color: purple;
+}
+
+#blacktile
+{
+	background-color: black;
+}
+
+#whitetile
+{
+	background-color: white;
+}
+
+#browntile
+{
+	background-color: brown;
+}
