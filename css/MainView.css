@@ -17,6 +17,11 @@ body
 	margin: 0px;
 }
 
+#main
+{
+	opacity: 0;
+}
+
 #menubar
 {
 	height: 10%;
