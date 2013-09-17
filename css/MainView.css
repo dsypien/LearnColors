@@ -1,19 +1,25 @@
 .smalltile
 {
 	position: relative;
-	width: 30%;
-	height: 95%;
-	margin-top: 2%;
-	margin-left: 2%;
+	width: 33%;
+	height: 100%;
 	float: left;
-	border: solid;
-	border-width: 1px;
 }
 
 .column
 {
 	width: 100%;
 	height: 33%;
+}
+
+body
+{
+	margin: 0px;
+}
+
+#mainview
+{
+	position:relative;
 }
 
 #redtile
