@@ -16,6 +16,8 @@ $(document).ready(function(){
 	  }, 1500 );
 	  
 	$('.smalltile').click(function(){
-		alert( this.attributes.color.nodeValue + " clicked");
+		//alert( this.attributes.color.nodeValue + " clicked");
+		$('#mainview').css("height", "0");
+		$('#tileview').css("background", this.attributes.color.nodeValue);
 	});
 });
