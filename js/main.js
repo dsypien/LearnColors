@@ -25,37 +25,44 @@ function getCurrentView(){
 $(document).ready(function(){
 	$('#main').animate({
 		opacity: 1.0
-	  }, 1500 );
+	  }, 1000 );
 	  
 	viewstack.push("#mainview");
 	 
 	$('#previousview').click(function(){
-		hideview(viewstack.pop());
+		var curview = viewstack.pop();
 		
 		$(getCurrentView()).animate({
 			"height": "90%"
 			}, 1000, function(){
-				//oncomplete
+				$(curview).css("height", 0);
 			}
 		);
+		
+		// If the current view is the only view on the stack, there is
+		// no previous view.  Hide the previousview button
+		if(viewstack.length == 1){
+			$('#previousview').css("visibility", "hidden");
+		}
 	});	
 	  
 	$('.smalltile').click(function(){
 		$('#tileview').css({
 			"background":this.attributes.color.nodeValue,
-			"height": "90%"
-		});
-		hideview('#mainview');
+			"height": "90%"}
+		);
 		
+		hideview('#mainview');
 		viewstack.push("#tileview");
+		$('#previousview').css("visibility", "visible");
 	});
 });
 
 function hideview(viewname){
 	$(viewname).animate({
-			"height": "0"
-			}, 1000, function(){
-			    // on complete
-			}
-		);
+		"height": "0"
+		}, 500, function(){
+			// on complete
+		}
+	);
 }
