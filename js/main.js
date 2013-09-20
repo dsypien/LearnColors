@@ -46,9 +46,9 @@ $(document).ready(function(){
 		}
 	});	
 	  
-	$('.smalltile').click(function(){
+	$('.tilebutton').click(function(){
 		$('#tileview').css({
-			"background":this.attributes.color.nodeValue,
+			"background":this.parentNode.attributes.color.nodeValue,
 			"height": "90%"}
 		);
 		
