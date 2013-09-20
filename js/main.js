@@ -41,7 +41,10 @@ $(document).ready(function(){
 	});	
 	  
 	$('.smalltile').click(function(){
-		$('#tileview').css("background", this.attributes.color.nodeValue);
+		$('#tileview').css({
+			"background":this.attributes.color.nodeValue,
+			"height": "90%"
+		});
 		hideview('#mainview');
 		
 		viewstack.push("#tileview");
