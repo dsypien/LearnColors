@@ -32,6 +32,7 @@ $(document).ready(function(){
 	$('#previousview').click(function(){
 		var curview = viewstack.pop();
 		
+		$(getCurrentView()).show();
 		$(getCurrentView()).animate({
 			"height": "90%"
 			}, 1000, function(){
@@ -62,7 +63,7 @@ function hideview(viewname){
 	$(viewname).animate({
 		"height": "0"
 		}, 500, function(){
-			// on complete
+			$(viewname).hide();
 		}
 	);
 }
