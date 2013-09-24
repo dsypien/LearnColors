@@ -52,7 +52,11 @@ $(document).ready(function(){
 			"height": "90%"
 		});
 		
-		$('#tilecolumn1').css({
+		$('#bigtile').css({
+			"background":this.parentNode.attributes.color.nodeValue
+		});
+		
+		$('.imagetile').css({
 			"background":this.parentNode.attributes.color.nodeValue
 		});
 		
