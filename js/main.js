@@ -49,9 +49,12 @@ $(document).ready(function(){
 	  
 	$('.tilebutton').click(function(){
 		$('#tileview').css({
-			"background":this.parentNode.attributes.color.nodeValue,
-			"height": "90%"}
-		);
+			"height": "90%"
+		});
+		
+		$('#tilecolumn1').css({
+			"background":this.parentNode.attributes.color.nodeValue
+		});
 		
 		hideview('#mainview');
 		viewstack.push("#tileview");

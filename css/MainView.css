@@ -11,6 +11,19 @@
 	height: 33%;
 }
 
+#tilecolumn1
+{
+	width:100%;
+	height:75%;
+}
+
+#tilecolumn2
+{
+	width:100%;
+	height:25%;
+	background: yellow;
+}
+
 .tilebutton
 {
 	border-radius: 10px;
