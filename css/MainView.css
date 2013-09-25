@@ -102,45 +102,45 @@ body
 	height:90%;
 }
 
-#redtile
+.redtile
 {
 	background-color: #FF2626;
 }
-#orangetile
+.orangetile
 {
 	background-color: #FF800D;
 }
-#yellowtile
+.yellowtile
 {
 	background-color: #FFFF00;
 }
 
-#greentile
+.greentile
 {
 	background-color: #48FB0D;
 }
 
-#bluetile
+.bluetile
 {
 	background-color: #0000FF;
 }
 
-#purpletile
+.purpletile
 {
 	background-color: #B300B3;
 }
 
-#blacktile
+.blacktile
 {
 	background-color: black;
 }
 
-#pinktile
+.pinktile
 {
 	background-color: #FF0099;
 }
 
-#browntile
+.browntile
 {
 	background-color: #C98A4B;
 }

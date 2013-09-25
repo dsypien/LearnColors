@@ -52,13 +52,8 @@ $(document).ready(function(){
 			"height": "90%"
 		});
 		
-		$('#bigtile').css({
-			"background":this.parentNode.attributes.color.nodeValue
-		});
-		
-		$('.imagetile').css({
-			"background":this.parentNode.attributes.color.nodeValue
-		});
+		$('#bigtile').attr("class",this.parentNode.attributes.color.nodeValue + "tile");
+		$('.imagetile').attr("class", "imagetile " + this.parentNode.attributes.color.nodeValue + "tile");
 		
 		hideview('#mainview');
 		viewstack.push("#tileview");
