@@ -6,7 +6,7 @@ var colors = {
 	"blue":5,
 	"purple":6,
 	"black":7,
-	"white":8,
+	"pink":8,
 	"brown":9
 };
 
