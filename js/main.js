@@ -83,7 +83,7 @@ function getCurrentView() {
     if (size < 1) {
         return null;
     }
-
+    
     return viewstack[size - 1];
 }
 
@@ -119,7 +119,8 @@ $(document).ready(function () {
 
         $('#bigtile').attr("class", this.parentNode.attributes.color.nodeValue + "tile");
         $('.imagetile').attr("class", "imagetile " + this.parentNode.attributes.color.nodeValue + "tile");
-
+        $('.imagetile').css("background-image", "url(" +colors.red.images[0] +")")
+         
         hideview('#mainview');
         viewstack.push("#tileview");
         $('#previousview').css("visibility", "visible");

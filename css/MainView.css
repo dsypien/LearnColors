@@ -45,6 +45,9 @@
 	width:20%;
 	height:86%;
 	border-radius: 10px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .tilebutton
@@ -80,7 +83,7 @@ body
 #menubar
 {
 	height: 10%;
-	background: gray;
+	background: lightgreen;
 }
 
 #previousview
