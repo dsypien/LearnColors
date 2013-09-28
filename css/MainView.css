@@ -73,6 +73,9 @@
 body
 {
 	margin: 0px;
+    background-image: url('../images/color-circles-background.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 #main
@@ -88,8 +91,7 @@ body
 
 #previousview
 {
-	width: 32px;
-	height: 32px;
+	height: 85%;
 	border-radius: 25px;
 	margin-top: 4px;
 	margin-left: 15px;

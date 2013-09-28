@@ -113,13 +113,19 @@ $(document).ready(function () {
     });
 
     $('.tilebutton').click(function () {
+        var selectedColor = this.parentNode.attributes.color.nodeValue
+
         $('#tileview').css({
             "height": "90%"
         });
 
-        $('#bigtile').attr("class", this.parentNode.attributes.color.nodeValue + "tile");
-        $('.imagetile').attr("class", "imagetile " + this.parentNode.attributes.color.nodeValue + "tile");
-        $('.imagetile').css("background-image", "url(" +colors.red.images[0] +")")
+        $('#bigtile').attr("class", selectedColor + "tile");
+        $('.imagetile').attr("class", "imagetile " + selectedColor + "tile");
+        
+
+        for (i = 0; i < 4; i++) {
+            $('#imagetile' + i).css("background-image", "url(" + colors[selectedColor].images[i] + ")")
+        }
          
         hideview('#mainview');
         viewstack.push("#tileview");
