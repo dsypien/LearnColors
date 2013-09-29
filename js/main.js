@@ -93,6 +93,7 @@ $(document).ready(function () {
     }, 1000);
 
     viewstack.push("#mainview");
+    $('.imagetile').draggable();
 
     $('#previousview').click(function () {
         var curview = viewstack.pop();
@@ -120,7 +121,7 @@ $(document).ready(function () {
         });
 
         $('#bigtile').attr("class", selectedColor + "tile");
-        $('.imagetile').attr("class", "imagetile " + selectedColor + "tile");
+      //  $('.imagetile').attr("class", "imagetile " + selectedColor + "tile");
         
 
         for (i = 0; i < 4; i++) {
