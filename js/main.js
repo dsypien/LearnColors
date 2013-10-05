@@ -1,76 +1,76 @@
 var colors = {
     "red": {
-        "images": ["images/red/apple.png"
-                    , "images/red/cherry.png"
-                    , "images/red/pepper.png"
-                    , "images/red/raspberry.png"
-                    , "images/red/tomato.png"
-                    , "images/red/tomatoe.png"
-                    , "images/red/watermellon.png"
+        "images": ["images/red/apple"
+                    , "images/red/cherry"
+                    , "images/red/pepper"
+                    , "images/red/raspberry"
+                    , "images/red/tomato"
+                    , "images/red/tomatoe"
+                    , "images/red/watermellon"
         ]
     },
     "orange": {
-        "images": ["images/orange/apricot.png"
-                    , "images/orange/carrots.png"
-                    , "images/orange/orange.png"
-                    , "images/orange/pie.png"
+        "images": ["images/orange/apricot"
+                    , "images/orange/carrots"
+                    , "images/orange/orange"
+                    , "images/orange/pie"
         ]
     },
     "yellow": {
-        "images": ["images/yellow/banana.png"
-                    , "images/yellow/bee.png"
-                    , "images/yellow/cheese.png"
-                    , "images/yellow/cheese2.png"
-                    , "images/yellow/fish.png"
-                    , "images/yellow/lemon.png"
-                    , "images/yellow/sun.png"
+        "images": ["images/yellow/banana"
+                    , "images/yellow/bee"
+                    , "images/yellow/cheese"
+                    , "images/yellow/cheese2"
+                    , "images/yellow/fish"
+                    , "images/yellow/lemon"
+                    , "images/yellow/sun"
         ]
     },
     "green": {
-        "images": ["images/green/candy.png"
-                    , "images/green/fish.png"
-                    , "images/green/frog.png"
-                    , "images/green/leaf.png"
-                    , "images/green/olive.png"
-                    , "images/green/pear.png"
-                    , "images/green/snake.png"
-                    , "images/green/soybeans.png"
-                    , "images/green/turtle.png"
+        "images": ["images/green/candy"
+                    , "images/green/fish"
+                    , "images/green/frog"
+                    , "images/green/leaf"
+                    , "images/green/olive"
+                    , "images/green/pear"
+                    , "images/green/snake"
+                    , "images/green/soybeans"
+                    , "images/green/turtle"
         ]
     },
     "blue": {
-        "images": ["images/blue/blue.png"
-                    , "images/blue/elephant.png"
+        "images": ["images/blue/blue"
+                    , "images/blue/elephant"
         ]
     },
     "purple": {
-        "images": ["images/purple/grapes.png"
-                    , "images/purple/ice-cream.png"
-                    , "images/purple/onion.png"
+        "images": ["images/purple/grapes"
+                    , "images/purple/ice-cream"
+                    , "images/purple/onion"
         ]
     },
     "black": {
-        "images": ["images/black/camera.png"
-                    , "images/black/cat.png"
-                    , "images/black/computer.png"
-                    , "images/black/microphone.png"
-                    , "images/black/tv.png"
-                    , "images/black/tv2.png"
+        "images": ["images/black/camera"
+                    , "images/black/cat"
+                    , "images/black/computer"
+                    , "images/black/microphone"
+                    , "images/black/tv"
+                    , "images/black/tv2"
         ]
     },
     "pink": {
-        "images": ["images/pink/flower.png"
-                    , "images/pink/pencil.png"
-                    , "images/pink/pinkbow.png"
-                    , "images/pink/rabbit.png"
+        "images": ["images/pink/flower"
+                    , "images/pink/pencil"
+                    , "images/pink/pinkbow"
+                    , "images/pink/rabbit"
         ]
     },
     "brown": {
-        "images": ["images/brown/cake.png"
-                    , "images/brown/chocolate.png"
-                    , "images/brown/cookie.png"
-                    , "images/brown/dog.png"
-                    , "images/brown/hamster.png"
+        "images": ["images/brown/cake"
+                    , "images/brown/chocolate"
+                    , "images/brown/cookie"
+                    , "images/brown/dog"
+                    , "images/brown/hamster"
         ]
     }
 };
@@ -93,7 +93,7 @@ $(document).ready(function () {
     }, 1000);
 
     viewstack.push("#mainview");
-    $('.imagetile').draggable();
+    $('.imagetile').draggable({ revert: "invalid" });
 
     $('#previousview').click(function () {
         var curview = viewstack.pop();
@@ -103,6 +103,7 @@ $(document).ready(function () {
             "height": "90%"
         }, 1000, function () {
             $(curview).css("height", 0);
+            $('.cutoutimage').css("visibility", "hidden");
         }
 		);
 
@@ -120,25 +121,38 @@ $(document).ready(function () {
             "height": "90%"
         });
 
-        $('#bigtile').attr("class", selectedColor + "tile");
-      //  $('.imagetile').attr("class", "imagetile " + selectedColor + "tile");
-        
+        $('#bigtile').attr("class", selectedColor + "tile");        
 
         for (i = 0; i < 4; i++) {
-            $('#imagetile' + i).css("background-image", "url(" + colors[selectedColor].images[i] + ")")
+            $('#imagetile' + i).css("background-image", "url(" + colors[selectedColor].images[i] + ".png)");
+            $('#cutoutimage' + i).css("background-image", "url(" + colors[selectedColor].images[i] + "_deColorD.png)");
         }
          
         hideview('#mainview');
         viewstack.push("#tileview");
         $('#previousview').css("visibility", "visible");
+        $('.cutoutimage').css("visibility", "visible");
     });
 });
+
+function getImageTileSize() {
+    var size = {
+        width : $('.imagetile').width(),
+        height : $('.imagetile').height()
+    };
+   
+    return size;
+}
 
 function hideview(viewname) {
     $(viewname).animate({
         "height": "0"
     }, 500, function () {
         $(viewname).hide();
-    }
-	);
+        var size = getImageTileSize();
+        $('.cutoutimage').css({
+            height: size.height,
+            width: size.width
+        });
+    });
 }
