@@ -36,6 +36,43 @@
 	color: white;
 }
 
+.cutoutimage 
+{
+    position:absolute;
+    width:100px;
+    height:100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#cutoutimage0
+{
+    top:10px;
+    left:10px;
+    background-position:left;
+}
+
+#cutoutimage1
+{
+    right:10px;
+    top:10px;
+    background-position: right;
+}
+
+#cutoutimage2
+{
+    left:10px;
+    bottom:10px;
+    background-position: left;
+}
+
+#cutoutimage3
+{
+    right:10px;
+    bottom:10px;
+    background-position:right;
+}
+
 .imagetile
 {
 	float:left;
@@ -73,6 +110,13 @@
 body
 {
 	margin: 0px;
+    background-color: khaki;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000; 
+    vertical-align:middle;
 }
 
 #main
