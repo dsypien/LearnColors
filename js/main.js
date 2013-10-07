@@ -94,6 +94,12 @@ $(document).ready(function () {
 
     viewstack.push("#mainview");
     $('.imagetile').draggable({ revert: "invalid" });
+    $('.cutoutimage').droppable({
+        accept: ".imagetile",
+        drop: function (event, ui) {
+           //
+        }
+    });
 
     $('#previousview').click(function () {
         var curview = viewstack.pop();
