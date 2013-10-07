@@ -93,7 +93,15 @@ $(document).ready(function () {
     }, 1000);
 
     viewstack.push("#mainview");
-    $('.imagetile').draggable({ revert: "invalid" });
+    $('.imagetile').draggable({
+        revert: function (event, ui) {
+            $(this).data("uiDraggable").originalPosition = {
+                top: 0,
+                left: 0
+            }
+            return !event;
+        }
+    });
     $('.cutoutimage').droppable({
         accept: ".imagetile",
         drop: function (event, ui) {
