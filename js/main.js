@@ -102,12 +102,17 @@ $(document).ready(function () {
             return !event;
         }
     });
-    $('.cutoutimage').droppable({
-        accept: ".imagetile",
-        drop: function (event, ui) {
-           //
-        }
-    });
+
+    for (i = 0; i < 4; i++) {
+        $('#cutoutimage' + i).droppable({
+            accept: "#imagetile" +  i,
+            drop: function (event, ui) {
+                $(ui.draggable).fadeOut(function () {
+                    ui.draggable.appendTo('#bigtile');
+                });
+            }
+        });
+    }
 
     $('#previousview').click(function () {
         var curview = viewstack.pop();
