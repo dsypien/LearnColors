@@ -45,28 +45,30 @@
     background-repeat: no-repeat;
 }
 
-#cutoutimage0
+.topleftimg
 {
     top:10px;
     left:10px;
     background-position:left;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
-#cutoutimage1
+.toprightimg
 {
     right:10px;
     top:10px;
     background-position: right;
 }
 
-#cutoutimage2
+.bottomleftimg
 {
     left:10px;
     bottom:10px;
     background-position: left;
 }
 
-#cutoutimage3
+.bottomrightimg
 {
     right:10px;
     bottom:10px;
