@@ -1,3 +1,4 @@
+var selectedColor = null;
 var colors = {
     "red": {
         "images": ["images/red/apple"
@@ -108,7 +109,9 @@ $(document).ready(function () {
             accept: "#imagetile" +  i,
             drop: function (event, ui) {
                 $(ui.draggable).fadeOut(function () {
-                    ui.draggable.appendTo('#bigtile');
+                    ui.draggable.removeClass("imagetile");
+                    var num = ui.draggable.attr("num");
+                    $('#cutoutimage' + num).css("background-image", "url(" + colors[selectedColor].images[num] + ".png)")
                 });
             }
         });
@@ -134,7 +137,7 @@ $(document).ready(function () {
     });
 
     $('.tilebutton').click(function () {
-        var selectedColor = this.parentNode.attributes.color.nodeValue
+        selectedColor = this.parentNode.attributes.color.nodeValue
 
         $('#tileview').css({
             "height": "90%"
