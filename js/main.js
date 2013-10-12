@@ -95,6 +95,7 @@ $(document).ready(function () {
 
     viewstack.push("#mainview");
     $('.imagetile').draggable({
+        containment: "window" ,
         revert: function (event, ui) {
             $(this).data("uiDraggable").originalPosition = {
                 top: 0,
