@@ -99,10 +99,14 @@ $(document).ready(function () {
         $('#cutoutimage' + i).droppable({
             accept: "#imagetile" +  i,
             drop: function (event, ui) {
-                $(ui.draggable).fadeOut(function () {
-                    ui.draggable.removeClass("imagetile");
+                $(ui.draggable).animate({
+                    opacity: 0
+                }, 300, function () {
                     var num = ui.draggable.attr("num");
-                    $('#cutoutimage' + num).css("background-image", "url(" + colors[selectedColor].images[num] + ".png)")
+                    $('#cutoutimage' + num).css("opacity", "0");
+                    $('#cutoutimage' + num)
+                        .css("background-image", "url(" + colors[selectedColor].images[num] + ".png)")
+                        .animate({ opacity: 1 });
                 });
             }
         });
@@ -113,7 +117,8 @@ $(document).ready(function () {
 
         $(getCurrentView()).show();
         $(getCurrentView()).animate({
-            "height": "90%"
+            "height": "90%",
+            "opacity": "100"
         }, 1000, function () {
             $(curview).css("height", 0);
             $('.cutoutimage').css("visibility", "hidden");
@@ -184,7 +189,8 @@ function getImageTileSize() {
 
 function hideview(viewname) {
     $(viewname).animate({
-        "height": "0"
+        "height": "0",
+        "opacity": "0"
     }, 500, function () {
         $(viewname).hide();
         var size = getImageTileSize();
