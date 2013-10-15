@@ -1,5 +1,6 @@
 .cell
 {
+    display: table;
 	position: relative;
 	width: 33%;
 	height: 100%;
@@ -89,7 +90,7 @@
     background-position: center;
 }
 
-.tilebutton
+.cell .tilebutton
 {
 	position: absolute;
 	top: 7%;
@@ -100,13 +101,17 @@
 	border-style:solid;
 	border-width:1px;
 	color: white;
-	
+	display: table-cell;
 	text-align: center;
 	font-family: Segoe, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
 	font-size: 30px;
 	font-weight: 100;
 	vertical-align: middle;
-	<!--text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px ;-->
+}
+
+.tilebutton p 
+{
+    padding-top:14%;
 }
 
 body
