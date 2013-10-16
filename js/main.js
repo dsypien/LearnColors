@@ -134,6 +134,7 @@ $(document).ready(function () {
 
     $('.tilebutton').click(function () {
         selectedColor = this.parentNode.attributes.color.nodeValue
+        $('#bittilelabel').html(selectedColor);
         generateImageTiles();
 
         $('#tileview').css({
