@@ -134,7 +134,9 @@ $(document).ready(function () {
 
     $('.tilebutton').click(function () {
         selectedColor = this.parentNode.attributes.color.nodeValue
-        $('#bittilelabel').html(selectedColor);
+
+        var tileLabelString = capitalizeFirstChar(selectedColor);
+        $('#bittilelabel').html(tileLabelString);
         generateImageTiles();
 
         $('#tileview').css({
@@ -154,6 +156,12 @@ $(document).ready(function () {
         $('.cutoutimage').css("visibility", "visible");
     });
 });
+
+function capitalizeFirstChar(word) {
+    return word.toLowerCase().replace(/\b[a-z]/g, function (char) {
+        return char.toUpperCase();
+    });
+}
 
 function generateImageTiles() {
     // Clear all images in tile column2
