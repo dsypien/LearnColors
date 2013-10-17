@@ -112,7 +112,7 @@ $(document).ready(function () {
         });
     }
 
-    $('#previousview').click(function () {
+    $('#imgprevious').click(function () {
         var curview = viewstack.pop();
 
         $(getCurrentView()).show();
@@ -126,9 +126,9 @@ $(document).ready(function () {
 		);
 
         // If the current view is the only view on the stack, there is
-        // no previous view.  Hide the previousview button
+        // no previous view.  Hide the imgprevious button
         if (viewstack.length == 1) {
-            $('#previousview').css("visibility", "hidden");
+            $('#imgprevious').css("visibility", "hidden");
         }
     });
 
@@ -152,7 +152,7 @@ $(document).ready(function () {
          
         hideview('#mainview');
         viewstack.push("#tileview");
-        $('#previousview').css("visibility", "visible");
+        $('#imgprevious').css("visibility", "visible");
         $('.cutoutimage').css("visibility", "visible");
     });
 });
