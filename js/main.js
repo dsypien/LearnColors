@@ -136,7 +136,7 @@ $(document).ready(function () {
         selectedColor = this.parentNode.attributes.color.nodeValue
 
         var tileLabelString = capitalizeFirstChar(selectedColor);
-        $('#bittilelabel').html(tileLabelString);
+        $('#bigtilelabel').html(tileLabelString);
         generateImageTiles();
 
         $('#tileview').css({
