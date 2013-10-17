@@ -1,0 +1,28 @@
+body
+{
+	margin: 0px;
+    background-color: khaki;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000; 
+    vertical-align:middle;
+	font-family: Segoe, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+	font-weight: 100;
+}
+
+#menubar
+{
+	height: 10%;
+	background: lightgreen;
+}
+
+#imgprevious
+{
+	height: 85%;
+	border-radius: 25px;
+	margin-top: 4px;
+	margin-left: 15px;
+	visibility: hidden;
+}
