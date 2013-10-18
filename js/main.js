@@ -132,6 +132,16 @@ $(document).ready(function () {
         }
     });
 
+    function shuffle(array) {
+        for (i = array.length - 1; i > 0; i--) {
+            var temp = array[i];
+            var random = Math.floor(Math.random() * (i + 1));
+
+            array[i] = array[random];
+            array[random] = temp;
+        }
+    }
+
     $('.tilebutton').click(function () {
         selectedColor = this.parentNode.attributes.color.nodeValue
 
