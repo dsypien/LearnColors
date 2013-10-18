@@ -140,6 +140,8 @@ $(document).ready(function () {
             array[i] = array[random];
             array[random] = temp;
         }
+
+        return array;
     }
 
     $('.tilebutton').click(function () {
@@ -156,8 +158,19 @@ $(document).ready(function () {
         $('#bigtile').attr("class", selectedColor + "tile");        
 
         for (i = 0; i < 4; i++) {
-            $('#imagetile' + i).css("background-image", "url(" + colors[selectedColor].images[i] + ".png)");
             $('#cutoutimage' + i).css("background-image", "url(" + colors[selectedColor].images[i] + "_deColorD.png)");
+        }
+
+        var imageAry = new Array();
+        for (i = 0; i < 4; i++) {
+            imageAry[i] = colors[selectedColor].images[i] + ".png";
+        }
+
+        imageAry = shuffle(imageAry);
+
+        for (i = 0; i < 4; i++) {
+            var image = "url(" + imageAry[i] + ")"
+            $('#imagetile' + i).css("background-image", image);
         }
          
         hideview('#mainview');
