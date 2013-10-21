@@ -132,18 +132,6 @@ $(document).ready(function () {
         }
     });
 
-    function shuffle(array) {
-        for (i = array.length - 1; i > 0; i--) {
-            var temp = array[i];
-            var random = Math.floor(Math.random() * (i + 1));
-
-            array[i] = array[random];
-            array[random] = temp;
-        }
-
-        return array;
-    }
-
     $('.tilebutton').click(function () {
         selectedColor = this.parentNode.attributes.color.nodeValue
 
@@ -163,14 +151,17 @@ $(document).ready(function () {
 
         var imageAry = new Array();
         for (i = 0; i < 4; i++) {
-            imageAry[i] = colors[selectedColor].images[i] + ".png";
+            imageAry[i] = {
+                "filename": colors[selectedColor].images[i] + ".png",
+                "index": i
+            };
         }
 
         imageAry = shuffle(imageAry);
 
         for (i = 0; i < 4; i++) {
-            var image = "url(" + imageAry[i] + ")"
-            $('#imagetile' + i).css("background-image", image);
+            var image = "url(" + imageAry[i].filename + ")"
+            $('#imagetile' + imageAry[i].index).css("background-image", image);
         }
          
         hideview('#mainview');
