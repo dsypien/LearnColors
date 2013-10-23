@@ -42,12 +42,15 @@ var colors = {
     "blue": {
         "images": ["images/blue/blue"
                     , "images/blue/elephant"
+                    , "images/blue/bird"
+                    , "images/blue/butterfly"
         ]
     },
     "purple": {
         "images": ["images/purple/grapes"
                     , "images/purple/ice-cream"
                     , "images/purple/onion"
+                    , "images/purple/star"
         ]
     },
     "black": {
@@ -72,6 +75,7 @@ var colors = {
                     , "images/brown/cookie"
                     , "images/brown/dog"
                     , "images/brown/hamster"
+                    , "images/brown/tedy
         ]
     }
 };
