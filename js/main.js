@@ -75,7 +75,7 @@ var colors = {
                     , "images/brown/cookie"
                     , "images/brown/dog"
                     , "images/brown/hamster"
-                    , "images/brown/tedy
+                    , "images/brown/tedy"
         ]
     }
 };
