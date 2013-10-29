@@ -99,30 +99,13 @@ $(document).ready(function () {
 
     viewstack.push("#mainview");
 
-    for (i = 0; i < 4; i++) {
-        $('#cutoutimage' + i).droppable({
-            accept: "#imagetile" +  i,
-            drop: function (event, ui) {
-                $(ui.draggable).animate({
-                    opacity: 0
-                }, 300, function () {
-                    var num = ui.draggable.attr("num");
-                    $('#cutoutimage' + num).css("opacity", "0");
-                    $('#cutoutimage' + num)
-                        .css("background-image", "url(" + colors[selectedColor].images[num] + ".png)")
-                        .animate({ opacity: 1 });
-                });
-            }
-        });
-    }
-
     $('#imgprevious').click(function () {
         var curview = viewstack.pop();
 
         $(getCurrentView()).show();
         $(getCurrentView()).animate({
             "height": "90%",
-            "opacity": "100"
+            "opacity": "1"
         }, 1000, function () {
             $(curview).css("height", 0);
             $('.cutoutimage').css("visibility", "hidden");
@@ -148,6 +131,23 @@ $(document).ready(function () {
         });
 
         $('#bigtile').attr("class", selectedColor + "tile");        
+
+       for (i = 0; i < 4; i++) {
+            $('#cutoutimage' + i).droppable({
+                accept: "#imagetile" +  i,
+                drop: function (event, ui) {
+                    $(ui.draggable).animate({
+                        opacity: 0
+                    }, 300, function () {
+                        var num = ui.draggable.attr("num");
+                        $('#cutoutimage' + num).css("opacity", "0");
+                        $('#cutoutimage' + num)
+                            .css("background-image", "url(" + colors[selectedColor].images[num] + ".png)")
+                            .animate({ opacity: 1 });
+                    });
+                }
+            });
+        }
 
         for (i = 0; i < 4; i++) {
             $('#cutoutimage' + i).css("background-image", "url(" + colors[selectedColor].images[i] + "_deColorD.png)");
