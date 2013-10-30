@@ -155,8 +155,9 @@ $(document).ready(function () {
         }
 
         for (i = 0; i < 4; i++) {
-            $('#cutoutimage' + i).droppable({
-                accept: "#imagetile" +  imageAry.indexOf(colors[selectedColor].images[i]),
+            var obj = $.grep(imageAry, function(e){ return e.filename ==  imageAry[i].filename; })
+            $('#cutoutimage' + obj[0].index).droppable({
+                accept: "#imagetile" + i ,
                 drop: function (event, ui) {
                     $(ui.draggable).animate({
                         opacity: 0
