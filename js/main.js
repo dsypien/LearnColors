@@ -132,9 +132,31 @@ $(document).ready(function () {
 
         $('#bigtile').attr("class", selectedColor + "tile");        
 
-       for (i = 0; i < 4; i++) {
+        // Set the background of each cutout image object
+        for (i = 0; i < 4; i++) {
+            $('#cutoutimage' + i).css("background-image", "url(" + colors[selectedColor].images[i] + "_deColorD.png)");
+        }
+
+        // Create an aray of image file names
+        var imageAry = new Array();
+        for (i = 0; i < 4; i++) {
+            imageAry[i] = {
+                "filename": colors[selectedColor].images[i] ,
+                "index" : i
+            };
+        }
+
+        imageAry = shuffle(imageAry);
+
+        for (i = 0; i < 4; i++) {
+            var obj = $.grep(imageAry, function(e){ return e.filename ==  imageAry[i].filename; })
+            var image = "url(" + imageAry[obj[0].index].filename + ".png)"
+            $('#imagetile' + obj[0].index).css("background-image", image);
+        }
+
+        for (i = 0; i < 4; i++) {
             $('#cutoutimage' + i).droppable({
-                accept: "#imagetile" +  i,
+                accept: "#imagetile" +  imageAry.indexOf(colors[selectedColor].images[i]),
                 drop: function (event, ui) {
                     $(ui.draggable).animate({
                         opacity: 0
@@ -147,25 +169,6 @@ $(document).ready(function () {
                     });
                 }
             });
-        }
-
-        for (i = 0; i < 4; i++) {
-            $('#cutoutimage' + i).css("background-image", "url(" + colors[selectedColor].images[i] + "_deColorD.png)");
-        }
-
-        var imageAry = new Array();
-        for (i = 0; i < 4; i++) {
-            imageAry[i] = {
-                "filename": colors[selectedColor].images[i] + ".png",
-                "index": i
-            };
-        }
-
-        imageAry = shuffle(imageAry);
-
-        for (i = 0; i < 4; i++) {
-            var image = "url(" + imageAry[i].filename + ")"
-            $('#imagetile' + imageAry[i].index).css("background-image", image);
         }
          
         hideview('#mainview');
