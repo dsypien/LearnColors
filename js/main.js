@@ -81,6 +81,7 @@ var colors = {
 };
 
 var viewstack = new Array();
+var imageToCutout = new Array();
 
 function getCurrentView() {
     var size = viewstack.length;
@@ -135,6 +136,7 @@ $(document).ready(function () {
         // Set the background of each cutout image object
         for (i = 0; i < 4; i++) {
             $('#cutoutimage' + i).css("background-image", "url(" + colors[selectedColor].images[i] + "_deColorD.png)");
+            $('#cutoutimage' + i).attr("num", i)
         }
 
         // Create an aray of image file names
@@ -146,16 +148,21 @@ $(document).ready(function () {
             };
         }
 
+        //shuffle images
         imageAry = shuffle(imageAry);
 
         for (i = 0; i < 4; i++) {
             var obj = $.grep(imageAry, function(e){ return e.filename ==  imageAry[i].filename; })
             var image = "url(" + imageAry[obj[0].index].filename + ".png)"
             $('#imagetile' + obj[0].index).css("background-image", image);
+            $('#imagetile' + obj[0].index).attr("num", obj[0].index);
+            var obj = $.grep(imageAry, function(e){ return e.filename ==  imageAry[i].filename; })
+            imageToCutout[obj[0].index]= i;
         }
 
         for (i = 0; i < 4; i++) {
             var obj = $.grep(imageAry, function(e){ return e.filename ==  imageAry[i].filename; })
+
             $('#cutoutimage' + obj[0].index).droppable({
                 accept: "#imagetile" + i ,
                 drop: function (event, ui) {
@@ -163,8 +170,11 @@ $(document).ready(function () {
                         opacity: 0
                     }, 300, function () {
                         var num = ui.draggable.attr("num");
-                        $('#cutoutimage' + num).css("opacity", "0");
-                        $('#cutoutimage' + num)
+
+                        var cutoutindex = imageToCutout[ui.draggable.attr("num")];
+                        console.log(cutoutindex);
+                        $('#cutoutimage' + cutoutindex).css("opacity", "0");
+                        $('#cutoutimage' +cutoutindex)
                             .css("background-image", "url(" + colors[selectedColor].images[num] + ".png)")
                             .animate({ opacity: 1 });
                     });
