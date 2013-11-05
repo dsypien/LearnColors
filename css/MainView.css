@@ -47,13 +47,30 @@
 {
 	background-color: #FF2626;
 }
+
+#redcell
+{
+	background-color: red;
+}
+
 .orangetile
 {
 	background-color: #FF800D;
 }
+
+#orangecell
+{
+	background-color: orange;
+}
+
 .yellowtile
 {
 	background-color: #FFFF00;
+}
+
+#yellowcell
+{
+	background-color: yellow;
 }
 
 .greentile
@@ -61,9 +78,19 @@
 	background-color: #48FB0D;
 }
 
+#greencell
+{
+	background-color: green;
+}
+
 .bluetile
 {
 	background-color: #0000FF;
+}
+
+#bluecell
+{
+	background-color: blue;
 }
 
 .purpletile
@@ -71,7 +98,17 @@
 	background-color: #B300B3;
 }
 
+#purplecell
+{
+	background-color: purple;
+}
+
 .blacktile
+{
+	background-color: black;
+}
+
+#blackcell
 {
 	background-color: black;
 }
@@ -81,9 +118,19 @@
 	background-color: #FF0099;
 }
 
+#pinkcell
+{
+	background-color: pink;
+}
+
 .browntile
 {
 	background-color: #C98A4B;
+}
+
+#browncell
+{
+	background-color: brown;
 }
 
 #tileview
