@@ -1,5 +1,6 @@
 body
 {
+	overflow: hidden;
 	margin: 0px;
     background-color: khaki;
     text-shadow:
@@ -12,14 +13,22 @@ body
 	font-weight: 100;
 }
 
+#splashscreen
+{
+	height: 100%;
+	backgound-color: pink;
+}
+
 #menubar
 {
+	visibility: hidden;
 	height: 10%;
 	background: lightgreen;
 }
 
 #imgprevious
 {
+	visibility: hidden;
 	height: 85%;
 	border-radius: 25px;
 	margin-top: 4px;
