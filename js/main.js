@@ -3,7 +3,15 @@ var colors = new Colors();
 
 var imageToCutout = new Array();
 
+function hideSplashScreen(milliseconds){
+    setTimeout( function(){
+     $('#splashscreen').remove();
+    }, milliseconds);
+}
+
 $(document).ready(function () {
+    hideSplashScreen(2500);
+
     $('#main').animate({
         opacity: 1.0
     }, 1000);
