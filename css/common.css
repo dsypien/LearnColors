@@ -21,9 +21,8 @@ body
 
 #menubar
 {
-	visibility: hidden;
 	height: 10%;
-	background: lightgreen;
+	background-color: lightgreen;
 }
 
 #imgprevious
