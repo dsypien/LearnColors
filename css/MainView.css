@@ -12,6 +12,28 @@
 	height: 33%;
 }
 
+.mainlabel
+{
+	width: 100%;
+	text-align: center;
+	position: absolute;
+	bottom: 0px;
+}
+
+.cell .mainlabel
+{
+	color: white;
+	text-align: center;
+	font-family: Segoe, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+	font-size: 25px;
+	font-weight: 100;
+}
+
+.cell .mainlabel p
+{
+	margin-bottom: 10px;
+	padding-bottom: 0px;
+}
 
 .cell .tilebutton
 {
@@ -26,10 +48,6 @@
 	color: white;
 	display: table-cell;
     vertical-align: middle;
-	text-align: center;
-	font-family: Segoe, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-	font-size: 25px;
-	font-weight: 100;
 }
 
 .tilebutton p 

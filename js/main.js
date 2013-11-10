@@ -10,7 +10,7 @@ function hideSplashScreen(milliseconds){
 }
 
 $(document).ready(function () {
-    hideSplashScreen(2500);
+    hideSplashScreen(500);
 
     $('#main').animate({
         opacity: 1.0
