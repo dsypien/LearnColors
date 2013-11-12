@@ -89,8 +89,8 @@ $(document).ready(function () {
                     }, 300, function () {
                         var num = ui.draggable.attr("num");
 
-                        var cutoutindex = imageToCutout[ui.draggable.attr("num")];
-                        console.log(cutoutindex);
+                        var cutoutindex = imageToCutout.indexOf(parseInt(num));
+                        console.log("num: "+ num + "  cutoutindex: " + cutoutindex);
 
                         $('#cutoutimage' + cutoutindex).css("opacity", "0");
                         $('#cutoutimage' + cutoutindex)
