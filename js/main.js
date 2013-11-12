@@ -87,14 +87,14 @@ $(document).ready(function () {
                     $(ui.draggable).animate({
                         opacity: 0
                     }, 300, function () {
-                        var num = ui.draggable.attr("num");
+                        var num = parseInt(ui.draggable.attr("num"));
 
-                        var cutoutindex = imageToCutout.indexOf(parseInt(num));
+                        var cutoutindex = parseInt(imageToCutout.indexOf(num));
                         console.log("num: "+ num + "  cutoutindex: " + cutoutindex);
 
                         $('#cutoutimage' + cutoutindex).css("opacity", "0");
                         $('#cutoutimage' + cutoutindex)
-                            .css("background-image", "url(" + colors.data[selectedColor].images[num] + ".png)")
+                            .css("background-image", "url(" + colors.data[selectedColor].images[cutoutindex] + ".png)")
                             .animate({ opacity: 1 });
                     });
                 }
