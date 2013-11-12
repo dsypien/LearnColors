@@ -63,7 +63,8 @@
 
 .redtile
 {
-	background-color: #FF2626;
+	background-color: white;
+	opacity: .75;
 }
 
 #redcell
@@ -73,82 +74,70 @@
 
 .orangetile
 {
-	background-color: #FF800D;
+	
 }
 
 #orangecell
 {
-	background-color: orange;
+	background-color: #FF800D;
 }
 
 .yellowtile
 {
-	background-color: #FFFF00;
+	
 }
 
 #yellowcell
 {
-	background-color: yellow;
+	background-color: #FFFF00;
 }
 
 .greentile
 {
-	background-color: #48FB0D;
+	
 }
 
 #greencell
 {
-	background-color: green;
+	background-color: #48FB0D;
 }
 
 .bluetile
 {
-	background-color: #0000FF;
+	
 }
 
 #bluecell
 {
-	background-color: blue;
+	background-color:  #0000FF;
 }
 
 .purpletile
 {
-	background-color: #B300B3;
+	
 }
 
 #purplecell
 {
-	background-color: purple;
+	background-color: #B300B3;
 }
 
-.blacktile
-{
-	background-color: black;
-}
 
 #blackcell
 {
 	background-color: black;
 }
 
-.pinktile
+#pinkcell
 {
 	background-color: #FF0099;
 }
 
-#pinkcell
-{
-	background-color: pink;
-}
 
-.browntile
-{
-	background-color: #C98A4B;
-}
 
 #browncell
 {
-	background-color: brown;
+	background-color: #C98A4B;
 }
 
 #tileview
