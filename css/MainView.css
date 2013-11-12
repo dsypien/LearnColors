@@ -48,6 +48,8 @@
 	color: white;
 	display: table-cell;
     vertical-align: middle;
+    background-color: white;
+	opacity: .55;
 }
 
 .tilebutton p 
@@ -63,79 +65,47 @@
 
 .redtile
 {
-	background-color: white;
-	opacity: .75;
-}
-
-#redcell
-{
 	background-color: red;
 }
 
 .orangetile
 {
-	
-}
-
-#orangecell
-{
 	background-color: #FF800D;
 }
 
-.yellowtile
-{
-	
-}
 
-#yellowcell
+.yellowtile
 {
 	background-color: #FFFF00;
 }
 
 .greentile
 {
-	
-}
-
-#greencell
-{
 	background-color: #48FB0D;
 }
 
 .bluetile
-{
-	
-}
-
-#bluecell
 {
 	background-color:  #0000FF;
 }
 
 .purpletile
 {
-	
-}
-
-#purplecell
-{
 	background-color: #B300B3;
 }
 
 
-#blackcell
+.blacktile
 {
 	background-color: black;
 }
 
-#pinkcell
+.pinktile
 {
 	background-color: #FF0099;
 }
 
-
-
-#browncell
+.browntile
 {
 	background-color: #C98A4B;
 }
