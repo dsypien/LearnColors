@@ -9,9 +9,7 @@ function hideSplashScreen(milliseconds){
     }, milliseconds);
 }
 
-$(document).ready(function () {
-    hideSplashScreen(500);
-
+function populateOpaqueImages(){
     var tileIndex = 0;
     for(var color in colors.data)
     {
@@ -20,6 +18,11 @@ $(document).ready(function () {
         $('#'+color+"cell").children(".tilebutton").css("background-image","url("+ backgroundImg + "_deColorD.png)");
         tileIndex++;
     }
+}
+
+$(document).ready(function () {
+    populateOpaqueImages();
+    hideSplashScreen(500);
 
     $('#main').animate({
         opacity: 1.0
@@ -47,8 +50,8 @@ $(document).ready(function () {
         }
     });
 
-    $('.tilebutton').click(function () {
-        selectedColor = this.parentNode.attributes.color.nodeValue
+    $('.cell').click(function () {
+        selectedColor = this.attributes.color.nodeValue
 
         var tileLabelString = capitalizeFirstChar(selectedColor);
         $('#bigtilelabel').html(tileLabelString);
