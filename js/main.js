@@ -12,6 +12,15 @@ function hideSplashScreen(milliseconds){
 $(document).ready(function () {
     hideSplashScreen(500);
 
+    var tileIndex = 0;
+    for(var color in colors.data)
+    {
+        var backgroundImg = colors.data[color].images[0];
+
+        $('#'+color+"cell").children(".tilebutton").css("background-image","url("+ backgroundImg + "_deColorD.png)");
+        tileIndex++;
+    }
+
     $('#main').animate({
         opacity: 1.0
     }, 1000);
