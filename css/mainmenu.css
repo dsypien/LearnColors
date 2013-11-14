@@ -1,14 +1,27 @@
+#mainmenu
+{
+	height:100%;
+}
+
 #maintitle
 {
-	
+	height: 40%;
+	width: 100%;
+	background-color: orange;
 }
 
 #learn
 {
-	
+	height: 60%;
+	width: 50%;
+	background-color: green;
+	float: left;
 }
 
 #play
 {
-	
+	height: 60%;
+	width: 50%;	
+	background-color:purple;
+	float:left;
 }
