@@ -50,6 +50,11 @@ $(document).ready(function () {
         }
     });
 
+    $('#play').click(function(){
+        hideview('#mainmenu');
+        viewstack.push("#mainmenu");
+    });
+
     $('.cell').click(function () {
         selectedColor = this.attributes.color.nodeValue
 
