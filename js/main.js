@@ -28,26 +28,20 @@ $(document).ready(function () {
         opacity: 1.0
     }, 1000);
 
-    viewstack.push("#mainview");
-
     $('#imgprevious').click(function () {
         var curview = viewstack.pop();
 
-        $(getCurrentView()).show();
-        $(getCurrentView()).animate({
-            "height": "90%",
-            "opacity": "1"
-        }, 1000, function () {
-            $(curview).css("height", 0);
-            $('.cutoutimage').css("visibility", "hidden");
-        }
-		);
-
-        // If the current view is the only view on the stack, there is
-        // no previous view.  Hide the imgprevious button
-        if (viewstack.length == 1) {
-            $('#imgprevious').css("visibility", "hidden");
-        }
+        if(curview != null){
+            $(curview).show();
+            $(curview).animate({
+                "height": "90%",
+                "opacity": "1"
+            }, 1000, function () {
+               // $(curview).css("height", 0);
+               // $('.cutoutimage').css("visibility", "hidden");
+            }
+            );
+        }   
     });
 
     $('#play').click(function(){
@@ -118,9 +112,8 @@ $(document).ready(function () {
             });
         }
          
+        viewstack.push("#mainview");
         hideview('#mainview');
-        viewstack.push("#tileview");
-        $('#imgprevious').css("visibility", "visible");
         $('.cutoutimage').css("visibility", "visible");
     });
 });
