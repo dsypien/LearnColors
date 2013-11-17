@@ -19,11 +19,6 @@ body
 	backgound-color: pink;
 }
 
-#mainmenu
-{
-	height:100%;
-}
-
 #menubar
 {
 	height: 10%;
@@ -32,10 +27,8 @@ body
 
 #imgprevious
 {
-	visibility: hidden;
 	height: 85%;
 	border-radius: 25px;
 	margin-top: 4px;
 	margin-left: 15px;
-	visibility: hidden;
 }
