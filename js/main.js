@@ -20,8 +20,11 @@ function populateOpaqueImages(){
 }
 
 $(document).ready(function () {
+    $('.tlt').textillate();
     populateOpaqueImages();
-    hideSplashScreen(500);
+    hideSplashScreen(2000);
+
+    $('#learn').css("background-image","url(images/lightbulb.svg)");
 
     $('#imgprevious').click(function () {
        onPreviousClick();

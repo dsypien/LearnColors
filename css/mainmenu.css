@@ -10,6 +10,14 @@
 	background-color: orange;
 }
 
+.icon
+{
+	background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
 #learn
 {
 	height: 60%;
