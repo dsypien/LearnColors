@@ -10,12 +10,13 @@
 	background-color: orange;
 }
 
-.icon
+.menuicon
 {
 	background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-
+    height:75%;
+    bottom:0;
 }
 
 #learn
@@ -33,3 +34,4 @@
 	background-color:purple;
 	float:left;
 }
+

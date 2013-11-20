@@ -24,8 +24,8 @@ $(document).ready(function () {
     populateOpaqueImages();
     hideSplashScreen(2000);
 
-    $('#learn').css("background-image","url(images/learn.png)");
-    $('#play').css("background-image","url(images/play.png)");
+    $('#learnicon').css("background-image","url(images/learn.png)");
+    $('#playicon').css("background-image","url(images/play.png)");
 
     $('#imgprevious').click(function () {
        onPreviousClick();
