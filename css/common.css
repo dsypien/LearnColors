@@ -2,7 +2,6 @@ body
 {
 	overflow: hidden;
 	margin: 0px;
-    background-color: khaki;
     vertical-align:middle;
 	font-family: Segoe, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
 	font-weight: 100;
@@ -11,7 +10,7 @@ body
 #splashscreen
 {
 	height: 100%;
-	backgound-color: pink;
+	background-color: khaki;
 }
 
 #menubar

@@ -22,7 +22,7 @@ function populateOpaqueImages(){
 $(document).ready(function () {
     $('.tlt').textillate();
     populateOpaqueImages();
-    hideSplashScreen(2000);
+    hideSplashScreen(400);
 
     $('#learnicon').css("background-image","url(images/learn.png)");
     $('#playicon').css("background-image","url(images/play.png)");
