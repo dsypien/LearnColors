@@ -40,6 +40,13 @@ $(document).ready(function () {
         selectedColor = this.attributes.color.nodeValue;
         onCellClick();
     });
+
+     $('.flip').click(function(){
+        $(this).find('.card').addClass('flipped').mouseleave(function(){
+            $(this).removeClass('flipped');
+        });
+        return false;
+    });
 });
 
 function onPreviousClick(){
