@@ -5,7 +5,6 @@
   	-webkit-perspective: 800;
    	width: 100%;
     position: relative;
-    margin: 50px auto;
 }
 
 .flip .card.flipped 
