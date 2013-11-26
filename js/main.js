@@ -24,8 +24,8 @@ $(document).ready(function () {
     populateOpaqueImages();
     hideSplashScreen(400);
 
-    $('#learnicon').css("background-image","url(images/learn.png)");
-    $('#playicon').css("background-image","url(images/play.png)");
+    document.getElementById('learnicon').style.backgroundImage ="url(images/learn.png)";
+    document.getElementById('learnicon').style.backgroundImage ="url(images/play.png)";
 
     $('#imgprevious').click(function () {
        onPreviousClick();
@@ -79,7 +79,8 @@ function onCellClick(){
 
     // Set the background of each cutout image object
     for (i = 0; i < 4; i++) {
-        $('#cutoutimage' + i).css("background-image", "url(" + colors.data[selectedColor].images[i] + "_deColorD.png)");
+        document.getElementById('cutoutimage' + i).style.backgroundImage =
+            "url(" + colors.data[selectedColor].images[i] + "_deColorD.png)";
         $('#cutoutimage' + i).attr("num", i)
     }
 
@@ -88,7 +89,7 @@ function onCellClick(){
     for (i = 0; i < 4; i++) {
         imageAry[i] = {
             "filename": colors.data[selectedColor].images[i] ,
-            "index" : i
+            "index" : i =
         };
     }
 
@@ -97,8 +98,9 @@ function onCellClick(){
 
     for (i = 0; i < 4; i++) {
         var obj = $.grep(imageAry, function(e){ return e.filename ==  imageAry[i].filename; })
-        var image = "url(" + imageAry[obj[0].index].filename + ".png)"
-        $('#imagetile' + obj[0].index).css("background-image", image);
+        var image = "url(" + imageAry[obj[0].index].filename + ".png)";
+
+        document.getElementById('imagetile' + obj[0].index).style.backgroundImage = image;
         $('#imagetile' + obj[0].index).attr("num", obj[0].index);
         var obj = $.grep(imageAry, function(e){ return e.filename ==  imageAry[i].filename; })
         imageToCutout[obj[0].index]= i;
