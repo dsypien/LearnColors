@@ -10,8 +10,7 @@ function hideSplashScreen(milliseconds){
 
 function populateOpaqueImages(){
     var tileIndex = 0;
-    for(var color in colors.data)
-    {
+    for(var color in colors.data){
         var backgroundImg = colors.data[color].images[0];
 
         $('#'+color+"cell").children(".tilebutton").css("background-image","url("+ backgroundImg + "_deColorD.png)");
@@ -89,7 +88,7 @@ function onCellClick(){
     for (i = 0; i < 4; i++) {
         imageAry[i] = {
             "filename": colors.data[selectedColor].images[i] ,
-            "index" : i =
+            "index" : i 
         };
     }
 
@@ -121,6 +120,7 @@ function onCellClick(){
                     console.log("num: "+ num + "  cutoutindex: " + cutoutindex);
 
                     $('#cutoutimage' + cutoutindex).css("opacity", "0");
+
                     $('#cutoutimage' + cutoutindex)
                         .css("background-image", "url(" + colors.data[selectedColor].images[cutoutindex] + ".png)")
                         .animate({ opacity: 1 });
