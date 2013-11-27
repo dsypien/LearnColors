@@ -44,13 +44,16 @@ $(document).ready(function () {
     });
 
     $('#learn').click(function(){
-        $(flipView).insertAfter('#menubar');
-        $('.flip').click(function(){
-           $(this).find('.card').addClass('flipped').mouseleave(function(){
-               $(this).removeClass('flipped');
-           });
-           return false;
-        });
+        // Add flip view if it doesn't exist
+        if($('#learnview').length == 0){
+            $(flipView).insertAfter('#menubar');
+            $('.flip').click(function(){
+               $(this).find('.card').addClass('flipped').mouseleave(function(){
+                   $(this).removeClass('flipped');
+               });
+               return false;
+            });
+        }
 
         hideview('#mainmenu');
         viewstack.push("#mainmenu");
