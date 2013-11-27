@@ -38,6 +38,7 @@ $(document).ready(function () {
     });
 
     $('#play').click(function(){
+        $('#learnview').remove();
         hideview('#mainmenu');
         viewstack.push("#mainmenu");
     });
