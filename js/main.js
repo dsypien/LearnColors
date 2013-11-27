@@ -44,6 +44,13 @@ $(document).ready(function () {
 
     $('#learn').click(function(){
         $(flipView).insertAfter('#mainmenu');
+        $('.flip').click(function(){
+           $(this).find('.card').addClass('flipped').mouseleave(function(){
+               $(this).removeClass('flipped');
+           });
+           return false;
+        });
+
         hideview('#mainmenu');
         viewstack.push("#mainmenu");
     });
@@ -51,13 +58,6 @@ $(document).ready(function () {
     $('.cell').click(function () {
         selectedColor = this.attributes.color.nodeValue;
         onCellClick();
-    });
-
-     $('.flip').click(function(){
-        $(this).find('.card').addClass('flipped').mouseleave(function(){
-            $(this).removeClass('flipped');
-        });
-        return false;
     });
 });
 
