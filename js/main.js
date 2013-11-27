@@ -30,8 +30,8 @@ $(document).ready(function () {
     populateOpaqueImages();
     hideSplashScreen(400);
 
-    document.getElementById('learnicon').style.backgroundImage ="url(images/learn.png)";
-    document.getElementById('learnicon').style.backgroundImage ="url(images/play.png)";
+    document.getElementById('learnicon').style.backgroundImage ="url(images/learn_deColorD.png)";
+    document.getElementById('playicon').style.backgroundImage ="url(images/play_deColorD.png)";
 
     $('#imgprevious').click(function () {
        onPreviousClick();
@@ -43,7 +43,7 @@ $(document).ready(function () {
     });
 
     $('#learn').click(function(){
-        $(flipView).insertAfter('#mainmenu');
+        $(flipView).insertAfter('#menubar');
         $('.flip').click(function(){
            $(this).find('.card').addClass('flipped').mouseleave(function(){
                $(this).removeClass('flipped');
