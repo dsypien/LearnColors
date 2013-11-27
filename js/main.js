@@ -1,6 +1,13 @@
 var selectedColor = null;
 var colors = new Colors();
 var imageToCutout = new Array();
+var flipView = 
+    '<div id="learnview" class="flip">' +
+        '<div class="card">' +
+            '<div class="face front">Front</div>' +
+            '<div class="face back">Back</div>' +
+        '</div>' +
+    '</div>';
 
 function hideSplashScreen(milliseconds){
     setTimeout( function(){
