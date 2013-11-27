@@ -42,6 +42,12 @@ $(document).ready(function () {
         viewstack.push("#mainmenu");
     });
 
+    $('#learn').click(function(){
+        $(flipView).insertAfter('#mainmenu');
+        hideview('#mainmenu');
+        viewstack.push("#mainmenu");
+    });
+
     $('.cell').click(function () {
         selectedColor = this.attributes.color.nodeValue;
         onCellClick();
