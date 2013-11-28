@@ -7,7 +7,7 @@ var flipView =
     '<div id="learnview" class="flip">' +
         '<div class="card">' +
             '<div class="face front">Front</div>' +
-            '<div class="face back">Back</div>' +
+            '<div class="face back"></div>' +
         '</div>' +
     '</div>';
 
@@ -51,12 +51,21 @@ $(document).ready(function () {
             
             $(flipView).insertAfter('#menubar');
             $('.face').addClass(flipCardColor +'tile');
+            $('.back').html(flipCardColor);
 
             $('.flip').click(function(){
                $(this).find('.card').addClass('flipped').mouseleave(function(){
                    $(this).removeClass('flipped');
+                   $('.face').removeClass(flipCardColor +'tile');
+
+
                    flipCardIndex = (flipCardIndex + 1) % 9;
                    flipCardColor = Object.keys(colors.data)[flipCardIndex];
+
+                   $('.face').addClass(flipCardColor +'tile');
+                   $('.back').delay(800).html(flipCardColor);
+
+                   console.log("index " +flipCardIndex + " color " + flipCardColor);
                });
                return false;
             });
