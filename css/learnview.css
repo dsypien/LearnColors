@@ -37,7 +37,6 @@
 {
   	position: absolute;
   	z-index: 1;
-    background: black;
     color: white;
     cursor: pointer;
 }
@@ -45,8 +44,6 @@
 .flip .card .back 
 {
   	-webkit-transform: rotatex(-180deg);
-    background: blue;
-    background: white;
     color: black;
     cursor: pointer;
 }

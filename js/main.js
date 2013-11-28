@@ -1,6 +1,8 @@
 var selectedColor = null;
 var colors = new Colors();
 var imageToCutout = new Array();
+var flipCardIndex = 0;
+var flipCardColor = Object.keys(colors.data)[0];
 var flipView = 
     '<div id="learnview" class="flip">' +
         '<div class="card">' +
@@ -46,10 +48,15 @@ $(document).ready(function () {
     $('#learn').click(function(){
         // Add flip view if it doesn't exist
         if($('#learnview').length == 0){
+            
             $(flipView).insertAfter('#menubar');
+            $('.face').addClass(flipCardColor +'tile');
+
             $('.flip').click(function(){
                $(this).find('.card').addClass('flipped').mouseleave(function(){
                    $(this).removeClass('flipped');
+                   flipCardIndex = (flipCardIndex + 1) % 9;
+                   flipCardColor = Object.keys(colors.data)[flipCardIndex];
                });
                return false;
             });
