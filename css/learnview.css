@@ -1,7 +1,6 @@
 #learnview
 {
 	height: 100%;
-	background-color: green;
   	-webkit-perspective: 800;
    	width: 100%;
     position: relative;
@@ -44,6 +43,6 @@
 .flip .card .back 
 {
   	-webkit-transform: rotatex(-180deg);
-    color: black;
+    color: white;
     cursor: pointer;
 }

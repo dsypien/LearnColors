@@ -16,7 +16,8 @@ body
 #menubar
 {
 	height: 10%;
-	background-color: lightgreen;
+	background-color: white;
+	opacity: .35;
 }
 
 #imgprevious
