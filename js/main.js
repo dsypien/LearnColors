@@ -6,7 +6,7 @@ var flipCardColor = Object.keys(colors.data)[0];
 var flipView = 
     '<div id="learnview" class="flip">' +
         '<div class="card">' +
-            '<div class="face front">Front</div>' +
+            '<div class="face front"></div>' +
             '<div class="face back"></div>' +
         '</div>' +
     '</div>';
@@ -58,13 +58,14 @@ $(document).ready(function () {
                    $(this).removeClass('flipped');
                    $('.face').removeClass(flipCardColor +'tile');
 
-
                    flipCardIndex = (flipCardIndex + 1) % 9;
                    flipCardColor = Object.keys(colors.data)[flipCardIndex];
-
                    $('.face').addClass(flipCardColor +'tile');
-                   $('.back').delay(800).html(flipCardColor);
 
+                    setTimeout(function(){
+                        $('.back').html(flipCardColor);
+                   }, 500);
+                   
                    console.log("index " +flipCardIndex + " color " + flipCardColor);
                });
                return false;
