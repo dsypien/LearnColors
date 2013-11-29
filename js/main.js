@@ -2,10 +2,11 @@ var selectedColor = null;
 var colors = new Colors();
 var imageToCutout = new Array();
 var flipCardIndex = 0;
+var isCardFlipped = false;
 var flipCardColor = Object.keys(colors.data)[0];
 var flipView = 
     '<div id="learnview" class="flip">' +
-        '<div class="card">' +
+        '<div id="flipcard" class="card">' +
             '<div class="face front"></div>' +
             '<div class="face back"></div>' +
         '</div>' +
@@ -54,22 +55,34 @@ $(document).ready(function () {
             $('.back').html(flipCardColor);
 
             $('.flip').click(function(){
-               $(this).find('.card').addClass('flipped').mouseleave(function(){
-                   $(this).removeClass('flipped');
-                   $('.face').removeClass(flipCardColor +'tile');
-
-                   flipCardIndex = (flipCardIndex + 1) % 9;
-                   flipCardColor = Object.keys(colors.data)[flipCardIndex];
-                   $('.face').addClass(flipCardColor +'tile');
-
-                    setTimeout(function(){
-                        $('.back').html(flipCardColor);
-                   }, 500);
+                // only flip if it is not flipped
+               // if ( $(this).find('.card').hasClass('flipped') == false){
                    
-                   console.log("index " +flipCardIndex + " color " + flipCardColor);
-               });
-               return false;
+                   if(!isCardFlipped)
+                   {
+                   $(this).find('.card').addClass('flipped');
+
+                   return false;
+               }
+               // };
             });
+
+            $('.back').click(function(){
+               $('#flipcard').removeClass('flipped');
+               $('.face').removeClass(flipCardColor +'tile');
+
+               flipCardIndex = (flipCardIndex + 1) % 9;
+               flipCardColor = Object.keys(colors.data)[flipCardIndex];
+               $('.face').addClass(flipCardColor +'tile');
+
+                setTimeout(function(){
+                    $('.back').html(flipCardColor);
+               }, 500);
+
+                isCardFlipped = false;
+               
+               console.log("index " +flipCardIndex + " color " + flipCardColor);
+           });
         }
 
         hideview('#mainmenu');
