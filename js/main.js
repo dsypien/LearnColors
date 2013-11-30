@@ -62,6 +62,7 @@ $(document).ready(function () {
                 }
                 else
                 {
+                   $('.back').html();
                    $('#flipcard').removeClass('flipped');
                    $('.face').removeClass(flipCardColor +'tile');
 
