@@ -2,7 +2,6 @@ var selectedColor = null;
 var colors = new Colors();
 var imageToCutout = new Array();
 var flipCardIndex = 0;
-var isCardFlipped = false;
 var flipCardColor = Object.keys(colors.data)[0];
 var flipView = 
     '<div id="learnview" class="flip">' +
@@ -56,33 +55,27 @@ $(document).ready(function () {
 
             $('.flip').click(function(){
                 // only flip if it is not flipped
-               // if ( $(this).find('.card').hasClass('flipped') == false){
-                   
-                   if(!isCardFlipped)
-                   {
-                   $(this).find('.card').addClass('flipped');
+                if( $(this).find('.card').hasClass('flipped') == false)
+                {
+                    $(this).find('.card').addClass('flipped');
+                    return false;
+                }
+                else
+                {
+                   $('#flipcard').removeClass('flipped');
+                   $('.face').removeClass(flipCardColor +'tile');
 
-                   return false;
-               }
-               // };
+                   flipCardIndex = (flipCardIndex + 1) % 9;
+                   flipCardColor = Object.keys(colors.data)[flipCardIndex];
+                   $('.face').addClass(flipCardColor +'tile');
+
+                    setTimeout(function(){
+                        $('.back').html(flipCardColor);
+                   }, 500);                   
+                }
             });
 
-            $('.back').click(function(){
-               $('#flipcard').removeClass('flipped');
-               $('.face').removeClass(flipCardColor +'tile');
-
-               flipCardIndex = (flipCardIndex + 1) % 9;
-               flipCardColor = Object.keys(colors.data)[flipCardIndex];
-               $('.face').addClass(flipCardColor +'tile');
-
-                setTimeout(function(){
-                    $('.back').html(flipCardColor);
-               }, 500);
-
-                isCardFlipped = false;
-               
-               console.log("index " +flipCardIndex + " color " + flipCardColor);
-           });
+            
         }
 
         hideview('#mainmenu');
