@@ -18,7 +18,18 @@ function populateOpaqueImages(){
     }
 }
 
+function updateCellWidth(){
+    var cell_width = Math.floor( $( document ).width() / 3 ) - 6 ;
+    $('.cell').width(cell_width);
+}
+
+$(window).resize(function(){
+    updateCellWidth();
+})
+
 $(document).ready(function () {
+    updateCellWidth();
+    
     $('.tlt').textillate();
     populateOpaqueImages();
     hideSplashScreen(400);

@@ -2,7 +2,8 @@
 {
     display: table;
 	position: relative;
-	width: 33%;
+	margin: 1px;
+
 	height: 100%;
 	float: left;
 }
