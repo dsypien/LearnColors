@@ -1,5 +1,5 @@
 var flipCardIndex = 0;
-var flipCardColor = Object.keys(colors.data)[0];
+var flipCardColor = Object.keys(colors.data)[0].toUpperCase();
 var flipView = 
     '<div id="learnview" class="flip">' +
         '<div id="flipcard" class="card">' +
@@ -31,7 +31,7 @@ function AddFlipCardFunctionality()
            $('.face').removeClass(flipCardColor +'tile');
 
            flipCardIndex = (flipCardIndex + 1) % 9;
-           flipCardColor = Object.keys(colors.data)[flipCardIndex];
+           flipCardColor = Object.keys(colors.data)[flipCardIndex].toUpperCase();
            $('.face').addClass(flipCardColor +'tile');
 
             setTimeout(function(){
