@@ -5,6 +5,7 @@ body
     vertical-align:middle;
 	font-family: Segoe, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
 	font-weight: 100;
+	background-color: tan;
 }
 
 #splashscreen
@@ -22,6 +23,7 @@ body
 
 #imgprevious
 {
+	float: left;
 	height: 85%;
 	border-radius: 25px;
 	margin-top: 4px;
