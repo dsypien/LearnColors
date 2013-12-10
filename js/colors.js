@@ -1,6 +1,6 @@
 function Colors(){
     this.data= {
-        "red":
+        "red": {
             "images": ["images/red/apple"
                         , "images/red/cherry"
                         , "images/red/pepper"
