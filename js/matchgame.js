@@ -1,6 +1,8 @@
 var matched_items = 0;
  
 function generateImageTiles() {
+    matched_items = 0;
+
     // Clear all images in tile column2
     $('#tilecolumn2').html("");
 
@@ -30,7 +32,7 @@ function addDropEventHandlers(imageAry){
 
         $('#cutoutimage' + obj[0].index).droppable({
             accept: "#imagetile" + i ,
-            drop: function (event, ui) {
+            drop: function (event, ui) {                
                 $(ui.draggable).animate({
                     opacity: 0
                 }, 300, function () {
@@ -45,6 +47,13 @@ function addDropEventHandlers(imageAry){
                         .css("background-image", "url(" + colors.data[selectedColor].images[cutoutindex] + ".png)")
                         .animate({ opacity: 1 });
                 });
+
+                matched_items++;
+
+                if(matched_items == 4)
+                {
+                    alert("Congratulations ! :-)")
+                }
             }
         });
     }
