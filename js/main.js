@@ -60,7 +60,11 @@ $(document).ready(function () {
 });
 
 function onPreviousClick(){
-     var curview = viewstack.pop();
+   goToPreviousView();
+}
+
+function goToPreviousView(){
+    var curview = viewstack.pop();
 
     // if viewstack's length is zero we are at main menu need to display 100%
     // only 90% otherwise because other views have menubar that take up 10% of screen
@@ -73,7 +77,7 @@ function onPreviousClick(){
             "opacity": "1"
             }, 1000
         );
-    }   
+    }
 }
 
 function onCellClick(){

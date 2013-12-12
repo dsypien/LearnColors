@@ -53,6 +53,7 @@ function addDropEventHandlers(imageAry){
                 if(matched_items == 4){
                     setTimeout( function(){
                         alert("Congratulations ! :-)");
+                        goToPreviousView();
                     }, 1200);
                 }
             }
