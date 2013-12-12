@@ -50,9 +50,10 @@ function addDropEventHandlers(imageAry){
 
                 matched_items++;
 
-                if(matched_items == 4)
-                {
-                    alert("Congratulations ! :-)")
+                if(matched_items == 4){
+                    setTimeout( function(){
+                        alert("Congratulations ! :-)");
+                    }, 1200);
                 }
             }
         });
