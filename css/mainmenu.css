@@ -7,7 +7,7 @@
 {
 	height: 40%;
 	width: 100%;
-	background-color: orange;
+	background-color: #8D3A61;
 }
 
 .menuicon
@@ -24,7 +24,7 @@
 {
 	height: 60%;
 	width: 50%;
-	background-color: green;
+	background-color: #2bbbd8;
 	float: left;
 }
 
@@ -32,7 +32,7 @@
 {
 	height: 60%;
 	width: 50%;	
-	background-color:purple;
+	background-color: #f78d3f;
 	float:left;
 }
 
