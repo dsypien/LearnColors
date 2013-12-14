@@ -26,7 +26,6 @@
   	position: absolute;
   	-webkit-backface-visibility: hidden ;
   	z-index: 2;
-    font-family: Georgia;
     font-size: 3em;
     text-align: center;
     line-height: 200px;
