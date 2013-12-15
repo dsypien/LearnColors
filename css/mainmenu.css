@@ -10,6 +10,12 @@
 	background-color: #71F35F ;
 }
 
+#titleheader 
+{
+	color: white;
+	padding-top: 20px;
+}
+
 .menuicon
 {
 	background-size: contain;

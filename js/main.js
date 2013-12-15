@@ -31,6 +31,7 @@ $(document).ready(function () {
     updateCellWidth();
     
     $('.tlt').textillate();
+    $('#titleheader').fitText(0.8);
     populateOpaqueImages();
     hideSplashScreen(400);
 
