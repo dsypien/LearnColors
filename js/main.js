@@ -1,6 +1,7 @@
 var selectedColor = null;
 var colors = new Colors();
 var imageToCutout = new Array();
+var title_text = 'Learn Colors';
 
 function hideSplashScreen(milliseconds){
     setTimeout( function(){
@@ -27,13 +28,19 @@ $(window).resize(function(){
     updateCellWidth();
 })
 
+
+
 $(document).ready(function () {
     updateCellWidth();
     
     $('.tlt').textillate();
+    $('#titleheader').html().text(title_text);
     $('#titleheader').fitText(0.8);
+    $('#titleheader').lettering();
     populateOpaqueImages();
     hideSplashScreen(400);
+
+    for(i = 0; i < )
 
     document.getElementById('learnicon').style.backgroundImage ="url(images/learn_deColorD.png)";
     document.getElementById('playicon').style.backgroundImage ="url(images/play_deColorD.png)";
