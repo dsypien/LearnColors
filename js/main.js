@@ -34,13 +34,16 @@ $(document).ready(function () {
     updateCellWidth();
     
     $('.tlt').textillate();
-    $('#titleheader').html().text(title_text);
+    $('#titleheader').html(title_text);
     $('#titleheader').fitText(0.8);
     $('#titleheader').lettering();
     populateOpaqueImages();
     hideSplashScreen(400);
 
-    for(i = 0; i < )
+    for(i = 1; i <= title_text.length; i++){
+        var color_index = i % Object.keys(colors.data).length; 
+        $('.char'+ i).css("color", Object.keys(colors.data)[color_index] );
+    }
 
     document.getElementById('learnicon').style.backgroundImage ="url(images/learn_deColorD.png)";
     document.getElementById('playicon').style.backgroundImage ="url(images/play_deColorD.png)";
