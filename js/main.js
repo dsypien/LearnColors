@@ -109,7 +109,9 @@ function onCellClick(){
         "height": "90%"
     });
 
-    $('#bigtile').attr("class", selectedColor + "tile");        
+    $('#bigtile').attr("class", selectedColor + "tile");    
+
+    colors.data[selectedColor].images = shuffle(colors.data[selectedColor].images);
 
     // Set the background of each cutout image object
     for (i = 0; i < 4; i++) {
