@@ -42,7 +42,16 @@ $(document).ready(function () {
 
     for(i = 1; i <= title_text.length; i++){
         var color_index = i % Object.keys(colors.data).length; 
-        $('.char'+ i).css("color", Object.keys(colors.data)[color_index] );
+        var current_color = Object.keys(colors.data)[color_index];
+        var color_value = $("." + current_color + "tile").css("background-color");
+        $('.char'+ i).css("color", color_value );
+        $('.char'+ i).css("margin", '2px' );
+        $('.char'+ i).css("text-shadow", "black -4px 4px 4px");
+
+        if(i%2 == 1)
+        {
+            $('.char'+ i).css('-webkit-transform', 'rotate(-2deg)');
+        }
     }
 
     document.getElementById('learnicon').style.backgroundImage ="url(images/learn_deColorD.png)";
