@@ -46,7 +46,7 @@ $(document).ready(function () {
         var color_value = $("." + current_color + "tile").css("background-color");
         $('.char'+ i).css("color", color_value );
         $('.char'+ i).css("margin", '2px' );
-        $('.char'+ i).css("text-shadow", "black -4px 4px 4px");
+        $('.char'+ i).css("text-shadow", "black -1px 1px 1px");
 
         if(i%2 == 1)
         {

@@ -16,6 +16,7 @@ function AddFlipCardFunctionality()
     $(flipView).insertAfter('#menubar');
     $('.face').addClass(flipCardColor +'tile');
     $('.back').html(flipCardColor);
+    $('.back').fitText(0.8);
 
     $('.flip').click(function(){
         // only flip if it is not flipped
