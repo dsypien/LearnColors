@@ -11,15 +11,17 @@ function getCurrentView() {
 }
 
 function hideview(viewname) {
+    $('#menubar').css("height", "0");
     $(viewname).animate({
         "height": "0",
         "opacity": "0"
-    }, 500, function () {
+    }, 200, function () {
         $(viewname).hide();
         var size = getImageTileSize();
         $('.cutoutimage').css({
             height: size.height,
             width: size.width
         });
+        $('#menubar').css("height", "10%");
     });
 }

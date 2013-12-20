@@ -95,7 +95,7 @@ function goToPreviousView(){
         $(curview).animate({
             "height": height,
             "opacity": "1"
-            }, 1000
+            }, 200
         );
     }
 }
