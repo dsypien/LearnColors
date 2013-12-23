@@ -15,7 +15,7 @@ function hideview(viewname) {
     $(viewname).animate({
         "height": "0",
         "opacity": "0"
-    }, 200, function () {
+    }, 500, function () {
         $(viewname).hide();
         var size = getImageTileSize();
         $('.cutoutimage').css({
