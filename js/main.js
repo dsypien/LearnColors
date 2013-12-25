@@ -26,9 +26,16 @@ function updateCellWidth(){
 
 $(window).resize(function(){
     updateCellWidth();
+    updateVerticalAlignedControls();
 })
 
+function updateVerticalAlignedControls(){
+    cardheight = $('#flipcard').height();
+    titleheight = $('#backtitle').height();
 
+    topPadding = (cardheight - titleheight) / 2;
+    $('#backtitle').css("top", topPadding);
+}
 
 $(document).ready(function () {
     updateCellWidth();

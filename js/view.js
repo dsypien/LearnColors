@@ -11,7 +11,6 @@ function getCurrentView() {
 }
 
 function hideview(viewname) {
-    $('#menubar').css("height", "0");
     $(viewname).animate({
         "height": "0",
         "opacity": "0"
@@ -22,6 +21,5 @@ function hideview(viewname) {
             height: size.height,
             width: size.width
         });
-        $('#menubar').css("height", "10%");
     });
 }

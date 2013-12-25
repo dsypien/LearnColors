@@ -4,7 +4,9 @@ var flipView =
     '<div id="learnview" class="flip">' +
         '<div id="flipcard" class="card">' +
             '<div class="face front"></div>' +
-            '<div class="face back"></div>' +
+            '<div class="face back">' +
+                '<div id="backtitle"></div>'
+            '</div>' +
         '</div>' +
     '</div>';
 
@@ -15,8 +17,8 @@ function AddFlipCardFunctionality()
       
     $(flipView).insertAfter('#menubar');
     $('.face').addClass(flipCardColor +'tile');
-    $('.back').html(flipCardColor);
-    $('.back').fitText(0.8);
+    $('#backtitle').html(flipCardColor);
+    $('#backtitle').fitText(0.8);
 
     $('.flip').click(function(){
         // only flip if it is not flipped
@@ -27,7 +29,7 @@ function AddFlipCardFunctionality()
         }
         else
         {
-           $('.back').html();
+           $('#backtitle').html();
            $('#flipcard').removeClass('flipped');
            $('.face').removeClass(flipCardColor +'tile');
 
@@ -36,7 +38,7 @@ function AddFlipCardFunctionality()
            $('.face').addClass(flipCardColor +'tile');
 
             setTimeout(function(){
-                $('.back').html(flipCardColor);
+                $('#backtitle').html(flipCardColor);
            }, 500);                   
         }
     }); 
