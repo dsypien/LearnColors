@@ -24,22 +24,21 @@ function updateCellWidth(){
     $('.cell').width(cell_width);
 }
 
+function updateVerticalAlignment(outercontrolid, innercontrolid){
+  var outerheight = $('#' + outercontrolid).height();
+  var innerheight = $('#' + innercontrolid).height();
+
+  var topPadding = (outerheight - innerheight) / 2;
+  $('#' + innercontrolid).css("top", topPadding);
+}
+
 $(window).resize(function(){
     updateCellWidth();
-    updateVerticalAlignedControls();
-})
-
-function updateVerticalAlignedControls(){
-    cardheight = $('#flipcard').height();
-    titleheight = $('#backtitle').height();
-
-    topPadding = (cardheight - titleheight) / 2;
-    $('#backtitle').css("top", topPadding);
-}
+   updateVerticalAlignedFlipCard();
+});
 
 $(document).ready(function () {
     updateCellWidth();
-    updateVerticalAlignedControls();
     
     $('.tlt').textillate();
     $('#titleheader').html(title_text);

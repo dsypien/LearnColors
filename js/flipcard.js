@@ -10,6 +10,10 @@ var flipView =
         '</div>' +
     '</div>';
 
+function updateVerticalAlignedFlipCard(){
+  updateVerticalAlignment('flipcard', 'backtitle');
+}
+
 // Add flip view if it doesn't exist
 function AddFlipCardFunctionality()
 {
@@ -20,7 +24,7 @@ function AddFlipCardFunctionality()
     $('#backtitle').html(flipCardColor);
     $('#backtitle').fitText(0.8);
 
-    updateVerticalAlignedControls();
+    updateVerticalAlignedFlipCard();
 
     $('.flip').click(function(){
         // only flip if it is not flipped

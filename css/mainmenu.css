@@ -10,10 +10,10 @@
 	background-color: #71F35F ;
 }
 
-#titleheader 
+#titleheader
 {
-	color: white;
-	padding-top: 20px;
+	margin-bottom: 0;
+	padding-bottom: 0;
 }
 
 .menuicon
