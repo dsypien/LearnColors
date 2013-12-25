@@ -20,6 +20,8 @@ function AddFlipCardFunctionality()
     $('#backtitle').html(flipCardColor);
     $('#backtitle').fitText(0.8);
 
+    updateVerticalAlignedControls();
+
     $('.flip').click(function(){
         // only flip if it is not flipped
         if( $(this).find('.card').hasClass('flipped') == false)

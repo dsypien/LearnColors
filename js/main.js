@@ -39,6 +39,7 @@ function updateVerticalAlignedControls(){
 
 $(document).ready(function () {
     updateCellWidth();
+    updateVerticalAlignedControls();
     
     $('.tlt').textillate();
     $('#titleheader').html(title_text);
