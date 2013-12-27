@@ -4,6 +4,102 @@
 		"selected_items":
 		[
 			[
+				"inn",
+				"innercontrolid"
+			],
+			[
+				"upd",
+				"updateVerticalAlignedControls"
+			],
+			[
+				"tit",
+				"titleheight"
+			],
+			[
+				"cur",
+				"current_color"
+			],
+			[
+				"titl",
+				"title_text"
+			],
+			[
+				"ti",
+				"title_text"
+			],
+			[
+				"padding",
+				"padding-top"
+			],
+			[
+				"fu",
+				"function"
+			],
+			[
+				"backround",
+				"background-color"
+			],
+			[
+				"cell",
+				"cell_height"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"flipc",
+				"flipcard"
+			],
+			[
+				"flip",
+				"flipCardColor"
+			],
+			[
+				"flipcar",
+				"flipCardColor"
+			],
+			[
+				"css",
+				"addClass"
+			],
+			[
+				"main",
+				"mainmenu"
+			],
+			[
+				"ba",
+				"backgroundImage"
+			],
+			[
+				"cutou",
+				"cutoutindex"
+			],
+			[
+				"cutout",
+				"cutoutimage"
+			],
+			[
+				"get",
+				"getElementById"
+			],
+			[
+				"backg",
+				"backgroundImage"
+			],
+			[
+				"back",
+				"background-image"
+			],
+			[
+				"pop",
+				"populateOpaqueImages"
+			],
+			[
+				"bac",
+				"background-image"
+			],
+			[
 				"padd",
 				"padding-bottom"
 			],
@@ -39,7 +135,7 @@
 			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 3651,
+				"buffer_size": 4875,
 				"line_ending": "Windows"
 			}
 		},
@@ -47,7 +143,7 @@
 			"file": "css/common.css",
 			"settings":
 			{
-				"buffer_size": 539,
+				"buffer_size": 447,
 				"line_ending": "Windows"
 			}
 		},
@@ -55,7 +151,23 @@
 			"file": "js/main.js",
 			"settings":
 			{
-				"buffer_size": 4573,
+				"buffer_size": 5008,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "css/mainview.css",
+			"settings":
+			{
+				"buffer_size": 1186,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "js/flipcard.js",
+			"settings":
+			{
+				"buffer_size": 1548,
 				"line_ending": "Windows"
 			}
 		},
@@ -68,12 +180,19 @@
 			}
 		},
 		{
-			"contents": "Donor.cs   \nTracking.cs        \nConsent.cs\nAdmission.cs \nLabProfile.cs   \nHemodynamic.cs  \nMedication.cs  \nBloodProduct.cs  \nCardiac.cs  \nPulmonary.cs       \nMedicalSocial.cs \nIntraoperative.cs \nBase.cs            \nDisposition.cs     \n \n   \n    \n  \n\nAlmost done\nMedicalReview.cs *(This test is done except for the date time table fields with no id or name)\n\nWorking on :\n",
+			"file": "css/learnview.css",
 			"settings":
 			{
-				"buffer_size": 371,
-				"line_ending": "Windows",
-				"name": "Donor.cs"
+				"buffer_size": 692,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "css/mainmenu.css",
+			"settings":
+			{
+				"buffer_size": 503,
+				"line_ending": "Windows"
 			}
 		},
 		{
@@ -85,18 +204,18 @@
 			}
 		},
 		{
-			"file": "js/view.js",
+			"file": "js/matchgame.js",
 			"settings":
 			{
-				"buffer_size": 490,
+				"buffer_size": 1879,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "css/mainview.css",
+			"file": "js/view.js",
 			"settings":
 			{
-				"buffer_size": 1254,
+				"buffer_size": 490,
 				"line_ending": "Windows"
 			}
 		}
@@ -125,9 +244,11 @@
 	},
 	"file_history":
 	[
+		"/C/Users/david/Documents/GitHub/LearnColors/js/colors.js",
+		"/C/Users/david/Documents/GitHub/LearnColors/css/mainview.css",
+		"/C/Users/david/Documents/GitHub/LearnColors/js/view.js",
 		"/C/Users/david/Documents/GitHub/LearnColors/js/main.js",
 		"/C/Users/david/Documents/GitHub/LearnColors/css/tileview.css",
-		"/C/Users/david/Documents/GitHub/LearnColors/css/mainview.css",
 		"/C/Users/david/Documents/GitHub/LearnColors/css/common.css",
 		"/C/Users/david/Documents/GitHub/LearnColors/index.html"
 	],
@@ -147,6 +268,17 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"goToPreviousView",
+			"hideview",
+			"colors",
+			"titleheader",
+			"isCardFlipped",
+			"child",
+			"background",
+			"viewstack",
+			"getcurrentvi",
+			"imgprevious",
+			"cutoutimage",
 			"menubar",
 			"colors",
 			"colors.",
@@ -170,7 +302,7 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 7,
 			"sheets":
 			[
 				{
@@ -178,23 +310,24 @@
 					"file": "index.html",
 					"settings":
 					{
-						"buffer_size": 3651,
+						"buffer_size": 4875,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2721,
-								2721
+								945,
+								945
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 321.0,
+						"translation.y": 212.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -204,15 +337,182 @@
 					"file": "css/common.css",
 					"settings":
 					{
-						"buffer_size": 539,
+						"buffer_size": 447,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								286,
-								286
+								7,
+								25
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "js/main.js",
+					"settings":
+					{
+						"buffer_size": 5008,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								677,
+								677
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 243.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "css/mainview.css",
+					"settings":
+					{
+						"buffer_size": 1186,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								902,
+								902
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 764.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "js/flipcard.js",
+					"settings":
+					{
+						"buffer_size": 1548,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1024,
+								1024
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 64.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "css/tileview.css",
+					"settings":
+					{
+						"buffer_size": 1013,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								792,
+								792
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 939.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "css/learnview.css",
+					"settings":
+					{
+						"buffer_size": 692,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								363,
+								363
+							]
+						],
+						"settings":
+						{
+							"auto_name": "",
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "css/mainmenu.css",
+					"settings":
+					{
+						"buffer_size": 503,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								176,
+								176
 							]
 						],
 						"settings":
@@ -226,89 +526,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "js/main.js",
-					"settings":
-					{
-						"buffer_size": 4573,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1974,
-								1974
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 38.0,
-						"translation.y": 936.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "css/tileview.css",
-					"settings":
-					{
-						"buffer_size": 1013,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								795,
-								804
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 699.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"settings":
-					{
-						"buffer_size": 371,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								243,
-								243
-							]
-						],
-						"settings":
-						{
-							"auto_name": "Donor.cs",
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
+					"buffer": 8,
 					"file": "js/colors.js",
 					"settings":
 					{
@@ -319,8 +537,8 @@
 						"selection":
 						[
 							[
-								35,
-								35
+								75,
+								75
 							]
 						],
 						"settings":
@@ -336,7 +554,35 @@
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 9,
+					"file": "js/matchgame.js",
+					"settings":
+					{
+						"buffer_size": 1879,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1340,
+								1340
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 324.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
 					"file": "js/view.js",
 					"settings":
 					{
@@ -347,8 +593,8 @@
 						"selection":
 						[
 							[
-								28,
-								28
+								138,
+								138
 							]
 						],
 						"settings":
@@ -359,33 +605,6 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "css/mainview.css",
-					"settings":
-					{
-						"buffer_size": 1254,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1118,
-								1118
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1190.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -399,7 +618,7 @@
 	},
 	"input":
 	{
-		"height": 0.0
+		"height": 31.0
 	},
 	"layout":
 	{
@@ -449,6 +668,6 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 178.0,
+	"side_bar_width": 140.0,
 	"status_bar_visible": true
 }

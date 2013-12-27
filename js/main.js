@@ -33,8 +33,10 @@ function updateVerticalAlignment(outercontrolid, innercontrolid){
 }
 
 $(window).resize(function(){
-    updateCellWidth();
+   updateCellWidth();
    updateVerticalAlignedFlipCard();
+   updateVerticalAlignment('maintitle', 'titleheader');
+   updateVerticalAlignment('bigtile', 'bigtilelabel');
 });
 
 $(document).ready(function () {
@@ -44,6 +46,9 @@ $(document).ready(function () {
     $('#titleheader').html(title_text);
     $('#titleheader').fitText(0.8);
     $('#titleheader').lettering();
+    updateVerticalAlignment('maintitle', 'titleheader');
+    updateVerticalAlignment('bigtile', 'bigtilelabel');
+
     populateOpaqueImages();
     hideSplashScreen(400);
 

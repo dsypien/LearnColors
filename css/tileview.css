@@ -25,6 +25,11 @@
 	font-size: 50px;
 }
 
+#bigtilelabel 
+{
+    margin: 0;
+    position: relative;
+}
 .cutoutimage 
 {
     position:absolute;
