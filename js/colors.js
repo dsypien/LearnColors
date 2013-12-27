@@ -7,7 +7,7 @@ function Colors(){
                         , "images/red/raspberry"
                         , "images/red/tomato"
                         , "images/red/tomatoe"
-                        , "images/red/watermellon"
+                        , "images/red/watermelon"
             ]
         },
         "orange": {
