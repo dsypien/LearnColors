@@ -37,6 +37,12 @@ $(window).resize(function(){
    updateVerticalAlignedFlipCard();
    updateVerticalAlignment('maintitle', 'titleheader');
    updateVerticalAlignment('bigtile', 'bigtilelabel');
+
+   var size = getImageTileSize();
+   $('.cutoutimage').css({
+        height: size.height,
+        width: size.width
+    });
 });
 
 $(document).ready(function () {

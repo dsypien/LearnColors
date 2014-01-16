@@ -1,7 +1,8 @@
 body
 {
 	overflow: hidden;
-	margin: 0px;
+	height: 100%;
+	margin: 0;
     vertical-align:middle;
 	font-family: "Comic Sans MS", cursive, sans-serif;
 	font-weight: 100;
