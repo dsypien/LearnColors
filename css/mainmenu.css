@@ -8,6 +8,8 @@
 	height: 40%;
 	width: 100%;
 	background-color: #71F35F ;
+	position: absolute;
+	top:0;
 }
 
 #titleheader
@@ -30,7 +32,9 @@
 	height: 60%;
 	width: 50%;
 	background-color: #2bbbd8;
-	float: left;
+	position: absolute;
+	bottom: 0;
+	left: 0;
 }
 
 #play
@@ -38,6 +42,8 @@
 	height: 60%;
 	width: 50%;	
 	background-color: #F82727;
-	float:left;
+	position: absolute;
+	bottom: 0;
+	right: 0;
 }
 
