@@ -50,7 +50,9 @@ $(document).ready(function () {
     
     $('.tlt').textillate();
     $('#titleheader').html(title_text);
-    $('#titleheader').fitText(0.8);
+    //$('#titleheader').fitText(0.8);
+    //$('#learn').fitText(1.9);
+    //$('#play').fitText(1.9);
     $('#titleheader').lettering();
     updateVerticalAlignment('maintitle', 'titleheader');
     updateVerticalAlignment('bigtile', 'bigtilelabel');
