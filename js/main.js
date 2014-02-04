@@ -38,6 +38,8 @@ $(window).resize(function(){
    updateVerticalAlignment('maintitle', 'titleheader');
    updateVerticalAlignment('bigtile', 'bigtilelabel');
 
+   var fontsize = $('#maintitle').height() /5;
+   $('#maintitle').css("font-size", fontsize );
    var size = getImageTileSize();
    $('.cutoutimage').css({
         height: size.height,
