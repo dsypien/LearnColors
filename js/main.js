@@ -77,7 +77,7 @@ $(document).ready(function () {
     updateVerticalAlignment('bigtile', 'bigtilelabel');
 
     populateOpaqueImages();
-    hideSplashScreen(400);
+    hideSplashScreen(0);
 
     for(i = 1; i <= title_text.length; i++){
         var color_index = i % Object.keys(colors.data).length; 
