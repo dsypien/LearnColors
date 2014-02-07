@@ -38,7 +38,7 @@ $(window).resize(function(){
    updateVerticalAlignment('maintitle', 'titleheader');
    updateVerticalAlignment('bigtile', 'bigtilelabel');
 
-   adjustFont('maintitle');
+   $('#maintitle').adjustFont();
 
    var size = getImageTileSize();
    $('.cutoutimage').css({
@@ -47,9 +47,11 @@ $(window).resize(function(){
     });
 });
 
-function adjustFont(div){
-    var width = $('#' + div).width();
-    var height = $('#' + div ).height();
+//Jquery Extensions
+jQuery.fn.extend({
+  adjustFont: function() {
+    var width = this.width();
+    var height = this.height();
     var fontsize;
 
     if((width / 3) < height)
@@ -61,14 +63,17 @@ function adjustFont(div){
         fontsize =  height /5;
     }
 
-    $('#' + div).css("font-size", fontsize );
-}
+    this.css("font-size", fontsize );
+  }
+});
 
 $(document).ready(function () {
     updateCellWidth();
     
     $('.tlt').textillate();
     $('#titleheader').html(title_text);
+
+    $('#maintitle').adjustFont();
     //$('#titleheader').fitText(0.8);
     //$('#learn').fitText(1.9);
     //$('#play').fitText(1.9);
@@ -115,8 +120,6 @@ $(document).ready(function () {
         selectedColor = this.attributes.color.nodeValue;
         onCellClick();
     });
-
-    adjustFont('maintitle');
 });
 
 function onPreviousClick(){
