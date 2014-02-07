@@ -22,7 +22,6 @@ function AddFlipCardFunctionality()
     $(flipView).insertAfter('#menubar');
     $('.face').addClass(flipCardColor +'tile');
     $('#backtitle').html(flipCardColor);
-    $('#backtitle').fitText(0.8);
 
     updateVerticalAlignedFlipCard();
 
