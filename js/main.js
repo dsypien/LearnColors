@@ -38,26 +38,31 @@ $(window).resize(function(){
    updateVerticalAlignment('maintitle', 'titleheader');
    updateVerticalAlignment('bigtile', 'bigtilelabel');
 
-   var width = $('#maintitle').width();
-   var height = $('#maintitle').height();
-   var fontsize;
+   adjustFont('maintitle');
 
-   if((width / 3) < height)
-   {
-        fontsize = width / 15;
-   }
-   else
-   {
-        fontsize =  height /5;
-   }
-
-   $('#maintitle').css("font-size", fontsize );
    var size = getImageTileSize();
    $('.cutoutimage').css({
         height: size.height,
         width: size.width
     });
 });
+
+function adjustFont(div){
+    var width = $('#' + div).width();
+    var height = $('#' + div ).height();
+    var fontsize;
+
+    if((width / 3) < height)
+    {
+        fontsize = width / 15;
+    }
+    else
+    {
+        fontsize =  height /5;
+    }
+
+    $('#' + div).css("font-size", fontsize );
+}
 
 $(document).ready(function () {
     updateCellWidth();
@@ -110,6 +115,8 @@ $(document).ready(function () {
         selectedColor = this.attributes.color.nodeValue;
         onCellClick();
     });
+
+    adjustFont('maintitle');
 });
 
 function onPreviousClick(){
