@@ -38,7 +38,9 @@ $(window).resize(function(){
    updateVerticalAlignment('maintitle', 'titleheader');
    updateVerticalAlignment('bigtile', 'bigtilelabel');
 
-   $('#maintitle').adjustFont();
+   if($('#mainmenu').height() > 0){
+        $('#maintitle').adjustFont();
+    }
 
    var size = getImageTileSize();
    $('.cutoutimage').css({
