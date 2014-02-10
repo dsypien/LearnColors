@@ -34,7 +34,6 @@ function updateVerticalAlignment(outercontrolid, innercontrolid){
 
 $(window).resize(function(){
    updateCellWidth();
-   updateVerticalAlignedFlipCard();
    updateVerticalAlignment('maintitle', 'titleheader');
    updateVerticalAlignment('bigtile', 'bigtilelabel');
 
@@ -47,6 +46,8 @@ $(window).resize(function(){
         height: size.height,
         width: size.width
     });
+
+   updateVerticalAlignedFlipCard();
 });
 
 //Jquery Extensions

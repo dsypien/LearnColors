@@ -43,9 +43,8 @@ function AddFlipCardFunctionality()
            $('.face').addClass(flipCardColor +'tile');
 
             setTimeout(function(){
-                $('#backtitle').html(flipCardColor);
+                $('#backtitle').html('<h1>' + flipCardColor +'</h1>');
            }, 500);                   
-        }
     }); 
   }     
 }
