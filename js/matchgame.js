@@ -21,6 +21,7 @@ function generateImageTiles() {
                 top: 0,
                 left: 0
             }
+            
             return !event;
         }
     });
