@@ -20,7 +20,7 @@ function generateImageTiles() {
             $(this).data("uiDraggable").originalPosition = {
                 top: 0,
                 left: 0
-            }
+            };
             return !event;
         }
     });
@@ -28,7 +28,7 @@ function generateImageTiles() {
 
 function addDropEventHandlers(imageAry){
         for (i = 0; i < 4; i++) {
-        var obj = $.grep(imageAry, function(e){ return e.filename ==  imageAry[i].filename; })
+        var obj = $.grep(imageAry, function(e){ return e.filename ==  imageAry[i].filename; });
 
         $('#cutoutimage' + obj[0].index).droppable({
             accept: "#imagetile" + i ,

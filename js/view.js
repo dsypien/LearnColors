@@ -1,4 +1,4 @@
-var viewstack = new Array();
+var viewstack = {};
 
 function getCurrentView() {
     var size = viewstack.length;
