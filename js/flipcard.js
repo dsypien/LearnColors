@@ -1,11 +1,12 @@
 var flipCardIndex = 0;
-var flipCardColor = Object.keys(colors.data)[0].toUpperCase();
+var flipCardColor = colors.data[0].color.toUpperCase();
+
 var flipView = 
     '<div id="learnview" class="flip">' +
         '<div id="flipcard" class="card">' +
             '<div class="face front"></div>' +
             '<div class="face back">' +
-                '<div id="backtitle"></div>'
+                '<div id="backtitle"></div>' +
             '</div>' +
         '</div>' +
     '</div>';
@@ -17,7 +18,7 @@ function updateVerticalAlignedFlipCard(){
 // Add flip view if it doesn't exist
 function AddFlipCardFunctionality()
 {
-  if($('#learnview').length == 0){
+  if($('#learnview').length === 0){
       
     $(flipView).insertAfter('#menubar');
     $('.face').addClass(flipCardColor +'tile');
@@ -27,7 +28,7 @@ function AddFlipCardFunctionality()
 
     $('.flip').click(function(){
         // only flip if it is not flipped
-        if( $(this).find('.card').hasClass('flipped') == false)
+        if( $(this).find('.card').hasClass('flipped') === false)
         {
             $(this).find('.card').addClass('flipped');
             return false;
@@ -39,7 +40,7 @@ function AddFlipCardFunctionality()
            $('.face').removeClass(flipCardColor +'tile');
 
            flipCardIndex = (flipCardIndex + 1) % 9;
-           flipCardColor = Object.keys(colors.data)[flipCardIndex].toUpperCase();
+           flipCardColor = colors.data[flipCardIndex].color.toUpperCase();
            $('.face').addClass(flipCardColor +'tile');
 
             setTimeout(function(){

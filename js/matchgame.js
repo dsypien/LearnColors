@@ -44,7 +44,7 @@ function addDropEventHandlers(imageAry){
                     $('#cutoutimage' + cutoutindex).css("opacity", "0");
 
                     $('#cutoutimage' + cutoutindex)
-                        .css("background-image", "url(" + colors.data[selectedColor].images[cutoutindex] + ".png)")
+                        .css("background-image", "url(" + colors.objByColor(selectedColor).images[cutoutindex] + ".png)")
                         .animate({ opacity: 1 });
                 });
 

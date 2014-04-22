@@ -1,18 +1,13 @@
 var selectedColor = null;
-var colors = new Colors();
-var imageToCutout = new Array();
+var selectedIndex;
+var imageToCutout = [];
 var title_text = 'Learn Colors';
-
-function hideSplashScreen(milliseconds){
-    setTimeout( function(){
-     $('#splashscreen').remove();
-    }, milliseconds);
-}
 
 function populateOpaqueImages(){
     var tileIndex = 0;
-    for(var color in colors.data){
-        var backgroundImg = colors.data[color].images[0];
+    for(var i =0; i <  colors.data.length; i++){
+        var color = colors.data[i].color;
+        var backgroundImg = colors.data[i].images[0];
 
         $('#'+color+"cell").children(".tilebutton").css("background-image","url("+ backgroundImg + "_deColorD.png)");
         tileIndex++;
@@ -50,26 +45,6 @@ $(window).resize(function(){
    updateVerticalAlignedFlipCard();
 });
 
-//Jquery Extensions
-jQuery.fn.extend({
-  adjustFont: function() {
-    var width = this.width();
-    var height = this.height();
-    var fontsize;
-
-    if((width / 3) < height)
-    {
-        fontsize = width / 15;
-    }
-    else
-    {
-        fontsize =  height /5;
-    }
-
-    this.css("font-size", fontsize );
-  }
-});
-
 $(document).ready(function () {
     updateCellWidth();
     
@@ -77,19 +52,15 @@ $(document).ready(function () {
     $('#titleheader').html(title_text);
 
     $('#maintitle').adjustFont();
-    //$('#titleheader').fitText(0.8);
-    //$('#learn').fitText(1.9);
-    //$('#play').fitText(1.9);
     $('#titleheader').lettering();
     updateVerticalAlignment('maintitle', 'titleheader');
     updateVerticalAlignment('bigtile', 'bigtilelabel');
 
     populateOpaqueImages();
-    hideSplashScreen(0);
 
     for(i = 1; i <= title_text.length; i++){
-        var color_index = i % Object.keys(colors.data).length; 
-        var current_color = Object.keys(colors.data)[color_index];
+        var color_index = i % colors.data.length; 
+        var current_color = colors.data[color_index].color;
         var color_value = $("." + current_color + "tile").css("background-color");
         $('.char'+ i).css("color", color_value );
         $('.char'+ i).css("margin", '2px' );
@@ -134,9 +105,9 @@ function goToPreviousView(){
 
     // if viewstack's length is zero we are at main menu need to display 100%
     // only 90% otherwise because other views have menubar that take up 10% of screen
-    var height = viewstack.length == 0 ? "100%" : "90%";
+    var height = viewstack.length === 0 ? "100%" : "90%";
 
-    if(curview != null){
+    if(curview !== null){
         $(curview).show();
         $(curview).animate({
             "height": height,
@@ -157,26 +128,26 @@ function onCellClick(){
 
     $('#bigtile').attr("class", selectedColor + "tile");    
 
-    colors.data[selectedColor].images = shuffle(colors.data[selectedColor].images);
-
+    colors.objByColor(selectedColor).images.shuffle();
+    
     // Set the background of each cutout image object
     for (i = 0; i < 4; i++) {
         document.getElementById('cutoutimage' + i).style.backgroundImage =
-            "url(" + colors.data[selectedColor].images[i] + "_deColorD.png)";
-        $('#cutoutimage' + i).attr("num", i)
+            "url(" + colors.objByColor(selectedColor).images[i] + "_deColorD.png)";
+        $('#cutoutimage' + i).attr("num", i);
     }
 
     // Create an aray of image file names
-    var imageAry = new Array();
+    var imageAry = [];
     for (i = 0; i < 4; i++) {
         imageAry[i] = {
-            "filename": colors.data[selectedColor].images[i] ,
+            "filename": colors.objByColor(selectedColor).images[i] ,
             "index" : i 
         };
     }
 
     //shuffle images
-    imageAry = shuffle(imageAry);
+    imageAry.shuffle();
 
     for (i = 0; i < 4; i++) {
         var obj = $.grep(imageAry, function(e){ return e.filename ==  imageAry[i].filename; })
