@@ -1,4 +1,4 @@
-var colors = function(){
+var colors = function (){
     return {
         data : [
             {   color: "red",

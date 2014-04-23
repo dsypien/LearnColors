@@ -23,3 +23,20 @@ function hideview(viewname) {
         });
     });
 }
+
+function getImageTileSize() {
+    var size = {
+        width : $('.imagetile').width(),
+        height : $('.imagetile').height()
+    };
+   
+    return size;
+}
+
+function updateVerticalAlignment(outercontrolid, innercontrolid){
+  var outerheight = $('#' + outercontrolid).height();
+  var innerheight = $('#' + innercontrolid).height();
+
+  var topPadding = (outerheight - innerheight) / 2;
+  $('#' + innercontrolid).css("top", topPadding);
+}
