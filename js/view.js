@@ -10,6 +10,23 @@ function getCurrentView() {
     return viewstack[size - 1];
 }
 
+    function goToPreviousView(){
+        var curview = viewstack.pop();
+
+        // if viewstack's length is zero we are at main menu need to display 100%
+        // only 90% otherwise because other views have menubar that take up 10% of screen
+        var height = viewstack.length === 0 ? "100%" : "90%";
+
+        if(curview !== null){
+            $(curview).show();
+            $(curview).animate({
+                "height": height,
+                "opacity": "1"
+                }, 500
+            );
+        }
+    }
+
 function hideview(viewname) {
     $(viewname).animate({
         "height": "0",

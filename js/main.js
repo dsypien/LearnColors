@@ -32,7 +32,7 @@
             width: size.width
         });
 
-       updateVerticalAlignedFlipCard();
+       //flipCard.updateVerticalAlignedFlipCard();
     });
 
     $(document).ready(function () {
@@ -76,7 +76,7 @@
         });
 
         $('#learn').click(function(){
-            AddFlipCardFunctionality();
+            flipCard.init();
             hideview('#mainmenu');
             viewstack.push("#mainmenu");
         });
@@ -89,23 +89,6 @@
 
     function onPreviousClick(){
        goToPreviousView();
-    }
-
-    function goToPreviousView(){
-        var curview = viewstack.pop();
-
-        // if viewstack's length is zero we are at main menu need to display 100%
-        // only 90% otherwise because other views have menubar that take up 10% of screen
-        var height = viewstack.length === 0 ? "100%" : "90%";
-
-        if(curview !== null){
-            $(curview).show();
-            $(curview).animate({
-                "height": height,
-                "opacity": "1"
-                }, 500
-            );
-        }
     }
 
     function capitalizeFirstChar(word) {
