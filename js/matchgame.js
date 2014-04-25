@@ -58,7 +58,7 @@ var matchGame = (function (){
                     if(matched_items == 4){
                         setTimeout( function(){
                             alert("Congratulations ! :-)");
-                            goToPreviousView();
+                            views.previous();
                         }, 1200);
                     }
                 }
@@ -111,8 +111,8 @@ var matchGame = (function (){
 
             addDropEventHandlers(imageAry);
              
-            viewstack.push("#mainview");
-            hideview('#mainview');
+            views.push("#mainview");
+            views.hide('#mainview');
             $('.cutoutimage').css("visibility", "visible");
         }
     };

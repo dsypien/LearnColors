@@ -26,7 +26,7 @@
             $('#maintitle').adjustFont();
         }
 
-       var size = getImageTileSize();
+       var size = views.getImageTileSize();
        $('.cutoutimage').css({
             height: size.height,
             width: size.width
@@ -71,14 +71,14 @@
 
         $('#play').click(function(){
             $('#learnview').remove();
-            hideview('#mainmenu');
-            viewstack.push("#mainmenu");
+            views.hide('#mainmenu');
+            views.push("#mainmenu");
         });
 
         $('#learn').click(function(){
             flipCard.init();
-            hideview('#mainmenu');
-            viewstack.push("#mainmenu");
+            views.hide('#mainmenu');
+            views.push("#mainmenu");
         });
 
         $('.cell').click(function () {
@@ -88,7 +88,7 @@
     });
 
     function onPreviousClick(){
-       goToPreviousView();
+       views.previous();
     }
 
     function capitalizeFirstChar(word) {

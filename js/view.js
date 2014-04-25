@@ -1,14 +1,15 @@
-var viewstack = [];
+var views = (function(){
+    var viewstack = [];
 
-function getCurrentView() {
-    var size = viewstack.length;
+    function getCurrentView() {
+        var size = viewstack.length;
 
-    if (size < 1) {
-        return null;
+        if (size < 1) {
+            return null;
+        }
+        
+        return viewstack[size - 1];
     }
-    
-    return viewstack[size - 1];
-}
 
     function goToPreviousView(){
         var curview = viewstack.pop();
@@ -27,33 +28,48 @@ function getCurrentView() {
         }
     }
 
-function hideview(viewname) {
-    $(viewname).animate({
-        "height": "0",
-        "opacity": "0"
-    }, 500, function () {
-        $(viewname).hide();
-        var size = getImageTileSize();
-        $('.cutoutimage').css({
-            height: size.height,
-            width: size.width
+    function hideView(viewname) {
+        $(viewname).animate({
+            "height": "0",
+            "opacity": "0"
+        }, 500, function () {
+            $(viewname).hide();
+            var size = getImageTileSize();
+            $('.cutoutimage').css({
+                height: size.height,
+                width: size.width
+            });
         });
-    });
-}
+    }
 
-function getImageTileSize() {
-    var size = {
-        width : $('.imagetile').width(),
-        height : $('.imagetile').height()
+    function getImageTileSize() {
+        var size = {
+            width : $('.imagetile').width(),
+            height : $('.imagetile').height()
+        };
+       
+        return size;
+    }
+
+    function updateVerticalAlignment(outercontrolid, innercontrolid){
+      var outerheight = $('#' + outercontrolid).height();
+      var innerheight = $('#' + innercontrolid).height();
+
+      var topPadding = (outerheight - innerheight) / 2;
+      $('#' + innercontrolid).css("top", topPadding);
+    }
+
+    return {
+        get_current : getCurrentView(),
+        get_image_tile_size : getImageTileSize(),
+        previous : function(){ 
+            goToPreviousView();
+        },
+        hide : function(n){
+            hideView(n);
+        } ,
+        push : function(n){
+            viewstack.push(n);
+        }
     };
-   
-    return size;
-}
-
-function updateVerticalAlignment(outercontrolid, innercontrolid){
-  var outerheight = $('#' + outercontrolid).height();
-  var innerheight = $('#' + innercontrolid).height();
-
-  var topPadding = (outerheight - innerheight) / 2;
-  $('#' + innercontrolid).css("top", topPadding);
-}
+}());
