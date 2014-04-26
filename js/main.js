@@ -19,9 +19,7 @@
 
     $(window).resize(function(){
        updateCellWidth();
-        //updateVerticalAlignment('maintitle', 'titleheader');
-        //updateVerticalAlignment('bigtile', 'bigtilelabel');
-
+       
        if($('#mainmenu').height() > 0){
             $('#maintitle').adjustFont();
         }
@@ -31,21 +29,16 @@
             height: size.height,
             width: size.width
         });
-
-       //flipCard.updateVerticalAlignedFlipCard();
     });
 
     $(document).ready(function () {
         updateCellWidth();
-
-        // var game = new matchGame()   ;     
+   
         $('.tlt').textillate();
         $('#titleheader').html(title_text);
 
         $('#maintitle').adjustFont();
         $('#titleheader').lettering();
-        // updateVerticalAlignment('maintitle', 'titleheader');
-        //updateVerticalAlignment('bigtile', 'bigtilelabel');
 
         populateOpaqueImages();
 
@@ -66,7 +59,7 @@
         document.getElementById('playicon').style.backgroundImage ="url(images/play_deColorD.png)";
 
         $('#imgprevious').click(function () {
-           onPreviousClick();
+           views.previous();
         });
 
         $('#play').click(function(){
@@ -86,10 +79,6 @@
             matchGame.onCellClick(color);
         });
     });
-
-    function onPreviousClick(){
-       views.previous();
-    }
 
     function capitalizeFirstChar(word) {
         return word.toLowerCase().replace(/\b[a-z]/g, function (char) {

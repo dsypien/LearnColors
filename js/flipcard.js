@@ -12,9 +12,6 @@ var flipCard = (function(){
           '</div>' +
       '</div>';
 
-//  function updateVerticalAlignedFlipCard(){
-  //  updateVerticalAlignment('flipcard', 'backtitle');
- // }
 
   // Add flip view if it doesn't exist
   function initialize()
@@ -24,8 +21,6 @@ var flipCard = (function(){
       $(flipView).insertAfter('#menubar');
       $('.face').addClass(flipCardColor +'tile');
       $('#backtitle').html(flipCardColor);
-
-      //updateVerticalAlignedFlipCard();
 
       $('.flip').click(function(){
           // only flip if it is not flipped
