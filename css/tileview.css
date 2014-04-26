@@ -23,12 +23,15 @@
 	border-width:1px;
 	color: white;
 	font-size: 50px;
+    display: table;
 }
 
 #bigtilelabel 
 {
     margin: 0;
     position: relative;
+    display: table-cell;
+    vertical-align: middle;
 }
 .cutoutimage 
 {

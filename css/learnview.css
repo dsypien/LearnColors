@@ -10,6 +10,13 @@
 #backtitle
 {
   position: relative;
+  height:100%;
+  display:table-cell;
+  vertical-align: middle;
+}
+
+.face.back{
+  display: table;;
 }
 
 .flip .card.flipped 
