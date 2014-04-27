@@ -56,15 +56,22 @@ var matchGame = (function (){
                     matched_items++;
 
                     if(matched_items == 4){
+                        congratulate();
                         setTimeout( function(){
-                            alert("Congratulations ! :-)");
                             views.previous();
-                        }, 1200);
+                             $('#congratsimage').addClass('hidden');
+                             $('#congratsimage').removeClass('display');
+                        }, 1500);
                     }
                 }
             });
         }
     };
+
+    function congratulate(){
+        $('#congratsimage').removeClass('hidden');
+        $('#congratsimage').addClass('display');
+    }
 
     return {
         onCellClick : function (colorClicked){

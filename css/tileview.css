@@ -43,6 +43,21 @@
     background-repeat: no-repeat;
 }
 
+.hidden{
+    display:none;
+}
+
+.display{
+    display:block;
+}
+
+#congratsimage
+{
+    position: absolute;
+    top:10%;
+    left:10%;
+}
+
 .topleftimg
 {
     top:10px;
