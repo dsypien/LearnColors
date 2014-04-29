@@ -61,7 +61,9 @@ var views = (function(){
 
     return {
         get_current : getCurrentView(),
-        get_image_tile_size : getImageTileSize(),
+        getTileSize : function(){
+            return getImageTileSize()
+        },
         previous : function(){ 
             goToPreviousView();
         },

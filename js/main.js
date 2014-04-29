@@ -19,12 +19,12 @@
 
     $(window).resize(function(){
        updateCellWidth();
-       
+
        if($('#mainmenu').height() > 0){
             $('#maintitle').adjustFont();
         }
 
-       var size = views.getImageTileSize();
+       var size = views.getTileSize();
        $('.cutoutimage').css({
             height: size.height,
             width: size.width
