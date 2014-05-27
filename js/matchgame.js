@@ -61,7 +61,7 @@ var matchGame = (function (){
                             views.previous();
                              $('#congratsimage').addClass('hidden');
                              $('#congratsimage').removeClass('display');
-                        }, 2500);
+                        }, 1500);
                     }
                 }
             });
@@ -71,19 +71,7 @@ var matchGame = (function (){
     function congratulate(){
         $('#congratsimage').removeClass('hidden');
         $('#congratsimage').addClass('display');
-
-        var loffset = ( $(window).width() - $('#congratsimage').width() ) /2;
-        var toffset = ( $(window).height() - $("#congratsimage").height() ) / 2;
-
-        console.log("l  " + loffset +" t  "+ toffset);
-
-        $('#congratsimage').css("top", toffset);
-        $('#congratsimage').css("left", loffset);
-
-        $('#congratsimage').animate({
-            opacity : 1.0
-        }, 1000);
-    };
+    }
 
     return {
         onCellClick : function (colorClicked){
