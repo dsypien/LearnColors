@@ -66,6 +66,7 @@
             $('#learnview').remove();
             views.hide('#mainmenu');
             views.push("#mainmenu");
+            views.show("#mainview");
         });
 
         $('#learn').click(function(){

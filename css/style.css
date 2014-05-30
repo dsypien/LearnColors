@@ -1,3 +1,11 @@
+html{
+	height:100%;
+}
+
+.hidden{
+	display:none;
+}
+
 body
 {
 	overflow: hidden;
@@ -20,6 +28,8 @@ body
 	height: 10%;
 	background-color: white;
 	opacity: .35;
+	overflow: hidden;
+	opacity: 0.35;
 }
 
 #imgprevious
@@ -29,6 +39,8 @@ body
 	border-radius: 25px;
 	margin-top: 4px;
 	margin-left: 15px;
+	height: 10%;
+	clear:both;
 }
 
 .center
@@ -266,6 +278,7 @@ body
 {
 	position:relative;
 	height:92%;
+	display: none;
 }
 
 .redtile
@@ -319,5 +332,7 @@ body
 {
 	text-align: center;
 	width:100%;
-	height: 90%
+	height: 90%;
+	display:none;
+	opacity: 0;
 }

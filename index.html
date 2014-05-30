@@ -1,138 +1,141 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title>Learn Colors</title>
-		<link rel="stylesheet" type="text/css" href="css/style.css"/>
-        <link rel="stylesheet" type="text/css" href="css/flipcard.css"/>
-	</head>
-	<body>
-		<script type="text/javascript" src="js/jquery-ui-1.10.3.custom/js/jquery-1.9.1.js"></script>
-        <script type="text/javascript" src="js/jquery-ui-1.10.3.custom/js/jquery-ui-1.10.3.custom.min.js"></script>
-        <script type="text/javascript" src="thirdParty/jquery.ui.touch-punch.min.js"></script>
-		<script type="text/javascript" src="js/colors.js"></script>
-		<script type="text/javascript" src="js/main.js"></script>
-		<script type="text/javascript" src="js/view.js"></script>
-        <script type="text/javascript" src="js/extensions.js"></script>
-        <script type="text/javascript" src="js/flipcard.js"></script>
-        <script type="text/javascript" src="js/matchgame.js"></script>
-        <script type="text/javascript" src="thirdParty/assets/jquery.lettering.js"></script>
-        <script type="text/javascript" src="thirdParty/jquery.textillate.js"></script>
-		<center>		
-			<!-- MAIN MENU -->
-			<div id='mainmenu'>
-				<div id="maintitle">
-					<h1 id="titleheader"></h1>
-				</div>
-				<div id="learn">
-					<div id="learnicon" class='menuicon'>
-					</div>
-					<h1 id="learnheader" class="center">Learn</h1>
-				</div>
-				<div id="play">
-					<div id="playicon" class='menuicon'>
-					</div>
-					<h1 id="playheader" class="center">Play</h1>
-				</div>
+<head>
+	<meta charset="utf-8">
+	<title>Learn Colors</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="css/flipcard.css"/>
+    <link rel="stylesheet" type="text/css" href="css/tileview.css" />
+    <link rel="stylesheet" type="text/css" href="thirdParty/assets/animate.css" />
+	<link rel="stylesheet" type="text/css" href="js/jquery-ui-1.10.3.custom/css/start/jquery-ui-1.10.3.custom.css"/>
+</head>
+<body>
+    
+		<!-- MAIN MENU -->
+		<div id='mainmenu'>
+			<div id="maintitle">
+				<h1 id="titleheader"></h1>
 			</div>
+			<div id="learn">
+				<div id="learnicon" class='menuicon'>
+				</div>
+				<h1 id="learnheader" class="center">Learn</h1>
+			</div>
+			<div id="play">
+				<div id="playicon" class='menuicon'>
+				</div>
+				<h1 id="playheader" class="center">Play</h1>
+			</div>
+		</div>
 
-			<!-- MENU BAR -->
-			<div id='menubar'> 
-				<img src="images\other\back.png" id='imgprevious' >
-			</div>
-			<!-- MAIN VIEW -->
-			<div id='mainview'>
-				<div id='column1' class='column'>
-					<div id='redcell' color="red" class="cell redtile">
-						<div class='tilebutton'>
-                            
-						</div>
-						<div class='mainlabel'>
-							<p>Red</p>
-						</div>
+		<!-- MENU BAR -->
+		<div id='menubar' class="hidden"> 
+			<img src="images\other\back.png" id='imgprevious' >
+		</div>
+		<!-- MAIN VIEW -->
+		<div id='mainview'>
+			<div id='column1' class='column'>
+				<div id='redcell' color="red" class="cell redtile">
+					<div class='tilebutton'>
+	                    
 					</div>
-					<div id='orangecell' color="orange" class="cell orangetile">
-						<div class='tilebutton'>
-						</div>
-						<div class='mainlabel'>
-							<p>Orange</p>
-						</div>
-					</div>
-					<div id='yellowcell' color="yellow" class="cell yellowtile">
-						<div class='tilebutton'>
-						</div>
-						<div class='mainlabel'>
-							<p>Yellow</p>
-						</div>
+					<div class='mainlabel'>
+						<p>Red</p>
 					</div>
 				</div>
-				<div id='column2' class='column' >
-					<div id='greencell' color="green" class="cell greentile">
-						<div class='tilebutton'>
-						</div>
-						<div class='mainlabel'>
-							<p>Green</p>
-						</div>
+				<div id='orangecell' color="orange" class="cell orangetile">
+					<div class='tilebutton'>
 					</div>
-					<div id='bluecell' color="blue" class="cell bluetile">
-						<div class='tilebutton'>
-						</div>
-						<div class='mainlabel'>
-							<p>Blue</p>
-						</div>
-					</div>
-					<div id='purplecell' color="purple" class="cell purpletile">
-						<div class='tilebutton'>
-						</div>
-						<div class='mainlabel'>
-							<p>Purple</p>
-						</div>
+					<div class='mainlabel'>
+						<p>Orange</p>
 					</div>
 				</div>
-				<div id='column3' class='column'>
-					<div id='blackcell' color="black" class="cell blacktile">
-						<div class='tilebutton'>
-						</div>
-						<div class='mainlabel'>
-							<p>Black</p>
-						</div>
+				<div id='yellowcell' color="yellow" class="cell yellowtile">
+					<div class='tilebutton'>
 					</div>
-					<div id='pinkcell' color="pink" class="cell pinktile">
-						<div class='tilebutton'>
-						</div>
-						<div class='mainlabel'>
-							<p>Pink</p>
-						</div>
-					</div>
-					<div id='browncell' color="brown" class="cell browntile">
-						<div class='tilebutton'>
-						</div>
-						<div class='mainlabel'>
-							<p>Brown</p>
-						</div>
+					<div class='mainlabel'>
+						<p>Yellow</p>
 					</div>
 				</div>
 			</div>
-			
-			<!-- TILE VIEW -->
-			<div id="tileview">
-				<div id="tilecolumn1">
-					<div id="bigtile">
-                        <p id="bigtilelabel"></p>
-                        <img id='congratsimage' class="hidden" src="images/congrats.gif">
-                        <div id="cutoutimage0" class="cutoutimage topleftimg" num="0">
-                        </div>
-                        <div id="cutoutimage1" class="cutoutimage toprightimg" num="1">
-                        </div>
-                        <div id="cutoutimage2" class="cutoutimage bottomleftimg" num="2">
-                        </div>
-                        <div id="cutoutimage3" class="cutoutimage bottomrightimg" num="3">
-                        </div>
+			<div id='column2' class='column' >
+				<div id='greencell' color="green" class="cell greentile">
+					<div class='tilebutton'>
+					</div>
+					<div class='mainlabel'>
+						<p>Green</p>
 					</div>
 				</div>
-				<div id="tilecolumn2">
+				<div id='bluecell' color="blue" class="cell bluetile">
+					<div class='tilebutton'>
+					</div>
+					<div class='mainlabel'>
+						<p>Blue</p>
+					</div>
+				</div>
+				<div id='purplecell' color="purple" class="cell purpletile">
+					<div class='tilebutton'>
+					</div>
+					<div class='mainlabel'>
+						<p>Purple</p>
+					</div>
 				</div>
 			</div>
-		</center>
-	</body>
+			<div id='column3' class='column'>
+				<div id='blackcell' color="black" class="cell blacktile">
+					<div class='tilebutton'>
+					</div>
+					<div class='mainlabel'>
+						<p>Black</p>
+					</div>
+				</div>
+				<div id='pinkcell' color="pink" class="cell pinktile">
+					<div class='tilebutton'>
+					</div>
+					<div class='mainlabel'>
+						<p>Pink</p>
+					</div>
+				</div>
+				<div id='browncell' color="brown" class="cell browntile">
+					<div class='tilebutton'>
+					</div>
+					<div class='mainlabel'>
+						<p>Brown</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- TILE VIEW -->
+		<div id="tileview">
+			<div id="tilecolumn1">
+				<div id="bigtile">
+	                <p id="bigtilelabel"></p>
+	                <img id='congratsimage' class="hidden" src="images/congrats.gif">
+	                <div id="cutoutimage0" class="cutoutimage topleftimg" num="0">
+	                </div>
+	                <div id="cutoutimage1" class="cutoutimage toprightimg" num="1">
+	                </div>
+	                <div id="cutoutimage2" class="cutoutimage bottomleftimg" num="2">
+	                </div>
+	                <div id="cutoutimage3" class="cutoutimage bottomrightimg" num="3">
+	                </div>
+				</div>
+			</div>
+			<div id="tilecolumn2">
+			</div>
+		</div>
+	
+	<script type="text/javascript" src="/js/jquery-ui-1.10.3.custom/js/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-1.10.3.custom/js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="thirdParty/jquery.ui.touch-punch.min.js"></script>
+	<script type="text/javascript" src="js/colors.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/view.js"></script>
+    <script type="text/javascript" src="js/extensions.js"></script>
+    <script type="text/javascript" src="js/flipcard.js"></script>
+    <script type="text/javascript" src="js/matchgame.js"></script>
+    <script type="text/javascript" src="thirdParty/assets/jquery.lettering.js"></script>
+    <script type="text/javascript" src="thirdParty/jquery.textillate.js"></script>	
+</body>
 </html>

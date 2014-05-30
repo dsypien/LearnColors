@@ -16,13 +16,23 @@ var views = (function(){
 
         // if viewstack's length is zero we are at main menu need to display 100%
         // only 90% otherwise because other views have menubar that take up 10% of screen
-        var height = viewstack.length === 0 ? "100%" : "90%";
+        //var height = viewstack.length === 0 ? "100%" : "90%";
+
+        if(viewstack.length === 0){
+            height = "100%";
+            $('#menubar').addClass("hidden");
+        }
+        else{
+            $('#menubar').removeClass("hidden");
+            height = "90%";
+        }
 
         if(curview !== null){
             $(curview).show();
             $(curview).animate({
                 "height": height,
-                "opacity": "1"
+                "opacity": "1",
+                "display": "block"
                 }, 500
             );
         }
@@ -31,7 +41,8 @@ var views = (function(){
     function hideView(viewname) {
         $(viewname).animate({
             "height": "0",
-            "opacity": "0"
+            "opacity": "0",
+            "display": "none"
         }, 500, function () {
             $(viewname).hide();
             var size = getImageTileSize();
@@ -40,6 +51,14 @@ var views = (function(){
                 width: size.width
             });
         });
+    }
+
+    function showView(viewname){
+        $('#menubar').removeClass("hidden");
+        $(viewname).css({
+            "display": "block",
+            "opacity": "1"
+        })
     }
 
     function getImageTileSize() {
@@ -70,6 +89,9 @@ var views = (function(){
         hide : function(n){
             hideView(n);
         } ,
+        show : function(n){
+            showView(n);
+        },
         push : function(n){
             viewstack.push(n);
         }
