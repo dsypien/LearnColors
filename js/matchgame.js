@@ -120,6 +120,7 @@ var matchGame = (function (){
              
             views.push("#mainview");
             views.hide('#mainview');
+            views.show("#tileview");
             $('.cutoutimage').css("visibility", "visible");
         }
     };
