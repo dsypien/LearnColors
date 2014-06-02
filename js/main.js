@@ -73,6 +73,7 @@
             flipCard.init();
             views.hide('#mainmenu');
             views.push("#mainmenu");
+            views.show('#learnview')
         });
 
         $('.cell').click(function () {
