@@ -32,6 +32,9 @@
     });
 
     $(document).ready(function () {
+        var balloon = new CANVASBALLOON.Balloon('maincanvas', 400, 400, 80, 'green');
+        balloon.draw();
+
         updateCellWidth();
    
         $('.tlt').textillate();
