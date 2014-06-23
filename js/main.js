@@ -31,7 +31,7 @@
         });
     });
 
-    $(document).ready(function () {
+    $(window).load(function () {
         var balloon = new CANVASBALLOON.Balloon('maincanvas', 400, 400, 80, 'green');
         balloon.draw();
 
@@ -70,6 +70,7 @@
             views.hide('#mainmenu');
             views.push("#mainmenu");
             views.show("#mainview");
+            updateCellWidth();
         });
 
         $('#learn').click(function(){
