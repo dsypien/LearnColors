@@ -27,6 +27,9 @@ var flipCard = (function(){
           if( $(this).find('.card').hasClass('flipped') === false)
           {
               $(this).find('.card').addClass('flipped');
+              var soundFile = '../audio/' + flipCardColor + '.wav';
+              var audio = new Audio(soundFile);
+              audio.play();
               return false;
           }
           else
@@ -41,7 +44,7 @@ var flipCard = (function(){
 
               setTimeout(function(){
                   $('#backtitle').html( flipCardColor );
-             }, 500);                   
+             }, 800);                   
           }
       }); 
     }     
