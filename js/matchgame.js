@@ -1,9 +1,12 @@
-var matchGame = (function (){
+EmmasApp.matchgame = (function (){
 
-    var matched_items = 0;
-    var imageToCutout = [];
-    var selectedColor = null;
-    var selectedIndex;
+    var matched_items = 0,
+        imageToCutout = [],
+        selectedColor = null,
+        selectedIndex,
+        colors = EmmasApp.colors,
+        views = EmmasApp.views;
+
      
     function generateImageTiles() {
         matched_items = 0;
@@ -61,7 +64,7 @@ var matchGame = (function (){
                             views.previous();
                              $('#congratsimage').addClass('hidden');
                              $('#congratsimage').removeClass('display');
-                        }, 1500);
+                        }, 7800);
                     }
                 }
             });
@@ -69,6 +72,7 @@ var matchGame = (function (){
     };
 
     function congratulate(){
+        EmmasApp.audioPlayer.applaud();
         $('#congratsimage').removeClass('hidden');
         $('#congratsimage').addClass('display');
     }
