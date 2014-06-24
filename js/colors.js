@@ -1,4 +1,6 @@
-var colors = function (){
+var EmmasApp = EmmasApp || {};
+
+EmmasApp.colors = function (){
     return {
         data : [
             {   color: "red",

@@ -1,4 +1,6 @@
-var views = (function(){
+EmmasApp = EmmasApp || {};
+
+EmmasApp.views = (function(){
     var viewstack = [];
 
     function getCurrentView() {

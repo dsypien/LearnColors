@@ -1,5 +1,9 @@
+var EmmasApp = EmmasApp || {};
+
 (function(){
-    var title_text = 'Learn Colors';
+    var title_text = 'Learn Colors', 
+        colors = EmmasApp.colors,
+        views = EmmasApp.views;
 
     function populateOpaqueImages(){
         var tileIndex = 0;
@@ -74,7 +78,7 @@
         });
 
         $('#learn').click(function(){
-            flipCard.init();
+            EmmasApp.flipCard.init();
             views.hide('#mainmenu');
             views.push("#mainmenu");
             views.show('#learnview')
@@ -82,7 +86,7 @@
 
         $('.cell').click(function () {
             var color = this.attributes.color.nodeValue;
-            matchGame.onCellClick(color);
+            EmmasApp.matchgame.onCellClick(color);
         });
     });
 

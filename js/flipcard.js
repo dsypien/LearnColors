@@ -1,6 +1,7 @@
-var flipCard = (function(){
-  var flipCardIndex = 0;
-  var flipCardColor = colors.data[0].color;
+EmmasApp.flipCard = (function(){
+  var flipCardIndex = 0,
+    colors = EmmasApp.colors,
+    flipCardColor = colors.data[0].color;
 
   var flipView = 
       '<div id="learnview" class="flip">' +
@@ -27,9 +28,7 @@ var flipCard = (function(){
           if( $(this).find('.card').hasClass('flipped') === false)
           {
               $(this).find('.card').addClass('flipped');
-              var soundFile = '../audio/' + flipCardColor + '.wav';
-              var audio = new Audio(soundFile);
-              audio.play();
+              EmmasApp.audioPlayer.play(flipCardColor);
               return false;
           }
           else
