@@ -86,6 +86,7 @@ var EmmasApp = EmmasApp || {};
 
         $('#learn').click(function(){
             EmmasApp.flipCard.init();
+            audio.stop();
             views.hide('#mainmenu');
             views.push("#mainmenu");
             views.show('#learnview');
