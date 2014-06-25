@@ -1,4 +1,4 @@
-EmmasApp = EmmasApp || {};
+var EmmasApp = EmmasApp || {};
 
 EmmasApp.audioPlayer = (function(){
 	var audio, soundFile;
@@ -10,9 +10,7 @@ EmmasApp.audioPlayer = (function(){
 	}
 
 	return{
-		play : function(fileName){
-			play(fileName);
-		},
+		play : play,
 		applaud : function(){
 			play("applause");
 		},
