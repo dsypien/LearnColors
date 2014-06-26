@@ -42,8 +42,6 @@ var EmmasApp = EmmasApp || {};
         var balloon = new CANVASBALLOON.Balloon('maincanvas', 400, 400, 80, 'green');
         balloon.draw();
 
-        audio.intro();
-
         updateCellWidth();
    
         $('.tlt').textillate();
@@ -86,7 +84,6 @@ var EmmasApp = EmmasApp || {};
 
         $('#learn').click(function(){
             EmmasApp.flipCard.init();
-            audio.stop();
             views.hide('#mainmenu');
             views.push("#mainmenu");
             views.show('#learnview');
@@ -96,6 +93,8 @@ var EmmasApp = EmmasApp || {};
             var color = this.attributes.color.nodeValue;
             EmmasApp.matchgame.onCellClick(color);
         });
+
+        audio.intro();
     });
 
     function capitalizeFirstChar(word) {
