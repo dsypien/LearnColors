@@ -17,19 +17,19 @@ EmmasApp.audioPlayer = (function(){
 
 		soundFile = getFilePath(fileName);
 		if(audio !== undefined){
-			stop();
+			audio.pause();
 		}
 
         audio = new Audio(soundFile);
         audio.play();
 
         //Deep copy of audio, store in color sound array
-        soundObject[fileName] = jquery.extend(true, {}, audio);
+        soundObject[fileName] = jQuery.extend(true, {}, audio);
 	}
 
 	function playCached(audioObj){
 		if(audio !== undefined){
-			stop();	
+			audio.pause();
 		} 
 		
 		audio = audioObj;
@@ -40,10 +40,6 @@ EmmasApp.audioPlayer = (function(){
 		return '../audio/' + name + '.wav';
 	}
 
-	function stop(){
-		audio.pause();
-	}
-
 	return{
 		play : play,
 		applaud : function(){
@@ -52,15 +48,6 @@ EmmasApp.audioPlayer = (function(){
 			}
 
 			playCached(applauseAudio);
-		},
-		intro : function(){
-			playCached(introAudio);
-		},
-		minions : function(){
-			if(minionAudio === undefined){
-				minionAudio = new Audio(getFilePath('minions'));
-			}
-			playCached(minionAudio);
 		}
 	};
 }());

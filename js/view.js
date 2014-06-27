@@ -23,7 +23,6 @@ EmmasApp.views = (function(){
         if(viewstack.length === 0){
             height = "100%";
             $('#menubar').addClass("hidden");
-            EmmasApp.audioPlayer.intro();
         }
         else{
             $('#menubar').removeClass("hidden");
