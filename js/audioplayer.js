@@ -3,27 +3,28 @@ var EmmasApp = EmmasApp || {};
 EmmasApp.audioPlayer = (function(){
 	var soundFile,
 		audio,
-		introAudio = new Audio(getFilePath("xylophone")),
+		introAudio, //= new Audio(getFilePath("xylophone")), 
 		applauseAudio,
-		minionAudio;
+		minionAudio,
+		soundObject = {};
 
-	function play(fileName, doLoop){
-		// Set do Loop to false if it is not defined or not a boolean
-		// Otherwise doLoop should remain the same
-		doLoop = doLoop === undefined ? false : doLoop;
-		doLoop = typeof(doLoop) === 'boolean' ? doLoop : false;
-
+	function play(fileName){
+		// Play the cached version if found in the soundObject
+		if(fileName in soundObject){
+			playCached(soundObject[fileName]);
+			return;
+		}
 
 		soundFile = getFilePath(fileName);
-		
 		if(audio !== undefined){
 			stop();
 		}
 
         audio = new Audio(soundFile);
-        audio.loop = doLoop;
         audio.play();
-        
+
+        //Deep copy of audio, store in color sound array
+        soundObject[fileName] = jquery.extend(true, {}, audio);
 	}
 
 	function playCached(audioObj){
@@ -44,9 +45,7 @@ EmmasApp.audioPlayer = (function(){
 	}
 
 	return{
-		play : function(fileName){
-			play(fileName);
-		},
+		play : play,
 		applaud : function(){
 			if(applauseAudio === undefined){
 				applauseAudio = new Audio(getFilePath("applause"));

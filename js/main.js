@@ -78,8 +78,6 @@ var EmmasApp = EmmasApp || {};
             views.push("#mainmenu");
             views.show("#mainview");
             updateCellWidth();
-
-            audio.minions();
         });
 
         $('#learn').click(function(){
@@ -93,8 +91,6 @@ var EmmasApp = EmmasApp || {};
             var color = this.attributes.color.nodeValue;
             EmmasApp.matchgame.onCellClick(color);
         });
-
-        audio.intro();
     });
 
     function capitalizeFirstChar(word) {
