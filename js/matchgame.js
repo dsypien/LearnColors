@@ -62,19 +62,17 @@ EmmasApp.matchgame = (function (){
                         congratulate();
                         setTimeout( function(){
                             views.previous();
-                             $('#congratsimage').addClass('hidden');
-                             $('#congratsimage').removeClass('display');
+
+                            //TODO DRAW BALLOONS HERE
                         }, 7800);
                     }
                 }
             });
         }
-    };
+    }
 
     function congratulate(){
         EmmasApp.audioPlayer.applaud();
-        $('#congratsimage').removeClass('hidden');
-        $('#congratsimage').addClass('display');
     }
 
     return {
