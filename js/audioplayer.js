@@ -16,28 +16,25 @@ EmmasApp.audioPlayer = (function(){
 		}
 
 		soundFile = getFilePath(fileName);
-		if(audio !== undefined){
-			audio.pause();
-		}
-
         audio = new Audio(soundFile);
         audio.play();
 
-        //Deep copy of audio, store in color sound array
-        soundObject[fileName] = jQuery.extend(true, {}, audio);
+        // store the audio in the sound object
+        soundObject[fileName] = audio;
 	}
 
-	function playCached(audioObj){
-		if(audio !== undefined){
-			audio.pause();
-		} 
-		
-		audio = audioObj;
-		audio.play();
+	function playCached(audioObj){		
+		audioObj.play();
 	}
 
 	function getFilePath(name){
 		return '../audio/' + name + '.wav';
+	}
+
+	function stop(){
+		if(!audio.paused){
+			audio.pause();
+		}
 	}
 
 	return{
