@@ -256,7 +256,7 @@ body
 	background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    margin: 0 auto;
+    margin: 25px auto;
     display:block;
     opacity: .55;
     width: auto;
@@ -271,6 +271,7 @@ body
 	height:25%;
 	margin:0 auto;
 	color: #fff;
+	font-size:20px;
 	text-align: center;
 }
 
