@@ -14,7 +14,6 @@ var EmmasApp = EmmasApp || {};
             var color = colors.data[i].color;
             var backgroundImg = colors.data[i].images[0];
 
-            $('#'+color+"cell").children(".tilebutton").css("background-image","url("+ backgroundImg + "_deColorD.png)");
             $('#'+color+"cell").children('div').find('img').attr("src", backgroundImg + "_deColorD.png");
             tileIndex++;
         }
