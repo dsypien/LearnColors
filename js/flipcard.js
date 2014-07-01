@@ -20,7 +20,7 @@ EmmasApp.flipCard = (function(){
     if($('#learnview').length === 0){
         
       $(flipView).insertAfter('#menubar');
-      $('.face').addClass(flipCardColor +'tile');
+      $('.face').addClass(flipCardColor);
       $('#backtitle').html(flipCardColor);
 
       $('.flip').click(function(){
@@ -35,11 +35,11 @@ EmmasApp.flipCard = (function(){
           {
              $('#backtitle').html();
              $('#flipcard').removeClass('flipped');
-             $('.face').removeClass(flipCardColor +'tile');
+             $('.face').removeClass(flipCardColor);
 
              flipCardIndex = (flipCardIndex + 1) % 9;
              flipCardColor = colors.data[flipCardIndex].color;
-             $('.face').addClass(flipCardColor +'tile');
+             $('.face').addClass(flipCardColor);
 
               setTimeout(function(){
                   $('#backtitle').html( flipCardColor );

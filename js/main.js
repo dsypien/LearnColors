@@ -15,6 +15,7 @@ var EmmasApp = EmmasApp || {};
             var backgroundImg = colors.data[i].images[0];
 
             $('#'+color+"cell").children(".tilebutton").css("background-image","url("+ backgroundImg + "_deColorD.png)");
+            $('#'+color+"cell").children('div').find('img').attr("src", backgroundImg + "_deColorD.png");
             tileIndex++;
         }
     }
@@ -55,7 +56,7 @@ var EmmasApp = EmmasApp || {};
         for(i = 1; i <= title_text.length; i++){
             var color_index = i % colors.data.length; 
             var current_color = colors.data[color_index].color;
-            var color_value = $("." + current_color + "tile").css("background-color");
+            var color_value = $("." + current_color ).css("background-color");
             $('.char'+ i).css("color", color_value );
             $('.char'+ i).css("margin", '2px' );
 

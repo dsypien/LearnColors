@@ -85,7 +85,7 @@ EmmasApp.matchgame = (function (){
                 "height": "90%"
             });
 
-            $('#bigtile').attr("class", selectedColor + "tile");    
+            $('#bigtile').attr("class", selectedColor);    
 
             colors.objByColor(selectedColor).images.shuffle();
 

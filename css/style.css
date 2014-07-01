@@ -218,12 +218,9 @@ body
   text-transform: uppercase;
 }
 
-.cell
-{
-    display: table;
+.cell{
 	position: relative;
 	margin: 1px;
-
 	height: 100%;
 	float: left;
 }
@@ -255,6 +252,27 @@ body
 	padding-bottom: 0px;
 }
 
+.cell div img{
+	background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0 auto;
+    display:block;
+    opacity: .55;
+    width: auto;
+    height:100%;
+}
+
+.cell div{
+	height:65%;
+}
+
+.cell p{
+	height:25%;
+	margin:0 auto;
+	color: #fff;
+}
+
 .cell .tilebutton
 {
 	position: absolute;
@@ -263,7 +281,6 @@ body
 	width:86%;
 	height:65%;
 	color: white;
-	display: table-cell;
     vertical-align: middle;
 	opacity: .55;
 	background-size: contain;
@@ -283,49 +300,49 @@ body
 	display: none;
 }
 
-.redtile
+.red
 {
 	background-color: red;
 }
 
-.orangetile
+.orange
 {
 	background-color: #FF800D;
 }
 
 
-.yellowtile
+.yellow
 {
 	background-color: gold;
 }
 
-.greentile
+.green
 {
 	background-color: #3ECF0E;
 }
 
-.bluetile
+.blue
 {
 	background-color:  #0000FF;
 }
 
-.purpletile
+.purple
 {
 	background-color: #B300B3;
 }
 
 
-.blacktile
+.black
 {
 	background-color: #1D1D1D;
 }
 
-.pinktile
+.pink
 {
 	background-color: #FF0099;
 }
 
-.browntile
+.brown
 {
 	background-color: #C98A4B;
 }
