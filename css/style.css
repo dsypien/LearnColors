@@ -222,6 +222,7 @@ body
 	position: relative;
 	height: 100%;
 	float: left;
+	width:33.33%;
 }
 .column
 {
@@ -255,7 +256,7 @@ body
 	background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    margin: 25px auto;
+    margin: 5% auto;
     display:block;
     opacity: .55;
     width: auto;
