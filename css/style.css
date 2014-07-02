@@ -220,7 +220,6 @@ body
 
 .cell{
 	position: relative;
-	margin: 1px;
 	height: 100%;
 	float: left;
 }
