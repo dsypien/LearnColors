@@ -13,16 +13,26 @@ Array.prototype.shuffle =  function() {
 
 //Jquery Extensions
 jQuery.fn.extend({
-  adjustFont: function() {
+  adjustFont: function(isBig) {
     var width = this.width();
     var height = this.height();
     var fontsize;
 
-    if((width / 3) < height){
-        fontsize = width / 15;
+    if(isBig === undefined || isBig === false){
+        if((width / 3) < height){
+            fontsize = width / 15;
+        }
+        else{
+            fontsize =  height /5;
+        }
     }
     else{
-        fontsize =  height /5;
+     if((width / 3) < height){
+            fontsize = width / 2;
+        }
+        else{
+            fontsize =  height /1.5;
+        }   
     }
 
     this.css("font-size", fontsize );

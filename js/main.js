@@ -28,7 +28,13 @@ var EmmasApp = EmmasApp || {};
        updateCellWidth();
 
        if($('#mainmenu').height() > 0){
-            $('#maintitle').adjustFont();
+            $('#maintitle').adjustFont(false);
+        }
+        else if(EmmasApp.views.current() == '#mainview'){
+            $('.cell p').adjustFont(true);
+        }
+        else if(EmmasApp.views.current() == '#learnview'){
+             $('#backtitle').adjustFont();
         }
 
        var size = views.getTileSize();
@@ -39,9 +45,6 @@ var EmmasApp = EmmasApp || {};
     });
 
     $(window).load(function () {
-        var balloon = new CANVASBALLOON.Balloon('maincanvas', 400, 400, 80, 'green');
-        balloon.draw();
-
         updateCellWidth();
    
         $('.tlt').textillate();

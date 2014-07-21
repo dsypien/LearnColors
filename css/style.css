@@ -213,6 +213,7 @@ body
 {
   position: relative;
   height:100%;
+  letter-spacing: 3px;
   display:table-cell;
   vertical-align: middle;
   text-transform: uppercase;

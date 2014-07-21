@@ -1,9 +1,9 @@
 var EmmasApp = EmmasApp || {};
 
 EmmasApp.views = (function(){
-    var viewstack = [];
+    var viewstack = [], currentView;
 
-    function getCurrentView() {
+    function getLastView() {
         var size = viewstack.length;
 
         if (size < 1) {
@@ -28,6 +28,8 @@ EmmasApp.views = (function(){
             $('#menubar').removeClass("hidden");
             height = "90%";
         }
+
+        currentView = curview;
 
         if(curview !== null){
             $(curview).show();
@@ -56,11 +58,12 @@ EmmasApp.views = (function(){
     }
 
     function showView(viewname){
+        currentView = viewname;
         $('#menubar').removeClass("hidden");
         $(viewname).css({
             "display": "block",
             "opacity": "1"
-        })
+        });
     }
 
     function getImageTileSize() {
@@ -81,9 +84,12 @@ EmmasApp.views = (function(){
     }
 
     return {
-        get_current : getCurrentView(),
+        last : getLastView,
+        current: function(){
+            return currentView;
+        },
         getTileSize : function(){
-            return getImageTileSize()
+            return getImageTileSize();
         },
         previous : function(){ 
             goToPreviousView();
