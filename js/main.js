@@ -28,7 +28,7 @@ var EmmasApp = EmmasApp || {};
        updateCellWidth();
 
        if($('#mainmenu').height() > 0){
-            $('#maintitle').adjustFont(false);
+            $('#maintitle').adjustFont();
         }
         else if(EmmasApp.views.current() == '#mainview'){
             $('.cell p').adjustFont(true);
