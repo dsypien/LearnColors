@@ -21,11 +21,11 @@ span {
   top:100px;
   left: 200px;
   color: #fff;
-  font-size:64px;
+  font-size:94px;
 }
 .balloon > div {
   width: 104px;
-  height: 140px;
+  height: 130px;
   background: rgba(182, 15, 97, 0.9);
   border-radius: 0;
   border-radius: 80% 80% 80% 80%;
@@ -113,7 +113,7 @@ span {
   bottom: -11px;
   left: 52px;
   content: "▲";
-  font-size: 1em;
+  font-size: 13px;
 }
 span {
 /*  font-size: 4.8em;

@@ -62,7 +62,7 @@ EmmasApp.matchgame = (function (){
                         congratulate();
                         setTimeout( function(){
                             views.previous();
-                            $('.balloon').remove();
+                            //$('.balloon').remove();
                             //TODO DRAW BALLOONS HERE
                         }, 7800);
                     }
