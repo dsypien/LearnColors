@@ -18,6 +18,10 @@ body
 	background-color: tan;
 }
 
+.smiley{
+	font-family: arial;
+}
+
 #splashscreen
 {
 	height: 100%;
