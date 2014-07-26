@@ -81,6 +81,17 @@ EmmasApp.matchgame = (function (){
               '</div>');
 
           baloons.appendTo('#tileview');
+
+
+          baloons.width = $('.balloon div').first().width() * $('.balloon div').length;
+          baloons.height = $('.balloon div').first().height();
+
+          var top = ($(window).height() - baloons.height) / 2;
+          var left = ($(window).width() - baloons.width) / 2;
+          $('.balloon').css({
+            'top' : top,
+            'left' : left
+          });
     }
 
     return {
