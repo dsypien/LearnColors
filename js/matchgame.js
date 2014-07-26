@@ -60,8 +60,15 @@ EmmasApp.matchgame = (function (){
                         congratulate();
                         setTimeout( function(){
                             views.previous();
-                            //$('.balloon').remove();
-                            //TODO DRAW BALLOONS HERE
+
+                            $('.balloon').animate({
+                                top : '-500px',
+                              }, 2000, function(){
+                                $('.balloon').remove();
+                              });
+
+                            
+                            
                         }, 7800);
                     }
                 }
@@ -78,7 +85,10 @@ EmmasApp.matchgame = (function (){
                 '<div><span>A</span></div>' +
                 '<div><span>Y</span></div>' +
                 '<div><span>!</span></div>' +
-              '</div>');
+              '</div>'),
+            windowHeight = $(window).height(),
+            windowWidth = $(window).width();
+
 
           baloons.appendTo('#tileview');
 
@@ -86,12 +96,16 @@ EmmasApp.matchgame = (function (){
           baloons.width = $('.balloon div').first().width() * $('.balloon div').length;
           baloons.height = $('.balloon div').first().height();
 
-          var top = ($(window).height() - baloons.height) / 2;
-          var left = ($(window).width() - baloons.width) / 2;
+          var top = (windowHeight - baloons.height) / 2;
+          var left = (windowWidth - baloons.width) / 2;
           $('.balloon').css({
-            'top' : top,
+            'top' : windowHeight,
             'left' : left
           });
+
+          $('.balloon').animate({
+            top : 0,
+          }, 5000);
     }
 
     return {
