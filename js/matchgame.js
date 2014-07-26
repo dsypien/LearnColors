@@ -47,10 +47,8 @@ EmmasApp.matchgame = (function (){
                         var num = parseInt(ui.draggable.attr("num"));
 
                         var cutoutindex = parseInt(imageToCutout.indexOf(num));
-                        console.log("num: "+ num + "  cutoutindex: " + cutoutindex);
 
                         $('#cutoutimage' + cutoutindex).css("opacity", "0");
-
                         $('#cutoutimage' + cutoutindex)
                             .css("background-image", "url(" + colors.objByColor(selectedColor).images[cutoutindex] + ".png)")
                             .animate({ opacity: 1 });
