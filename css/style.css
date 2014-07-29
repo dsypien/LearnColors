@@ -133,6 +133,7 @@ body
     position: relative;
     display: table-cell;
     vertical-align: middle;
+    text-transform: uppercase;
 }
 
 .cutoutimage 
