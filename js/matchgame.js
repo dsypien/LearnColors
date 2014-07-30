@@ -66,9 +66,6 @@ EmmasApp.matchgame = (function (){
                               }, 2000, function(){
                                 $('.balloon').remove();
                               });
-
-                            
-                            
                         }, 7800);
                     }
                 }

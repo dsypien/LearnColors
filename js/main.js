@@ -94,6 +94,13 @@ var EmmasApp = EmmasApp || {};
             var color = this.attributes.color.nodeValue;
             EmmasApp.matchgame.onCellClick(color);
         });
+
+        $('#titleheader span').hover(function(){
+            var pixels = $('#titleheader span').css('font-size'),
+                pixelNum = Number(pixels.split('px')[0]);
+
+            $(this).css('font-size', pixelNum + 10 + 'px');
+        });
     });
 
     function capitalizeFirstChar(word) {
