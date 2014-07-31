@@ -136,6 +136,10 @@ body
     text-transform: uppercase;
 }
 
+#titleheader span:hover{
+	cursor: pointer;
+}
+
 .cutoutimage 
 {
     position:absolute;
