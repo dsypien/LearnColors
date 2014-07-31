@@ -6,7 +6,8 @@ var EmmasApp = EmmasApp || {};
     var title_text = 'Learn Colors', 
         colors = EmmasApp.colors,
         views = EmmasApp.views,
-        audio = EmmasApp.audioPlayer;
+        audio = EmmasApp.audioPlayer,
+        pixelsBeforeHover;
 
     function populateOpaqueImages(){
         var tileIndex = 0;
@@ -95,11 +96,14 @@ var EmmasApp = EmmasApp || {};
             EmmasApp.matchgame.onCellClick(color);
         });
 
-        $('#titleheader span').hover(function(){
-            var pixels = $('#titleheader span').css('font-size'),
-                pixelNum = Number(pixels.split('px')[0]);
 
-            $(this).css('font-size', pixelNum + 10 + 'px');
+        $('#titleheader span').mouseenter(function(){
+            var pixels = $('#titleheader span').css('font-size');
+            pixelsBeforeHover = Number(pixels.split('px')[0]);
+
+            $(this).css('font-size', pixelsBeforeHover + 60 + 'px');
+        }).mouseleave(function(){
+            $(this).css('font-size', pixelsBeforeHover+ 'px');
         });
     });
 
