@@ -313,6 +313,53 @@ body
 	display: none;
 }
 
+.red-font
+{
+	color: red;
+}
+
+.orange-font
+{
+	color: #FF800D;
+}
+
+
+.yellow-font
+{
+	color: gold;
+}
+
+.green-font
+{
+	color: #3ECF0E;
+}
+
+.blue-font
+{
+	color:  #0000FF;
+}
+
+.purple-font
+{
+	color: #B300B3;
+}
+
+
+.black-font
+{
+	color: #1D1D1D;
+}
+
+.pink-font
+{
+	color: #FF0099;
+}
+
+.brown-font
+{
+	color: #C98A4B;
+}
+
 .red
 {
 	background-color: red;

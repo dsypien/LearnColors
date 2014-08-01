@@ -59,13 +59,11 @@ var EmmasApp = EmmasApp || {};
         for(i = 1; i <= title_text.length; i++){
             var color_index = i % colors.data.length; 
             var current_color = colors.data[color_index].color;
-            var color_value = $("." + current_color ).css("background-color");
-            $('.char'+ i).css("color", color_value );
-            $('.char'+ i).css("margin", '2px' );
+            $('.char'+ i).addClass(current_color + "-font");
 
             if(i%2 == 1)
             {
-                $('.char'+ i).css('-webkit-transform', 'rotate(-2deg)');
+                $('.char'+ i).css('-webkit-transform', 'rotate(-5deg)');
             }
         }
 
