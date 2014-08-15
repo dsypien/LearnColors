@@ -6,8 +6,8 @@ var EmmasApp = EmmasApp || {};
     var title_text = 'Learn Colors', 
         colors = EmmasApp.colors,
         views = EmmasApp.views,
-        audio = EmmasApp.audioPlayer,
-        pixelsBeforeHover;
+        audio = EmmasApp.audioPlayer;
+        
     function populateOpaqueImages(){
         var tileIndex = 0;
         for(var i =0; i <  colors.data.length; i++){
@@ -60,11 +60,6 @@ var EmmasApp = EmmasApp || {};
             var current_color = colors.data[color_index].color;
             $('.char'+ i).addClass(current_color + "-font");
             $('.char'+ i).attr('color', current_color);
-
-            if(i%2 == 1)
-            {
-                // $('.char'+ i).css('-webkit-transform', 'rotate(-25deg)');
-            }
         }
 
         document.getElementById('learnicon').style.backgroundImage ="url(images/learn_deColorD.png)";
@@ -92,22 +87,6 @@ var EmmasApp = EmmasApp || {};
         $('.cell').click(function () {
             var color = this.attributes.color.nodeValue;
             EmmasApp.matchgame.onCellClick(color);
-        });
-
-
-        $('#titleheader span').mouseenter(function(){
-            var pixels = $('#titleheader span').css('font-size');
-            pixelsBeforeHover = Number(pixels.split('px')[0]);
-
-            $(this).css({
-                'font-size': pixelsBeforeHover+ 'px',
-                'position': 'absolute'
-            }).next().css('padding-left', $(this).width()  + 'px' );
-        }).mouseleave(function(){
-            $(this).css({
-                'font-size': pixelsBeforeHover+ 'px',
-                'position' : 'static'
-            }).next().css('margin-left', 0);
         });
     });
 
