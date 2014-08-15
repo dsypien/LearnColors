@@ -2,26 +2,29 @@ module.exports = function( grunt ){
 	grunt.initConfig({
 		pkg : grunt.file.readJSON('package.json'),
 		uglify : {
-			options : {
-				banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
-			},
 		    my_target: {
-		      files: [{
-		          expand: true,
-		          cwd: 'js/',
-		          src: '**/*.js',
-		          dest: 'build/min/',
-		          ext: '.min.js'
-		      }]
+		   	  options: {
+		       	mangle: false
+			  },
+		      files: {
+		          'build/output.min.js': [
+		          		'js/lib/jquery-1.9.1.js', 
+		          		'js/lib/jquery-ui-1.10.3.custom.min.js', 
+		          		'js/lib/jquery.ui.touch-punch.min.js', 
+		          		'js/lib/jquery.lettering.js', 
+		          		'js/lib/jquery.textillate.js', 
+		          		'js/audioplayer.js',
+		          		'js/colors.js',
+		          		'js/view.js',
+		          		'js/extensions.js',
+		          		'js/flipcard.js',
+		          		'js/matchgame.js',
+		          		'js/main.js'
+		          ]
+		      }
 		    }
 		},
 		cssmin : {
-			options : {
-				banner : '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
-			},
-			files : {
-				'build/thermometer.min.css' : ['css/thermometer.css']
-			},
 			minify : {
 				expand : true,
 				cwd : 	'css/',
@@ -31,10 +34,6 @@ module.exports = function( grunt ){
 			}
 		},
 		concat : {
-			js : {
-				src : 'build/min/*.js',
-				dest : 'build/package.min.js'
-			},
 			css : {
 				src : 'build/min/*.css',
 				dest : 'build/package.min.css'
