@@ -10,10 +10,10 @@ EmmasApp.audioPlayer = (function(){
 
 	function play(fileName){
 		// Play the cached version if found in the soundObject
-		if(fileName in soundObject){
-			playCached(soundObject[fileName]);
-			return;
-		}
+		// if(fileName in soundObject){
+		// 	playCached(soundObject[fileName]);
+		// 	return;
+		// }
 
 		soundFile = getFilePath(fileName);
         audio = new Audio(soundFile);
@@ -23,9 +23,9 @@ EmmasApp.audioPlayer = (function(){
         soundObject[fileName] = audio;
 	}
 
-	function playCached(audioObj){		
-		audioObj.play();
-	}
+	// function playCached(audioObj){		
+	// 	audioObj.play();
+	// }
 
 	function getFilePath(name){
 		return '../audio/' + name + '.wav';
@@ -38,13 +38,6 @@ EmmasApp.audioPlayer = (function(){
 	}
 
 	return{
-		play : play,
-		applaud : function(){
-			if(applauseAudio === undefined){
-				applauseAudio = new Audio(getFilePath("applause"));
-			}
-
-			playCached(applauseAudio);
-		}
+		play : play
 	};
 }());
