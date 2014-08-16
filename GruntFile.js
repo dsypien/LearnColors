@@ -7,7 +7,7 @@ module.exports = function( grunt ){
 		       	mangle: false
 			  },
 		      files: {
-		          'build/output.min.js': [
+		          'build/js/output.min.js': [
 		          		'js/lib/jquery-1.9.1.js', 
 		          		'js/lib/jquery-ui-1.10.3.custom.min.js', 
 		          		'js/lib/jquery.ui.touch-punch.min.js', 
@@ -24,22 +24,20 @@ module.exports = function( grunt ){
 		      }
 		    }
 		},
+		concat : {
+			css : {
+				src : 'css/*.css',
+				dest : 'css/output.css'
+			}
+		},
 		cssmin : {
 			minify : {
 				expand : true,
-				cwd : 	'css/',
-				src : ['*.css', '!*min.css'],
-				dest : "build/min",
+				src : ['css/output.css', 'output.min.css'],
+				dest : "build/",
 				ext: '.min.css'
 			}
-		},
-		concat : {
-			css : {
-				src : 'build/min/*.css',
-				dest : 'build/package.min.css'
-			}
 		}
-
 	});
 
 	grunt.loadNpmTasks('grunt-contrib-uglify');
