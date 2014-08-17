@@ -88,6 +88,11 @@ var EmmasApp = EmmasApp || {};
             var color = this.attributes.color.nodeValue;
             EmmasApp.matchgame.onCellClick(color);
         });
+
+        $('#titleheader span').click(function(){
+            var color = $(this).attr('color');
+            EmmasApp.audioPlayer.play(color);
+        });
     });
 
     function capitalizeFirstChar(word) {
