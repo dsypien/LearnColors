@@ -1,0 +1,22 @@
+CACHE MANIFEST
+/audio/applause.wav
+/audio/black.wav
+/audio/blue.wav
+/audio/brown.wav
+/audio/green.wav
+/audio/minions.wav
+/audio/orange.wav
+/audio/pink.wav
+/audio/purple.wav
+/audio/red.wav
+/audio/xylophone.wav
+/audio/yellow.wav
+
+/js/lib/jquery-1.9.1.js
+/js/lib/jquery-ui-1.10.3.custom.min.js
+/js/lib/jquery.lettering.js
+/js/lib/jquery.textillate.js
+/js/lib/jquery.ui.touch-punch.min.js
+
+NETWORK:
+*

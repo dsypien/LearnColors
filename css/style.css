@@ -62,7 +62,6 @@ body
 	height: 40%;
 	width: 100%;
 	background-color: #71F35F ;
-	background-image: url('../images/square_bg.png');
 	position: absolute;
 	top:0;
 }
@@ -273,7 +272,7 @@ body
 }
 
 .cell div{
-	height:65%;
+	height:55%;
 }
 
 .cell p{
@@ -467,4 +466,8 @@ body
   -webkit-transform:rotatex(-180deg);
   color: white;
   cursor: pointer;
+}
+
+#droppable0, #droppable1, #droppable2, #droppable3{
+	position: absolute;
 }
