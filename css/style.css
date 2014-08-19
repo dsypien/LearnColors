@@ -9,7 +9,9 @@ html{
 body
 {
 	overflow: hidden;
+	position:fixed;
 	height: 100%;
+	width:100%;
 	margin: 0;
     vertical-align:middle;
 	font-weight: 100;

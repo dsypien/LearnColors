@@ -23,7 +23,7 @@ EmmasApp.matchgame = (function (){
         }
 
         $('.imagetile').draggable({
-            containment: "window",
+            // containment: "document",
             revert: function (event, ui) {
                 $(this).data("uiDraggable").originalPosition = {
                     top: 0,
