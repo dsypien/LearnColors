@@ -7,7 +7,7 @@ var EmmasApp = EmmasApp || {};
         colors = EmmasApp.colors,
         views = EmmasApp.views,
         audio = EmmasApp.audioPlayer;
-        
+
     function populateOpaqueImages(){
         var tileIndex = 0;
         for(var i =0; i <  colors.data.length; i++){
@@ -20,14 +20,27 @@ var EmmasApp = EmmasApp || {};
     }
 
     function updateCellWidth(){
-        var cell_width = Math.floor( $( document ).width() / 3 ) - 6 ;
+        var cell_width = Math.floor( $( 'body' ).width() / 3 ) - 6 ;
         $('.cell').width(cell_width);
     }
 
     $(window).resize(function(){
        updateCellWidth();
+       adjustFonts();
 
-       if($('#mainmenu').height() > 0){
+       var size = views.getTileSize();
+       $('.cutoutimage').css({
+            height: size.height,
+            width: size.width
+        });
+    });
+
+    $('#mainview').resize(function(){
+        $('.cell p').adjustFont(true);
+    });
+
+    function adjustFonts(){
+        if($('#mainmenu').height() > 0){
             $('#maintitle').adjustFont();
         }
         else if(EmmasApp.views.current() == '#mainview'){
@@ -36,13 +49,7 @@ var EmmasApp = EmmasApp || {};
         else if(EmmasApp.views.current() == '#learnview'){
              $('#backtitle').adjustFont();
         }
-
-       var size = views.getTileSize();
-       $('.cutoutimage').css({
-            height: size.height,
-            width: size.width
-        });
-    });
+    }
 
     $(window).load(function () {
         updateCellWidth();

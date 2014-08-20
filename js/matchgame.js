@@ -101,7 +101,7 @@ EmmasApp.matchgame = (function (){
           });
 
           $('.balloon').animate({
-            top : 0,
+            top : 100,
           }, 5000);
     }
 

@@ -139,6 +139,11 @@ body
 	cursor: pointer;
 }
 
+#titleheader span{
+	text-shadow: -4px 2px 0px #555;
+	margin: 2px;
+}
+
 .cutoutimage 
 {
     position:absolute;
@@ -473,3 +478,16 @@ body
 #droppable0, #droppable1, #droppable2, #droppable3{
 	position: absolute;
 }
+
+#titleheader span:hover{top:3px}
+#titleheader .char1{-webkit-transform:rotate(-3deg)}
+#titleheader .char3{top:-1px;-webkit-transform:rotate(2deg)}
+#titleheader .char4{top:-7px}
+#titleheader .char6{top:-7px;-webkit-transform:rotate(2deg)}
+#titleheader .char7{}
+#titleheader .char8{top:1px;-webkit-transform:rotate(-2deg)}
+#titleheader .char9{-webkit-transform:rotate(2deg)}
+#titleheader .char10{top:-65px;width:36px;}
+#titleheader .char10:hover{-webkit-transition-duration:0.4s;}
+#titleheader .char11{top:2px;left:-30px;width:50px;-webkit-transform:rotate(-3deg)}
+#logo .char12{left:-24px}
