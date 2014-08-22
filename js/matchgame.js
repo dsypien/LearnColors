@@ -176,6 +176,7 @@ EmmasApp.matchgame = (function (){
             views.hide('#mainview');
             views.show("#tileview");
             $('.cutoutimage').css("visibility", "visible");
+            $('.imagetile').trigger('click');
 
             positionDroppables();
         }

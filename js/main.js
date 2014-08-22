@@ -97,6 +97,11 @@ var EmmasApp = EmmasApp || {};
         });
 
         $('#titleheader span').click(function(){
+             //ignore blank field
+            if($(this).hasClass('char6')){
+                return;
+            }
+
             var color = $(this).attr('color');
             EmmasApp.audioPlayer.play(color);
         });

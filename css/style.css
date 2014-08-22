@@ -61,7 +61,7 @@ body
 
 #maintitle
 {
-	height: 40%;
+	height: 50%;
 	width: 100%;
 	background-color: #71F35F ;
 	position: absolute;
@@ -80,7 +80,7 @@ body
 
 #learn
 {
-	height: 60%;
+	height: 50%;
 	width: 50%;
 	background-color: #2bbbd8;
 	position: absolute;
@@ -90,7 +90,7 @@ body
 
 #play
 {
-	height: 60%;
+	height: 50%;
 	width: 50%;	
 	background-color: #F82727;
 	position: absolute;
@@ -137,12 +137,24 @@ body
 
 #titleheader span:hover{
 	cursor: pointer;
+	background-color: white;
+	opacity: .9;
+}
+
+.char6:hover{
+	background-color: transparent !important;
+	cursor: default;
 }
 
 #titleheader span{
-	text-shadow: -4px 2px 0px #555;
+	text-shadow: -4px 2px 0px #777;
 	margin: 2px;
+	-moz-border-radius: 70px;
+	-webkit-border-radius: 70px;
+	border-radius: 170px;
+	padding-left: 10px;
 }
+
 
 .cutoutimage 
 {
@@ -477,6 +489,12 @@ body
 
 #droppable0, #droppable1, #droppable2, #droppable3{
 	position: absolute;
+}
+
+#backtitle, #bigtilelabel, h1, p{
+	text-shadow: -4px 2px 0px #777;
+	letter-spacing: 5px;
+	font-variant: small-caps;
 }
 
 #titleheader span:hover{top:3px}
