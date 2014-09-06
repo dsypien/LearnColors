@@ -4,9 +4,15 @@ EmmasApp.flipCard = (function(){
     flipCardColor = colors.data[0].color;
 
   var flipView = 
-      '<div id="learnview" class="flip">' +
+  
+
+        '<div id="learnview" class="flip">' +
           '<div id="flipcard" class="card">' +
-              '<div class="face front"></div>' +
+              '<div class="face front">' +
+                  // '<div class="img_container"><center>' +
+                  //     '<img src="../images/touch_finger.png">' +
+                  // '</center></div>' +
+              '</div>' +
               '<div class="face back">' +
                   '<div id="backtitle"></div>' +
               '</div>' +

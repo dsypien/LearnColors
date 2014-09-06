@@ -137,7 +137,7 @@ body
 
 #titleheader span:hover{
 	cursor: pointer;
-	background-color: white;
+	background-color: #ADFF2F;
 	opacity: .9;
 }
 
@@ -472,10 +472,19 @@ body
 
 .flip .card .front 
 {
-	position: absolute;
-	z-index: 1;
+  position: absolute;
+  z-index: 1;
   color: white; 
   cursor: pointer;
+}
+
+.img_container{
+	width:20%;
+	height: auto;
+}
+
+.flip .card .front img{
+	width:100%;
 }
 
 .flip .card .back 

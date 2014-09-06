@@ -20,10 +20,10 @@ jQuery.fn.extend({
 
     if(isBig === undefined || isBig === false){
         if((width / 3) < height){
-            fontsize = width / 15;
+            fontsize = width / 20;
         }
         else{
-            fontsize =  height /5;
+            fontsize =  height /10;
         }
     }
     else{
