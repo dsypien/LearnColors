@@ -9,9 +9,6 @@ EmmasApp.flipCard = (function(){
         '<div id="learnview" class="flip">' +
           '<div id="flipcard" class="card">' +
               '<div class="face front">' +
-                  // '<div class="img_container"><center>' +
-                  //     '<img src="../images/touch_finger.png">' +
-                  // '</center></div>' +
               '</div>' +
               '<div class="face back">' +
                   '<div id="backtitle"></div>' +
