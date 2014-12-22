@@ -112,20 +112,21 @@ EmmasApp.matchgame = (function (){
         var offset_3 = $('#cutoutimage3').offset();
         var imageWidth = $('.cutoutimage').width();
         var imageHeight = $('#cutoutimage0').height();
-        var droppableHeight = $('#bigtile').height() / 2;
+        var droppableHeight = imageHeight * 1.5;
+        var droppableWidth = imageWidth * 1.5;
 
         console.log(offset_0);
         console.log(offset_1);
         console.log(offset_2);
         console.log(offset_3);
 
-        $('#droppable0').offset({top:offset_0.top , left: offset_0.left - (imageWidth / 2)});
-        $('#droppable1').offset({top:offset_1.top , left: offset_1.left - (imageWidth / 2)});
-        $('#droppable2').offset({top:offset_2.top - imageHeight , left: offset_2.left - (imageWidth / 2)});
-        $('#droppable3').offset({top:offset_3.top - imageHeight , left: offset_3.left - (imageWidth / 2)});
-
-        $('.droppable').width( imageWidth * 2 );
+        $('.droppable').width( droppableWidth);
         $('.droppable').height( droppableHeight );
+
+        $('#droppable0').offset({top:offset_0.top - (imageHeight/4), left: offset_0.left - (imageWidth / 4)});
+        $('#droppable1').offset({top:offset_1.top - (imageHeight/4), left: offset_1.left - (imageWidth / 4)});
+        $('#droppable2').offset({top:offset_2.top - (imageHeight/4), left: offset_2.left - (imageWidth / 4)});
+        $('#droppable3').offset({top:offset_3.top - (imageHeight/4), left: offset_3.left - (imageWidth / 4)});
     }
 
     return {
@@ -174,13 +175,12 @@ EmmasApp.matchgame = (function (){
             addDropEventHandlers(imageAry);
              
             views.push("#mainview");
-            views.hide('#mainview');
             views.show("#tileview");
+            views.hide('#mainview', function(){
+                positionDroppables();
+            });
+            
             $('.cutoutimage').css("visibility", "visible");
-
-            positionDroppables();
-            $('#imagetile0').click();
-            $('#imagetile1').click();
         }
     };
 }());

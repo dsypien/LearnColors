@@ -42,7 +42,7 @@ EmmasApp.views = (function(){
         }
     }
 
-    function hideView(viewname) {
+    function hideView(viewname, callback) {
         $(viewname).animate({
             "height": "0",
             "opacity": "0",
@@ -54,6 +54,10 @@ EmmasApp.views = (function(){
                 height: size.height,
                 width: size.width
             });
+
+            if(callback){
+                callback();
+            }
         });
     }
 
@@ -94,8 +98,8 @@ EmmasApp.views = (function(){
         previous : function(){ 
             goToPreviousView();
         },
-        hide : function(n){
-            hideView(n);
+        hide : function(n, c){
+            hideView(n, c);
         } ,
         show : function(n){
             showView(n);
