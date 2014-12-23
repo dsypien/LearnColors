@@ -3,7 +3,7 @@ var EmmasApp = EmmasApp || {};
 // Depends on EmmasApp.colors && EmmasApp.views
 
 (function(){
-    var title_text = 'Learn Colors', 
+    var title_text = 'Colors', 
         colors = EmmasApp.colors,
         views = EmmasApp.views,
         audio = EmmasApp.audioPlayer;

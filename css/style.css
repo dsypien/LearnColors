@@ -78,6 +78,9 @@ body
 
 .menuicon
 {
+	-webkit-animation: pulsate 2s infinite;
+	-o-animation: pulsate 2s infinite;
+	animation: pulsate 2s infinite;
 	background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -143,6 +146,13 @@ body
     text-transform: uppercase;
 }
 
+#titleheader{
+	bottom: 0px;
+	position: absolute;
+	width: 100%;
+	margin: 5px auto;
+}
+
 #titleheader span:hover{
 	cursor: pointer;
 	background-color: #ADFF2F;
@@ -156,7 +166,6 @@ body
 
 #titleheader span{
 	text-shadow: -4px 2px 0px #777;
-	margin: 2px;
 	-moz-border-radius: 70px;
 	-webkit-border-radius: 70px;
 	border-radius: 170px;
@@ -418,7 +427,7 @@ body
 
 .black
 {
-	background-color: #1D1D1D;
+	background-color: #2C2C2C;
 }
 
 .pink
@@ -526,3 +535,50 @@ body
 #titleheader .char10:hover{-webkit-transition-duration:0.4s;}
 #titleheader .char11{top:2px;left:-30px;width:50px;-webkit-transform:rotate(-3deg)}
 #logo .char12{left:-24px}
+
+ .sky {
+   width: 100%;
+   height: 400px;
+   position: relative;
+   overflow: hidden;
+   background: #0099ff;
+   background: -moz-linear-gradient(top, #0099ff, #6ADCF9);
+   background: -webkit-linear-gradient(top, #0099ff, #6ADCF9);
+   background: -ms-linear-gradient(top, #0099ff, #6ADCF9);
+   background: -o-linear-gradient(top, #0099ff, #6ADCF9);
+   background: linear-gradient(top, #0099ff, #6ADCF9);
+}
+
+ .grass {
+   width: 100%;
+   height: 100%;
+   position: relative;
+   overflow: hidden;
+   background: #86FF11;
+   background: -moz-linear-gradient(top, #86FF11, #304919);
+   background: -webkit-linear-gradient(top, #86FF11, #304919);
+   background: -ms-linear-gradient(top, #86FF11, #304919);
+   background: -o-linear-gradient(top, #86FF11, #304919);
+   background: linear-gradient(top, #86FF11, #304919);
+}
+
+@-webkit-keyframes pulsate {
+    0%   {opacity: .5;}
+    50%  {opacity: 1;}
+    100% {opacity: .5;}
+}
+@-o-keyframes pulsate {
+	0%   {opacity: .5;}
+    50%  {opacity: 1;}
+    100% {opacity: .5;}
+}
+@-moz-keyframes pulsate {
+	0%   {opacity: .5;}
+    50%  {opacity: 1;}
+    100% {opacity: .5;}
+}
+@keyframes pulsate {
+	0%   {opacity: .5;}
+    50%  {opacity: 1;}
+    100% {opacity: .5;}
+}
