@@ -8,6 +8,26 @@ var EmmasApp = EmmasApp || {};
         views = EmmasApp.views,
         audio = EmmasApp.audioPlayer;
 
+   jQuery(window).bind('orientationchange', function(e) {
+
+  switch ( window.orientation ) {
+
+    case 0:
+        alert('portrait mode');
+    break;
+
+    case 90:
+        alert('landscape mode screen turned to the left');
+    break;
+
+    case -90:
+        alert('landscape mode screen turned to the right');
+    break;
+
+  }
+
+});
+
     function populateOpaqueImages(){
         var tileIndex = 0;
         for(var i =0; i <  colors.data.length; i++){
@@ -26,7 +46,7 @@ var EmmasApp = EmmasApp || {};
 
     $(window).resize(function(){
        updateCellWidth();
-       adjustFonts();
+       // adjustFonts();
 
        var size = views.getTileSize();
        $('.cutoutimage').css({
@@ -35,21 +55,21 @@ var EmmasApp = EmmasApp || {};
         });
     });
 
-    $('#mainview').resize(function(){
-        $('.cell p').adjustFont(true);
-    });
+    // $('#mainview').resize(function(){
+    //     $('.cell p').adjustFont(true);
+    // });
 
-    function adjustFonts(){
-        if($('#mainmenu').height() > 0){
-            $('#maintitle').adjustFont();
-        }
-        else if(EmmasApp.views.current() == '#mainview'){
-            $('.cell p').adjustFont(true);
-        }
-        else if(EmmasApp.views.current() == '#learnview'){
-             $('#backtitle').adjustFont();
-        }
-    }
+    // function adjustFonts(){
+    //     if($('#mainmenu').height() > 0){
+    //         $('#maintitle').adjustFont();
+    //     }
+    //     else if(EmmasApp.views.current() == '#mainview'){
+    //         $('.cell p').adjustFont(true);
+    //     }
+    //     else if(EmmasApp.views.current() == '#learnview'){
+    //          $('#backtitle').adjustFont();
+    //     }
+    // }
 
     $(window).load(function () {
         updateCellWidth();
@@ -57,7 +77,7 @@ var EmmasApp = EmmasApp || {};
         $('.tlt').textillate();
         $('#titleheader').html(title_text);
 
-        $('#maintitle').adjustFont();
+        // $('#maintitle').adjustFont();
         $('#titleheader').lettering();
 
         populateOpaqueImages();

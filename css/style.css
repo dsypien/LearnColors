@@ -43,6 +43,7 @@ body
 	opacity: .35;
 	overflow: hidden;
 	opacity: 0.35;
+	min-height: 80px;
 }
 
 #imgprevious
@@ -155,7 +156,6 @@ body
 
 #titleheader span:hover{
 	cursor: pointer;
-	background-color: #ADFF2F;
 	opacity: .9;
 }
 
@@ -562,6 +562,72 @@ body
    background: linear-gradient(top, #86FF11, #304919);
 }
 
+.cloud {
+   position: absolute;
+   -moz-animation: cloudDrift linear infinite;
+   -webkit-animation: cloudDrift linear infinite;
+   -o-animation: cloudDrift linear infinite;
+   animation: cloudDrift linear infinite;
+}
+
+.small {
+   top: 70px;
+   left: -580px;
+   -moz-animation-duration: 150s;
+   -webkit-animation-duration: 150s;
+   -o-animation-duration: 150s;
+   animation-duration: 150s;
+}
+
+.medium {
+   top: 140px;
+   left: -110px;
+   -moz-animation-duration: 180s;
+   -webkit-animation-duration: 180s;
+   -o-animation-duration: 180s;
+   animation-duration: 180s;
+}
+
+.large {
+   top: 100px;
+   left: -340px;
+   -moz-animation-duration: 240s;
+   -webkit-animation-duration: 240s;
+   -o-animation-duration: 240s;
+   animation-duration: 240s;
+}
+
+img#sun {
+	top: 10px;
+	position: absolute;
+	right: 10px;
+	width: 200px;
+
+	-moz-animation: spin 25s linear infinite;
+	-webkit-animation: spin 25s linear infinite;
+	-o-animation: spin 25s linear infinite;
+	animation: spin 25s linear infinite;
+}
+
+@-moz-keyframes cloudDrift {
+   from { -moz-transform: translateX(0px); }
+   to { -moz-transform: translateX(2000px); }
+}
+@-webkit-keyframes cloudDrift {
+   from { -webkit-transform: translateX(0px); }
+   to { -webkit-transform: translateX(2000px); }
+} 
+
+@-o-keyframes cloudDrift {
+   from { -o-transform: translateX(0px); }
+   to { -o-transform: translateX(2000px); }
+}
+
+@keyframes cloudDrift {
+   from { transform: translateX(0px); }
+   to { transform: translateX(2000px); }
+}
+
 @-webkit-keyframes pulsate {
     0%   {opacity: .5;}
     50%  {opacity: 1;}
@@ -581,4 +647,27 @@ body
 	0%   {opacity: .5;}
     50%  {opacity: 1;}
     100% {opacity: .5;}
+}
+
+@-moz-keyframes spin { 
+    100% { 
+        -moz-transform: rotate(360deg); 
+    }
+}
+
+@-o-keyframes identifier {
+	100%{
+		-o-transform: rotate(360deg);
+	}
+}
+
+@-webkit-keyframes spin { 
+    100%{ 
+        -webkit-transform: rotate(360deg); 
+    }
+}
+@keyframes spin { 
+    100%{ 
+        transform: rotate(360deg); 
+    }
 }
