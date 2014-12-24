@@ -1,0 +1,90 @@
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen 
+and (min-width : 350px) 
+and (max-width : 480px) {
+	#titleheader{
+		font-size:70px;
+	}
+
+	.menuicon{
+		height: 20%;
+	}
+
+	#sun{
+		width: 100px !important;
+	}
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen 
+and (min-width : 351px)
+and (max-width : 767px) {
+	#titleheader{
+		font-size:60px;
+	}
+
+	.menuicon{
+		height: 20%;
+	}
+
+	#sun{
+		width: 100px !important;
+	}
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen 
+and (max-width : 350px) {
+	#titleheader{
+		font-size:50px;
+	}
+
+	#titleheader span{
+		padding-left:6px;
+	}
+
+	.menuicon{
+		height: 15%;
+	}
+
+	#sun{
+		width: 100px !important;
+	}
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen 
+and (min-width : 768px) 
+and (max-width : 1024px) {
+	#titleheader{
+		font-size: 120px;
+	}
+}
+
+/* iPads (landscape) ----------- */
+@media only screen 
+and (min-width : 768px) 
+and (max-width : 1024px) 
+and (orientation : landscape) {
+	#titleheader{
+		font-size: 120px;
+	}
+}
+
+/* iPads (portrait) ----------- */
+@media only screen 
+and (min-width : 768px) 
+and (max-width : 1024px) 
+and (orientation : portrait) {
+	#titleheader{
+		font-size: 120px;
+	}
+}
+
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-width : 1025px) {
+	#titleheader{
+		font-size: 150px;
+	}
+}
