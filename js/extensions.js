@@ -11,30 +11,30 @@ Array.prototype.shuffle =  function() {
     return this;
 };
 
-//Jquery Extensions
-jQuery.fn.extend({
-  adjustFont: function(isBig) {
-    var width = this.width();
-    var height = this.height();
-    var fontsize;
+// //Jquery Extensions
+// jQuery.fn.extend({
+//   adjustFont: function(isBig) {
+//     var width = this.width();
+//     var height = this.height();
+//     var fontsize;
 
-    if(isBig === undefined || isBig === false){
-        if((width / 3) < height){
-            fontsize = width / 20;
-        }
-        else{
-            fontsize =  height /10;
-        }
-    }
-    else{
-     if((width / 3) < height){
-            fontsize = width / 2;
-        }
-        else{
-            fontsize =  height /1.5;
-        }   
-    }
+//     if(isBig === undefined || isBig === false){
+//         if((width / 3) < height){
+//             fontsize = width / 20;
+//         }
+//         else{
+//             fontsize =  height /10;
+//         }
+//     }
+//     else{
+//      if((width / 3) < height){
+//             fontsize = width / 2;
+//         }
+//         else{
+//             fontsize =  height /1.5;
+//         }   
+//     }
 
-    this.css("font-size", fontsize );
-  }
-});
+//     this.css("font-size", fontsize );
+//   }
+// });
