@@ -43,7 +43,7 @@ body
 	opacity: .35;
 	overflow: hidden;
 	opacity: 0.35;
-	min-height: 80px;
+	min-height: 50px;
 }
 
 #imgprevious
@@ -305,6 +305,7 @@ body
     opacity: .55;
     width: auto;
     height:100%;
+    margin-top: 15%;
 }
 
 .cell div{
@@ -313,7 +314,6 @@ body
 
 .cell p{
 	height:25%;
-	margin:0 auto;
 	color: #fff;
 	font-size:20px;
 	text-align: center;

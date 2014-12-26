@@ -13,6 +13,11 @@ and (max-width : 480px) {
 	#sun{
 		width: 100px !important;
 	}
+
+	.cell p {
+		font-size:16px;
+		padding-top: 15px;
+	}
 }
 
 /* Smartphones (landscape) ----------- */
@@ -49,6 +54,11 @@ and (max-width : 350px) {
 
 	#sun{
 		width: 100px !important;
+	}
+
+	.cell p {
+		font-size:16px;
+		padding-top: 15px;
 	}
 }
 
