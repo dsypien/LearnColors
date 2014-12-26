@@ -18,6 +18,10 @@ and (max-width : 480px) {
 		font-size:16px;
 		padding-top: 15px;
 	}
+
+	.cell div img{
+	    margin-top: 15%;
+	}
 }
 
 /* Smartphones (landscape) ----------- */
@@ -34,6 +38,10 @@ and (max-width : 767px) {
 
 	#sun{
 		width: 100px !important;
+	}
+
+	.cell div img{
+	    margin-top: 15%;
 	}
 }
 
@@ -60,6 +68,10 @@ and (max-width : 350px) {
 		font-size:16px;
 		padding-top: 15px;
 	}
+
+	.cell div img{
+	    margin-top: 15%;
+	}
 }
 
 /* iPads (portrait and landscape) ----------- */
@@ -68,6 +80,10 @@ and (min-width : 768px)
 and (max-width : 1024px) {
 	#titleheader{
 		font-size: 120px;
+	}
+
+	.cell p {
+		font-size:30px;
 	}
 }
 
@@ -79,6 +95,10 @@ and (orientation : landscape) {
 	#titleheader{
 		font-size: 120px;
 	}
+
+	.cell p {
+		font-size:30px;
+	}
 }
 
 /* iPads (portrait) ----------- */
@@ -89,6 +109,10 @@ and (orientation : portrait) {
 	#titleheader{
 		font-size: 120px;
 	}
+
+	.cell p {
+		font-size:30px;
+	}
 }
 
 /* Desktops and laptops ----------- */
@@ -96,5 +120,10 @@ and (orientation : portrait) {
 and (min-width : 1025px) {
 	#titleheader{
 		font-size: 150px;
+	}
+
+	.cell p {
+		font-size:40px;
+		margin-top: 20px;
 	}
 }
