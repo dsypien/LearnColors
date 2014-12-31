@@ -26,6 +26,19 @@ and (max-width : 480px) {
 	#backtitle{
 		font-size: 70px;
 	}
+
+	div.baloon{
+		font-size: 45px !important;
+	}
+
+	.balloon > div {
+		width: 50px !important;
+		height: 80px !important;
+	}
+
+	.balloon > div:before {
+		left: 30px;
+	}
 }
 
 /* Smartphones (landscape) ----------- */
@@ -50,6 +63,19 @@ and (max-width : 767px) {
 
 	#backtitle{
 		font-size: 70px;
+	}
+
+	div.baloon{
+		font-size: 45px !important;
+	}
+
+	.balloon > div {
+		width: 50px !important;
+		height: 80px !important;
+	}
+
+	.balloon > div:before {
+		left: 30px;
 	}
 }
 
@@ -83,6 +109,19 @@ and (max-width : 350px) {
 
 	#backtitle{
 		font-size: 50px;
+	}
+
+	div.baloon{
+		font-size: 45px !important;
+	}
+
+	.balloon > div {
+		width: 50px !important;
+		height: 80px !important;
+	}
+
+	.balloon > div:before {
+		left: 30px;
 	}
 }
 
