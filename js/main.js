@@ -39,15 +39,7 @@ var EmmasApp = EmmasApp || {};
         }
     }
 
-    function updateCellWidth(){
-        var cell_width = Math.floor( $( 'body' ).width() / 3 ) - 6 ;
-        $('.cell').width(cell_width);
-    }
-
     $(window).resize(function(){
-       updateCellWidth();
-       // adjustFonts();
-
        var size = views.getTileSize();
        $('.cutoutimage').css({
             height: size.height,
@@ -55,25 +47,8 @@ var EmmasApp = EmmasApp || {};
         });
     });
 
-    // $('#mainview').resize(function(){
-    //     $('.cell p').adjustFont(true);
-    // });
 
-    // function adjustFonts(){
-    //     if($('#mainmenu').height() > 0){
-    //         $('#maintitle').adjustFont();
-    //     }
-    //     else if(EmmasApp.views.current() == '#mainview'){
-    //         $('.cell p').adjustFont(true);
-    //     }
-    //     else if(EmmasApp.views.current() == '#learnview'){
-    //          $('#backtitle').adjustFont();
-    //     }
-    // }
-
-    $(window).load(function () {
-        updateCellWidth();
-   
+    $(window).load(function () {   
         $('.tlt').textillate();
         $('#titleheader').html(title_text);
 
@@ -101,7 +76,6 @@ var EmmasApp = EmmasApp || {};
             views.hide('#mainmenu');
             views.push("#mainmenu");
             views.show("#mainview");
-            updateCellWidth();
         });
 
         $('#learn').click(function(){

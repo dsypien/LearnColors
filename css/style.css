@@ -134,7 +134,7 @@ body
 	border-style:solid;
 	border-width:1px;
 	color: white;
-	font-size: 50px;
+	font-size: 4em;
     display: table;
 }
 
@@ -341,7 +341,7 @@ body
 #mainview
 {
 	position:relative;
-	height:92%;
+	height:90%;
 	display: none;
 }
 
