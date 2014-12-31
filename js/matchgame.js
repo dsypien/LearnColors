@@ -61,11 +61,11 @@ EmmasApp.matchgame = (function (){
                         setTimeout( function(){
                             views.previous();
 
-                            $('.balloon').animate({
-                                top : '-500px',
-                              }, 2000, function(){
-                                $('.balloon').remove();
-                              });
+                        //     $('.balloon').animate({
+                        //         top : '-500px',
+                        //       }, 2000, function(){
+                        //         $('.balloon').remove();
+                        //       });
                         }, 7800);
                     }
                 }
@@ -94,7 +94,7 @@ EmmasApp.matchgame = (function (){
           baloons.height = $('.balloon div').first().height();
 
           var top = (windowHeight - baloons.height) / 2;
-          var left = (windowWidth - baloons.width) / 2;
+          var left = (windowWidth - $('.balloon').width() ) / 2;
           $('.balloon').css({
             'top' : windowHeight,
             'left' : left
