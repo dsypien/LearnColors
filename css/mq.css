@@ -1,5 +1,5 @@
 /* Smartphones (portrait and landscape) ----------- */
-@media only screen 
+@media only screen  
 and (min-width : 350px) 
 and (max-width : 480px) {
 	#titleheader{
@@ -27,22 +27,21 @@ and (max-width : 480px) {
 		font-size: 70px;
 	}
 
-	div.baloon{
-		font-size: 45px !important;
-	}
 
 	.balloon > div {
-		width: 50px !important;
-		height: 80px !important;
+		font-size: 3em;
 	}
 
 	.balloon > div:before {
 		left: 30px;
 	}
+	#bigtile{
+		font-size: 2em;
+	}
 }
 
 /* Smartphones (landscape) ----------- */
-@media only screen 
+@media only screen  
 and (min-width : 351px)
 and (max-width : 767px) {
 	#titleheader{
@@ -65,22 +64,22 @@ and (max-width : 767px) {
 		font-size: 70px;
 	}
 
-	div.baloon{
-		font-size: 45px !important;
-	}
 
 	.balloon > div {
-		width: 50px !important;
-		height: 80px !important;
+		font-size: 3em;
 	}
 
 	.balloon > div:before {
 		left: 30px;
 	}
+
+	#bigtile{
+		font-size: 2em;
+	}
 }
 
 /* Smartphones (portrait) ----------- */
-@media only screen 
+@media only screen  
 and (max-width : 350px) {
 	#titleheader{
 		font-size:50px;
@@ -111,17 +110,17 @@ and (max-width : 350px) {
 		font-size: 50px;
 	}
 
-	div.baloon{
-		font-size: 45px !important;
-	}
 
 	.balloon > div {
-		width: 50px !important;
-		height: 80px !important;
+		font-size: 2em;
 	}
 
 	.balloon > div:before {
 		left: 30px;
+	}
+
+	#bigtile{
+		font-size: 2em;
 	}
 }
 
@@ -139,6 +138,10 @@ and (max-width : 1024px) {
 
 	#backtitle{
 		font-size: 90px;
+	}
+
+	.balloon > div {
+		font-size: 4em;
 	}
 }
 
@@ -158,6 +161,10 @@ and (orientation : landscape) {
 	#backtitle{
 		font-size: 90px;
 	}
+
+	.balloon > div {
+		font-size: 4em;
+	}
 }
 
 /* iPads (portrait) ----------- */
@@ -176,6 +183,10 @@ and (orientation : portrait) {
 	#backtitle{
 		font-size: 90px;
 	}
+
+	.balloon > div {
+		font-size: 4em;
+	}
 }
 
 /* Desktops and laptops ----------- */
@@ -192,5 +203,9 @@ and (min-width : 1025px) {
 
 	#backtitle{
 		font-size: 120px;
+	}
+
+	.balloon > div {
+		font-size: 5em;
 	}
 }
