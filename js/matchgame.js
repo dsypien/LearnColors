@@ -61,11 +61,11 @@ EmmasApp.matchgame = (function (){
                         setTimeout( function(){
                             views.previous();
 
-                        //     $('.balloon').animate({
-                        //         top : '-500px',
-                        //       }, 2000, function(){
-                        //         $('.balloon').remove();
-                        //       });
+                            $('.balloon').animate({
+                                top : '-500px',
+                              }, 2000, function(){
+                                $('.balloon').remove();
+                              });
                         }, 7800);
                     }
                 }
