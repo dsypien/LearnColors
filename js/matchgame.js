@@ -40,7 +40,10 @@ EmmasApp.matchgame = (function (){
 
             $('#droppable' + obj[0].index).droppable({
                 accept: "#imagetile" + i ,
-                drop: function (event, ui) {                
+                drop: function (event, ui) { 
+                    //play success sound
+                    EmmasApp.audioPlayer.play("success");
+
                     $(ui.draggable).animate({
                         opacity: 0
                     }, 300, function () {
