@@ -13,15 +13,15 @@ var EmmasApp = EmmasApp || {};
   switch ( window.orientation ) {
 
     case 0:
-        alert('portrait mode');
+        // alert('portrait mode');
     break;
 
     case 90:
-        alert('landscape mode screen turned to the left');
+        // alert('landscape mode screen turned to the left');
     break;
 
     case -90:
-        alert('landscape mode screen turned to the right');
+        // alert('landscape mode screen turned to the right');
     break;
 
   }
@@ -52,7 +52,6 @@ var EmmasApp = EmmasApp || {};
         $('.tlt').textillate();
         $('#titleheader').html(title_text);
 
-        // $('#maintitle').adjustFont();
         $('#titleheader').lettering();
 
         populateOpaqueImages();
