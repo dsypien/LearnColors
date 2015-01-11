@@ -30,7 +30,7 @@ EmmasApp.matchgame = (function (){
                     left: 0
                 };
 
-                // EmmasApp.audioPlayer.play("error");
+                EmmasApp.audioPlayer.play("error");
                 return !event;
             }
         });
@@ -44,7 +44,7 @@ EmmasApp.matchgame = (function (){
                 accept: "#imagetile" + i ,
                 drop: function (event, ui) { 
                     //play success sound
-                    // EmmasApp.audioPlayer.play("success");
+                    EmmasApp.audioPlayer.play("success");
 
                     $(ui.draggable).animate({
                         opacity: 0
