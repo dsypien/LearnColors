@@ -500,7 +500,13 @@ body
 }
 
 .flip .card .front img{
-	width:100%;
+	width:35%;
+}
+
+span.helper {
+vertical-align: middle;
+height: 100%;
+display: inline-block;
 }
 
 .flip .card .back 
