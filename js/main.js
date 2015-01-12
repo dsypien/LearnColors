@@ -86,6 +86,7 @@ var EmmasApp = EmmasApp || {};
 
         $('.cell').click(function () {
             var color = this.attributes.color.nodeValue;
+            EmmasApp.audioPlayer.play(color);
             EmmasApp.matchgame.onCellClick(color);
         });
 
