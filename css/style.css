@@ -500,7 +500,14 @@ body
 }
 
 .flip .card .front img{
-	width:35%;
+	position: absolute;
+	top: 20%;
+	left: 40%;
+	width:20%;
+
+	-webkit-animation: upNdown 2s  linear infinite;
+	-o-animation: upNdown 2s  linear infinite;
+	animation: upNdown 2s  linear infinite;
 }
 
 span.helper {
@@ -675,4 +682,25 @@ img#sun {
     100%{ 
         transform: rotate(360deg); 
     }
+}
+
+@-webkit-keyframes upNdown {
+	0% { width:25%; left: 37.5%; top: 20%; }
+	50% { width: 20%; left: 40%; top:25%;}
+	100% { width:25%; left: 37.5%; top: 20%;}
+}
+@-o-keyframes upNdown {
+	0% { width:25%;  left: 37.5%; top: 20%;}
+	50% { width: 20%; left: 40%; top:25%;}
+	100% { width:25%; left: 37.5%; top: 20%;}
+}
+@-moz-keyframes upNdown {
+	0% { width:25%;  left: 37.5%; top: 20%;}
+	50% { width: 20%; left: 40%; top:25%;}
+	100% { width:25%; left: 37.5%; top: 20%;}
+}
+@keyframes upNdown {
+	0% { width:25%;  left: 37.5%; top: 20%;}
+	50% { width: 20%; left: 40%; top:25%;}
+	100% { width:25%; left: 37.5%; top: 20%;}
 }
