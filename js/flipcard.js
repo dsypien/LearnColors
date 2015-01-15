@@ -28,6 +28,9 @@ EmmasApp.flipCard = (function(){
           // only flip if it is not flipped
           if( $(this).find('.card').hasClass('flipped') === false)
           {
+              // Cancel showFingerTimeout
+              clearTimeout(showFingerTimeout);
+
               $(this).find('.card').addClass('flipped');
               EmmasApp.audioPlayer.play(flipCardColor);
               $('.flip .card .front img').addClass('hidden');
