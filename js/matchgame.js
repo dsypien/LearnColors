@@ -23,16 +23,7 @@ EmmasApp.matchgame = (function (){
         }
 
         $('.imagetile').draggable({
-            // containment: "document",
-            revert: function (event, ui) {
-                $(this).data("uiDraggable").originalPosition = {
-                    top: 0,
-                    left: 0
-                };
-
-                EmmasApp.audioPlayer.play("error");
-                return !event;
-            }
+            revert: true
         });
     }
 

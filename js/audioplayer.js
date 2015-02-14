@@ -11,6 +11,7 @@ EmmasApp.audioPlayer = (function(){
 	}
 
 	function getFilePath(name){
+		console.log("playing sound : " + name);
 		return '../audio/' + name + '.wav';
 	}
 
