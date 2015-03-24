@@ -26,7 +26,7 @@ module.exports = function( grunt ){
 		},
 		concat : {
 			css : {
-				src : 'css/*.css',
+				src : ['css/style.css', 'css/baloons.css', 'css/mq.css'],
 				dest : 'css/output.css'
 			}
 		},
@@ -41,8 +41,8 @@ module.exports = function( grunt ){
 	});
 
 	grunt.loadNpmTasks('grunt-contrib-uglify');
-	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-concat');
+	grunt.loadNpmTasks('grunt-contrib-cssmin');
 
-	grunt.registerTask('default', ['uglify', 'cssmin', 'concat']);
+	grunt.registerTask('default', ['uglify', 'concat', 'cssmin']);
 };
