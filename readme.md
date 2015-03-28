@@ -1,4 +1,4 @@
-# LearnColors
+# Learn Colors
 Learn Colors is a web application that I wrote for my daughter Emma, to help 
 her learn colors. 
 
@@ -14,17 +14,15 @@ Building
 For OSX/Linux:
 
 ```bash
-git clone https://github.com/dsypien/LearnColors.git
-cd LearnColors
-npm update
-grunt
+$ git clone https://github.com/dsypien/LearnColors.git
+$ cd LearnColors
+$ npm update
+$ grunt
 ```
 
 -------
 License
 -------
-
-The MIT License (MIT)
 
 Copyright (c) 2014-2015, David Sypien.
 
@@ -46,3 +44,17 @@ or read http://www.gnu.org/licenses/lgpl.txt.
 
 Screenshots
 ===
+
+![alt text](https://github.com/dsypien/LearnColors/blob/master/github-snapshots/1.png "Learn Colors main screen")
+
+![alt text](https://github.com/dsypien/LearnColors/blob/master/github-snapshots/2.png "Choose color for matching game screen")
+
+![alt text](https://github.com/dsypien/LearnColors/blob/master/github-snapshots/3.png "Red color matching game")
+
+![alt text](https://github.com/dsypien/LearnColors/blob/master/github-snapshots/4.png "YAY! we did it!  We matched all the items :)")
+
+![alt text](https://github.com/dsypien/LearnColors/blob/master/github-snapshots/5.png "Click orange flip card.")
+
+![alt text](https://github.com/dsypien/LearnColors/blob/master/github-snapshots/6.png "Orange card flipping.")
+
+
