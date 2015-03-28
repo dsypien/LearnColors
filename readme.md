@@ -1,6 +1,4 @@
-Learn Colors
-============
-
+# LearnColors
 Learn Colors is a web application that I wrote for my daughter Emma, to help 
 her learn colors. 
 
@@ -45,3 +43,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 For your convience, the LGPL license can be found on the GNU website,
 or read http://www.gnu.org/licenses/lgpl.txt.
+
+Screenshots
+===
