@@ -27,14 +27,13 @@ module.exports = function( grunt ){
 		concat : {
 			css : {
 				src : ['css/style.css', 'css/baloons.css', 'css/mq.css'],
-				dest : 'css/output.css'
+				dest : 'build/css/output.css'
 			}
 		},
 		cssmin : {
 			minify : {
 				expand : true,
-				src : ['css/output.css', 'output.min.css'],
-				dest : "build/",
+				src : ['build/css/output.css', 'output.min.css'],
 				ext: '.min.css'
 			}
 		}
